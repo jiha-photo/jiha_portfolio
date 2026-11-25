@@ -751,6 +751,44 @@ button,input,textarea,select {
     }
 }
 </style>
+<style id="v20-career-style">
+.tl-preview {
+    width: auto;
+    height: auto;
+    max-width: min(340px, 42vw);
+    max-height: 380px;
+    padding: 0;
+    background: #fff !important;
+    background-image: none !important;
+    overflow: hidden;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px -12px #0005;
+}
+
+.tl-preview .career-photo {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(340px, 42vw);
+    max-height: 350px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.tl-preview span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 2;
+    background: rgba(255,255,255,.94);
+    padding: 5px 10px;
+}
+
+.tl-preview.career-empty {
+    opacity: 0 !important;
+}
+</style>
 </head>
 <body>
 
@@ -1744,5 +1782,143 @@ const im=document.getElementById('artImage'),z=document.getElementById('artZoom'
 const note=document.createElement('div');note.className='art-resolution';note.hidden=true;im.closest('.art-panel').insertBefore(note,im.closest('.art-scroll'));
 im.addEventListener('load',()=>{note.hidden=false;note.textContent='원본 '+im.naturalWidth+' × '+im.naturalHeight+' px'+(im.naturalWidth<600?' · 저해상도 원본 (강제 확대하지 않음)':' · 원본 비율 유지');});im.addEventListener('error',()=>note.hidden=true);
 document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hidden=true},true);
-})();</script></body>
+})();</script><script id="v20-career-preview">
+/* V20-CAREER-PREVIEW */
+(() => {
+    const preview = document.querySelector('.tl-preview');
+    if (!preview) return;
+
+    const assets = window.PORTFOLIO_ASSETS || {};
+    const resolve = p => assets[p] || p;
+
+    const ownFeed = ["assets/other/own-feed/251121/4회차_KOR 0.jpg","assets/other/own-feed/251121/4회차_KOR 1.jpg","assets/other/own-feed/251121/4회차_KOR 2.jpg","assets/other/own-feed/251121/4회차_KOR 3.jpg","assets/other/own-feed/251121/4회차_KOR 4.jpg","assets/other/own-feed/251121/4회차_KOR 5.jpg"];
+
+    const groups = {
+        'DESIGNSKIN': [
+            ...ownFeed,
+            'images/ds-own-01.jpg',
+            'images/ds-own-05.jpg',
+            'images/ds-disney-01.jpg'
+        ],
+        'JAYEONGIKKEO': [
+            'images/feed-01.jpg',
+            'images/feed-03.jpg',
+            'images/campaign-black-cover.jpg',
+            'images/campaign-spring-cover.jpg'
+        ],
+        'SANHO MANSION': [
+            'images/archive-03.jpg'
+        ],
+        'EDUCATION': [
+            'assets/other/web-publishing/web-kellogg-pc.jpg.png',
+            'assets/other/web-publishing/web-subway-project.png.png',
+            'assets/other/web-publishing/web-hyosung-project.jpg.jpg'
+        ],
+        'CHAAKAN': [
+            'images/archive-01.jpg'
+        ],
+        'MOJANARA': [
+            'images/archive-02.jpg'
+        ],
+        'NAUNAU.JP': [
+            'images/naunau-01.jpg',
+            'images/naunau-04.jpg'
+        ],
+        'B1 STUDIO': [
+            'images/b1-forest-cover.jpg',
+            'images/b1-train-cover.jpg'
+        ]
+    };
+
+    const label = preview.querySelector('span');
+
+    const photo = document.createElement('img');
+    photo.className = 'career-photo';
+    photo.alt = '';
+    preview.prepend(photo);
+
+    let timer = null;
+    let token = 0;
+
+    function stop() {
+        token++;
+        clearInterval(timer);
+        timer = null;
+        preview.classList.add('career-empty');
+        preview.classList.remove('show');
+        photo.removeAttribute('src');
+    }
+
+    function start(row) {
+        stop();
+
+        const current = token;
+        const key = row.dataset.label;
+
+        const paths = [
+            ...(groups[key] || []),
+            ...(row.dataset.img ? [row.dataset.img] : [])
+        ];
+
+        const urls = [...new Set(paths.map(resolve))];
+        let index = 0;
+        let tried = 0;
+
+        if (!urls.length) return;
+
+        function showNext() {
+            if (current !== token) return;
+
+            if (tried >= urls.length) {
+                stop();
+                return;
+            }
+
+            photo.onload = () => {
+                if (current !== token) return;
+                tried = 0;
+                preview.classList.remove('career-empty');
+                preview.classList.add('show');
+            };
+
+            photo.onerror = () => {
+                if (current !== token) return;
+                tried++;
+                index = (index + 1) % urls.length;
+                showNext();
+            };
+
+            photo.src = urls[index];
+        }
+
+        if (label) label.textContent = key || '';
+
+        showNext();
+
+        if (urls.length > 1) {
+            timer = setInterval(() => {
+                if (!photo.complete) return;
+                index = (index + 1) % urls.length;
+                showNext();
+            }, 1800);
+        }
+    }
+
+    document.querySelectorAll('.tl-item').forEach(row => {
+        row.addEventListener('mouseenter', () => {
+            if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+            start(row);
+        });
+
+        row.addEventListener('mouseleave', stop);
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stop();
+    });
+
+    preview.classList.add('career-empty');
+})();
+</script>
+</body>
 </html>
