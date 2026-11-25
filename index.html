@@ -1207,6 +1207,260 @@ button,input,textarea,select {
 }
 
 </style>
+<style id="v22-blooming-style">
+
+.bloom-section {
+    margin: 32px 0 40px;
+    padding: clamp(16px, 3vw, 32px);
+    background: #f5f3ef;
+    color: #35382f;
+    border-radius: 20px;
+    font-family: var(--sans, sans-serif);
+}
+
+.bloom-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #d7d8d0;
+}
+
+.bloom-eyebrow {
+    font-size: 10px;
+    letter-spacing: .12em;
+    color: #858177;
+}
+
+.bloom-title {
+    margin: 20px 0 5px;
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.05;
+    letter-spacing: -.055em;
+    color: #35382f;
+}
+
+.bloom-subtitle {
+    color: #858177;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.bloom-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 25px 0 20px;
+}
+
+.bloom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background: #fff;
+    color: #35382f;
+    border: 1px solid #d8d9d1;
+    border-radius: 99px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bloom-button.active {
+    background: #35382f;
+    color: #fff;
+    border-color: #35382f;
+}
+
+.bloom-button:hover {
+    background: #e2e6dc;
+    color: #35382f;
+}
+
+.bloom-status {
+    padding: 24px 12px;
+    text-align: center;
+    color: #858177;
+    font-size: 12px;
+}
+
+.bloom-grid {
+    column-count: 3;
+    column-gap: 12px;
+}
+
+.bloom-card {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 7px;
+    background: #fff;
+    overflow: hidden;
+    break-inside: avoid;
+    text-align: left;
+    cursor: zoom-in;
+}
+
+.bloom-image {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+.bloom-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .35s ease;
+}
+
+.bloom-card:hover img {
+    transform: scale(1.035);
+}
+
+.bloom-card-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px;
+    color: #555a50;
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: .04em;
+}
+
+.bloom-count {
+    color: #92958c;
+    font-size: 11px;
+}
+
+.bloom-footer {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #d7d8d0;
+    color: #858177;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.bloom-viewer {
+    width: min(1100px, 96vw);
+    max-width: 96vw;
+    height: 92vh;
+    max-height: 92vh;
+    padding: 0;
+    border: 0;
+    border-radius: 15px;
+    background: #20231e;
+    color: #fff;
+    overflow: hidden;
+    font-family: var(--sans, sans-serif);
+}
+
+.bloom-viewer[open] {
+    display: grid;
+    grid-template-rows: auto minmax(0,1fr) auto;
+}
+
+.bloom-viewer::backdrop {
+    background: rgba(0,0,0,.78);
+}
+
+.bloom-viewer-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    gap: 15px;
+}
+
+.bloom-viewer-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bloom-viewer-body {
+    overflow: auto;
+    min-height: 0;
+    background: #fff;
+    text-align: center;
+    overscroll-behavior: contain;
+}
+
+.bloom-viewer-body img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.bloom-viewer-body.is-full img {
+    width: min(100%, 900px);
+    height: auto;
+}
+
+.bloom-viewer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    flex-wrap: wrap;
+}
+
+.bloom-viewer button,
+.bloom-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff44;
+    border-radius: 30px;
+    background: #ffffff15;
+    color: #fff;
+    padding: 9px 15px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bloom-viewer button:hover,
+.bloom-download:hover {
+    background: #ffffff30;
+}
+
+.bloom-viewer [hidden] {
+    display: none !important;
+}
+
+@media(max-width:700px) {
+    .bloom-grid {
+        column-count: 2;
+        column-gap: 8px;
+    }
+
+    .bloom-card {
+        margin-bottom: 8px;
+    }
+
+    .bloom-section {
+        padding: 15px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .bloom-image img {
+        transition: none;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -2748,6 +3002,628 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
             preview.style.backgroundRepeat = '';
         });
     }
+
+})();
+</script>
+<script id="v22-blooming-script">
+/* V22-BLOOMING-GALLERY */
+
+(() => {
+    const SOURCE = "assets/other/b1-blooming/original/blooming-full.jpg.jpg";
+
+    let sectionsPromise = null;
+    let sections = [];
+    let selected = 0;
+    let fullMode = false;
+
+    function loadImage(url) {
+        return new Promise((resolve, reject) => {
+            const image = new Image();
+
+            image.onload = () => resolve(image);
+            image.onerror = () => reject(
+                new Error('Original image could not be loaded')
+            );
+
+            image.src = url;
+        });
+    }
+
+    function canvasBlob(canvas) {
+        return new Promise((resolve,reject) => {
+            canvas.toBlob(blob => {
+                if (blob) resolve(blob);
+                else reject(new Error('Canvas export failed'));
+            }, 'image/png');
+        });
+    }
+
+    async function splitArtwork() {
+
+        const image = await loadImage(SOURCE);
+
+        const W = image.naturalWidth;
+        const H = image.naturalHeight;
+
+        const scale = Math.min(1, 420 / W);
+
+        const scanWidth = Math.max(
+            1, Math.round(W * scale)
+        );
+
+        const scanHeight = Math.max(
+            1, Math.round(H * scale)
+        );
+
+        // Analyze a reduced copy to reduce memory usage.
+        // The original image is used for final crops.
+
+        const scan = document.createElement('canvas');
+        scan.width = scanWidth;
+        scan.height = scanHeight;
+
+        const ctx = scan.getContext('2d', {
+            willReadFrequently: true
+        });
+
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0,0,scanWidth,scanHeight);
+
+        ctx.drawImage(
+            image,0,0,scanWidth,scanHeight
+        );
+
+        const pixels = ctx.getImageData(
+            0,0,scanWidth,scanHeight
+        ).data;
+
+        const blankRows = [];
+
+        for (let y=0; y<scanHeight; y++) {
+
+            let white = 0;
+            let tested = 0;
+
+            for (let x=0; x<scanWidth; x+=2) {
+
+                const i = (y*scanWidth+x)*4;
+
+                const r = pixels[i];
+                const g = pixels[i+1];
+                const b = pixels[i+2];
+
+                const lo = Math.min(r,g,b);
+                const hi = Math.max(r,g,b);
+
+                if (lo>=242 && hi-lo<=12) {
+                    white++;
+                }
+
+                tested++;
+            }
+
+            blankRows[y] = white/tested >= .985;
+        }
+
+        // Detect continuous horizontal white space.
+
+        const minGap = Math.max(
+            5, Math.round(scanWidth*.025)
+        );
+
+        const gaps = [];
+
+        let start = -1;
+
+        for (let y=0; y<=scanHeight; y++) {
+
+            const blank = y<scanHeight && blankRows[y];
+
+            if (blank && start<0) {
+                start = y;
+            }
+
+            if (!blank && start>=0) {
+
+                if (y-start>=minGap) {
+                    gaps.push({
+                        start,
+                        end:y,
+                        size:y-start,
+                        middle:Math.floor((start+y)/2)
+                    });
+                }
+
+                start = -1;
+            }
+        }
+
+        // Avoid very small, fragmented sections.
+
+        const minSection = Math.round(
+            scanWidth * .7
+        );
+
+        const targetSection = Math.round(
+            scanWidth * 1.7
+        );
+
+        const maxSection = Math.round(
+            scanWidth * 3.2
+        );
+
+        const candidates = gaps.filter(g =>
+            g.middle>minSection &&
+            g.middle<scanHeight-minSection
+        );
+
+        const cuts = [0];
+
+        let previous = 0;
+
+        while (scanHeight-previous>maxSection) {
+
+            const available = candidates.filter(g =>
+                g.middle>=previous+minSection &&
+                g.middle<=previous+maxSection
+            );
+
+            if (!available.length) {
+
+                // Do not cut through content merely
+                // to reach a target height.
+
+                const next = candidates.find(g =>
+                    g.middle>previous+maxSection
+                );
+
+                if (!next) break;
+
+                cuts.push(next.middle);
+                previous = next.middle;
+                continue;
+            }
+
+            available.sort((a,b) => {
+
+                const scoreA =
+                    Math.abs(
+                        a.middle-previous-targetSection
+                    ) - a.size*2;
+
+                const scoreB =
+                    Math.abs(
+                        b.middle-previous-targetSection
+                    ) - b.size*2;
+
+                return scoreA-scoreB;
+            });
+
+            const chosen = available[0].middle;
+
+            cuts.push(chosen);
+            previous = chosen;
+        }
+
+        cuts.push(scanHeight);
+
+        // Release the analysis canvas.
+
+        scan.width = 1;
+        scan.height = 1;
+
+        const output = [];
+
+        for (let i=0; i<cuts.length-1; i++) {
+
+            const top = Math.round(
+                cuts[i]*H/scanHeight
+            );
+
+            const bottom = Math.round(
+                cuts[i+1]*H/scanHeight
+            );
+
+            const height = bottom-top;
+
+            if (height<=0) continue;
+
+            const canvas = document.createElement('canvas');
+
+            canvas.width = W;
+            canvas.height = height;
+
+            const crop = canvas.getContext('2d');
+
+            crop.drawImage(
+                image,
+                0,top,W,height,
+                0,0,W,height
+            );
+
+            const blob = await canvasBlob(canvas);
+
+            const url = URL.createObjectURL(blob);
+
+            output.push({
+                url,
+                width:W,
+                height,
+                number:output.length+1
+            });
+
+            canvas.width = 1;
+            canvas.height = 1;
+
+            // Allow the browser to update the UI.
+            await new Promise(r => setTimeout(r,0));
+        }
+
+        sections = output;
+
+        return sections;
+    }
+
+    function getSections() {
+
+        if (!sectionsPromise) {
+
+            sectionsPromise = splitArtwork().catch(error => {
+
+                sectionsPromise = null;
+
+                throw error;
+            });
+        }
+
+        return sectionsPromise;
+    }
+
+    // Image viewer
+
+    const viewer = document.createElement('dialog');
+
+    viewer.className = 'bloom-viewer';
+
+    viewer.setAttribute(
+        'aria-label',
+        'Blooming Artwork Viewer'
+    );
+
+    viewer.innerHTML = `
+
+        <header class="bloom-viewer-head">
+
+            <span class="bloom-viewer-title">
+                BLOOMING
+            </span>
+
+            <button type="button"
+                    data-bloom-action="close">
+                Close ×
+            </button>
+
+        </header>
+
+        <div class="bloom-viewer-body">
+            <img alt="Blooming artwork">
+        </div>
+
+        <footer class="bloom-viewer-controls">
+
+            <button type="button"
+                    data-bloom-action="prev">
+                ‹ PREV
+            </button>
+
+            <span class="bloom-viewer-count"></span>
+
+            <button type="button"
+                    data-bloom-action="next">
+                NEXT ›
+            </button>
+
+            <a class="bloom-download">
+                SAVE IMAGE
+            </a>
+
+        </footer>
+    `;
+
+    document.body.appendChild(viewer);
+
+    const viewBody = viewer.querySelector(
+        '.bloom-viewer-body'
+    );
+
+    const viewImage = viewBody.querySelector('img');
+
+    const viewCount = viewer.querySelector(
+        '.bloom-viewer-count'
+    );
+
+    const viewTitle = viewer.querySelector(
+        '.bloom-viewer-title'
+    );
+
+    const download = viewer.querySelector(
+        '.bloom-download'
+    );
+
+    function displayPhoto(index) {
+
+        if (!sections.length) return;
+
+        fullMode = false;
+
+        selected =
+            (index+sections.length)%sections.length;
+
+        const item = sections[selected];
+
+        const number = String(
+            selected+1
+        ).padStart(2,'0');
+
+        viewImage.src = item.url;
+
+        viewTitle.textContent =
+            `BLOOMING — WORK ${number}`;
+
+        viewCount.textContent =
+            `${selected+1} / ${sections.length}`;
+
+        viewBody.classList.remove('is-full');
+
+        viewer.querySelectorAll(
+            '[data-bloom-action="prev"],' +
+            '[data-bloom-action="next"]'
+        ).forEach(b => b.hidden=false);
+
+        download.href = item.url;
+
+        download.download =
+            `blooming-${number}.png`;
+
+        viewBody.scrollTop = 0;
+
+        if (!viewer.open) {
+            viewer.showModal();
+        }
+    }
+
+    function displayOriginal() {
+
+        fullMode = true;
+
+        viewImage.src = SOURCE;
+
+        viewTitle.textContent =
+            'BLOOMING — FULL DETAIL PAGE';
+
+        viewCount.textContent =
+            'ORIGINAL ARTWORK';
+
+        viewBody.classList.add('is-full');
+
+        viewer.querySelectorAll(
+            '[data-bloom-action="prev"],' +
+            '[data-bloom-action="next"]'
+        ).forEach(b => b.hidden=true);
+
+        download.href = SOURCE;
+        download.download = 'blooming-full.jpg';
+
+        viewBody.scrollTop = 0;
+
+        if (!viewer.open) {
+            viewer.showModal();
+        }
+    }
+
+    viewer.addEventListener('click',e => {
+
+        const button = e.target.closest(
+            '[data-bloom-action]'
+        );
+
+        if (!button) return;
+
+        const action = button.dataset.bloomAction;
+
+        if (action==='close') {
+            viewer.close();
+        }
+
+        if (action==='prev') {
+            displayPhoto(selected-1);
+        }
+
+        if (action==='next') {
+            displayPhoto(selected+1);
+        }
+    });
+
+    viewer.addEventListener('keydown',e => {
+
+        if (fullMode) return;
+
+        if (e.key==='ArrowLeft') {
+            e.preventDefault();
+            displayPhoto(selected-1);
+        }
+
+        if (e.key==='ArrowRight') {
+            e.preventDefault();
+            displayPhoto(selected+1);
+        }
+    });
+
+    viewer.addEventListener('close',() => {
+        viewImage.removeAttribute('src');
+    });
+
+    viewer.addEventListener('cancel',e => {
+        e.preventDefault();
+        viewer.close();
+    });
+
+    // Add Blooming to the existing B1 case.
+
+    function mountGallery() {
+
+        const existing = document.querySelector(
+            '.b1-gallery'
+        );
+
+        if (!existing) return;
+
+        if (existing.parentElement.querySelector(
+            '.bloom-section'
+        )) return;
+
+        const section = document.createElement('section');
+
+        section.className = 'bloom-section';
+
+        section.innerHTML = `
+
+            <div class="bloom-top">
+
+                <span class="bloom-eyebrow">
+                    B1 STUDIO / SELECTED PROJECTS
+                </span>
+
+                <span class="bloom-eyebrow">
+                    BLOOMING
+                </span>
+
+            </div>
+
+            <h2 class="bloom-title">Blooming.</h2>
+
+            <p class="bloom-subtitle">
+                Fashion Photography & Product Styling
+            </p>
+
+            <div class="bloom-toolbar">
+
+                <button type="button"
+                        class="bloom-button active">
+                    ALL WORKS
+                </button>
+
+                <button type="button"
+                        class="bloom-button bloom-full">
+                    FULL DETAIL PAGE
+                </button>
+
+                <span class="bloom-count"></span>
+
+            </div>
+
+            <div class="bloom-status">
+                Analyzing original artwork...
+            </div>
+
+            <div class="bloom-grid"></div>
+
+            <footer class="bloom-footer">
+                PRODUCT PHOTOGRAPHY /
+                STYLING /
+                DETAIL PAGE DESIGN
+            </footer>
+        `;
+
+        existing.insertAdjacentElement(
+            'afterend',section
+        );
+
+        section.querySelector(
+            '.bloom-full'
+        ).addEventListener('click',displayOriginal);
+
+        const status = section.querySelector(
+            '.bloom-status'
+        );
+
+        const grid = section.querySelector(
+            '.bloom-grid'
+        );
+
+        getSections().then(items => {
+
+            if (!section.isConnected) return;
+
+            status.hidden = true;
+
+            section.querySelector(
+                '.bloom-count'
+            ).textContent =
+                `${items.length} Selected Sections`;
+
+            items.forEach((item,i) => {
+
+                const number = String(
+                    i+1
+                ).padStart(2,'0');
+
+                const card = document.createElement(
+                    'button'
+                );
+
+                card.type = 'button';
+                card.className = 'bloom-card';
+
+                card.innerHTML = `
+
+                    <div class="bloom-image">
+                        <img src="${item.url}"
+                             alt="Blooming Work ${number}"
+                             loading="lazy">
+                    </div>
+
+                    <div class="bloom-card-label">
+                        <span>WORK ${number}</span>
+                        <span>VIEW</span>
+                    </div>
+                `;
+
+                card.addEventListener(
+                    'click',
+                    () => displayPhoto(i)
+                );
+
+                grid.appendChild(card);
+            });
+
+        }).catch(error => {
+
+            if (!section.isConnected) return;
+
+            status.textContent =
+                'Automatic preview unavailable. ' +
+                'Use Full Detail Page.';
+
+            console.warn(
+                'Blooming segmentation:',error
+            );
+        });
+    }
+
+    // Existing portfolio functions are preserved.
+    // Detect B1 detail content when the popup opens.
+
+    const observer = new MutationObserver(
+        mountGallery
+    );
+
+    observer.observe(document.body,{
+        childList:true,
+        subtree:true
+    });
+
+    mountGallery();
 
 })();
 </script>
