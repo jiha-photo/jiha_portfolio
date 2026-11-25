@@ -1219,6 +1219,15 @@ function igTab(root,tab){stopHover();const items=tab==='reel'?CASES.now.insta.re
   root.querySelectorAll('.ig-cat,.ig-hl').forEach(b=>b.style.opacity=tab==='mag'?.4:'');
   const s=root.querySelector('.ig-scroll'),t=root.querySelector('.ig-tabs');if(s.scrollTop>t.offsetTop)s.scrollTop=t.offsetTop;
 }
+  
+const allowedReelCats = ['all', 'own', 'disney'];
+
+root.querySelectorAll('.ig-cat, .ig-hl[data-cat]').forEach(b => {
+  b.style.display =
+    tab === 'reel' && !allowedReelCats.includes(b.dataset.cat)
+      ? 'none'
+      : '';
+});
 function igOpen(root,c,kind,i){
   const g=c.insta,v=root.querySelector('.ig-view');
   const head=(sub)=>`<div class="vh"><button class="ig-back" aria-label="뒤로">‹</button><span class="ig-ring mini"><i class="ph" data-img="${g.avatar}" data-label=""></i></span><span>${g.user}<br><small>${sub}</small></span></div>`;
