@@ -572,7 +572,18 @@ footer{display:flex;justify-content:space-between;padding:28px 32px;border-top:1
 
 .art-open{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:99px;padding:9px 14px;font-size:12px;margin:4px;cursor:pointer}.art-open:hover{background:var(--ink);color:var(--bg)}
 .art-view{position:fixed;inset:0;z-index:1100;background:rgba(20,20,20,.82);backdrop-filter:blur(10px);display:grid;place-items:center;padding:20px}.art-view[hidden]{display:none}.art-panel{width:min(900px,100%);height:92vh;height:92dvh;background:var(--bg);border-radius:22px;display:flex;flex-direction:column;overflow:hidden}.art-head{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}.art-head strong{flex:1;font-size:16px}.art-head button{border:1px solid var(--line);border-radius:99px;background:#fff;padding:10px 16px;color:var(--ink)}.art-scroll{flex:1;overflow:auto;overscroll-behavior:contain;padding:20px;background:#e9e7e3;text-align:center}.art-scroll img{display:block;margin:auto;width:min(100%,760px);height:auto;user-select:none;-webkit-user-drag:none}.art-scroll.original img{width:auto;max-width:100%}.art-note{font-size:11px;color:var(--mute);padding:10px 20px;text-align:center}.art-error{padding:30px;color:var(--mute)}@media(max-width:600px){.art-view{padding:8px}.art-panel{height:96dvh;border-radius:14px}.art-head{padding:12px;gap:6px}.art-head button{padding:8px 10px}.art-scroll{padding:8px}}
+
 </style>
+  html, body,
+h1, h2, h3, h4, h5, h6,
+p, span, a, div,
+button, input, textarea, select {
+    font-family: 'Paperlogy', sans-serif !important;
+}
+
+body {
+    word-break: keep-all;
+}
 <style id="native-image-policy">
 /* Preserve native pixel dimensions; only shrink to fit. */
 .art-scroll img,.b1-gallery .scroll img,.m-gallery img{width:auto;max-width:100%;height:auto;margin-inline:auto;image-rendering:auto}
@@ -597,6 +608,7 @@ body{font-size:15px;line-height:1.65}button,input,select,textarea{font-family:va
 @media(max-width:900px){.hero{padding:110px 28px 72px;min-height:660px}.hero-title{font-size:clamp(52px,12vw,100px)}.keychain{scale:.7;right:5%}.about-grid{grid-template-columns:1fr;gap:32px}.hero-row{gap:24px}.wrap{padding:72px 24px!important}.work-sticky{padding:72px 24px}.sec-head{align-items:flex-start;gap:12px}.work-head{align-items:flex-start}.tl-item{grid-template-columns:1fr;gap:6px}.card-vis{aspect-ratio:1.2}.card h3{font-size:19px}.card .kpi{font-size:22px}.card .sum{font-size:12px}}
 @media(max-width:600px){.nav{padding:12px 18px}.hero{padding:110px 20px 64px;min-height:620px}.hero-title{font-size:clamp(45px,13vw,78px)}.keychain{scale:.55;opacity:.8;right:4%}.hero-eyebrow{max-width:70%;font-size:11px}.hero-copy{font-size:26px}.hero-sub{font-size:14px}.wrap{padding:60px 20px!important}.work-sticky{padding:60px 20px}.work-track,.axes{grid-template-columns:1fr;gap:14px}.work-head{display:block}.work-head>div:last-child{text-align:left!important;margin-top:8px}.card{padding:16px}.card-vis{aspect-ratio:1.3}.stat{min-height:180px}.axis{min-height:0}.modal-panel{padding:20px 18px 48px}.m-sec{grid-template-columns:1fr;gap:8px}.m-gallery{grid-template-columns:repeat(auto-fit,minmax(125px,1fr))}.contact-title{font-size:40px}.cols{gap:20px}.promo-cover-grid img{max-height:155px}}
 </style>
+<<<<<<< HEAD
 <style>.promo-cover-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr));gap:8px!important;align-items:stretch!important}.promo-cover-grid>div{grid-column:span 2;display:flex;flex-direction:column;min-height:0;gap:4px}.promo-cover-grid>div:nth-child(n+4){grid-column:span 3}.promo-cover-grid img{width:100%!important;height:0!important;flex:1;min-height:0;object-fit:contain;max-height:none!important;margin:0!important}.promo-cover-grid span{margin:0!important;font-size:10px!important;line-height:1.25}.campaign-layout>div:first-child figure+figure{margin-top:12px}</style><style>.own-videos{margin:32px 0 48px}.own-videos h4{font-size:24px;margin:8px 0}.own-videos p{color:var(--mute);font-size:14px;margin-bottom:18px}.own-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.own-tile{border:0;background:transparent;text-align:left;color:inherit;min-width:0}.own-poster{display:grid;place-items:center;position:relative;aspect-ratio:9/14;background:#e8e5e2;border-radius:14px;overflow:hidden}.own-poster img{width:100%;height:100%;object-fit:contain}.own-play{position:absolute;bottom:12px;right:12px;background:#171717;color:white;border-radius:50%;width:40px;height:40px;display:grid;place-items:center}.own-tile strong{display:block;font-size:14px;margin-top:8px}.own-tile small{color:var(--mute)}.own-player{border:0;border-radius:16px;background:#181818;color:white;padding:18px;width:min(92vw,700px);max-height:94vh;margin:auto;z-index:9999}.own-player::backdrop{background:#000b}.own-player header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.own-player button{border:0;border-radius:20px;padding:8px 16px}.own-player video{display:block;max-height:76vh;max-width:100%;margin:auto;width:auto;height:auto}.own-player p{font-size:12px;color:#ccc;margin-top:10px}@media(max-width:600px){.own-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}</style><style>.own-poster{position:relative}.own-poster .hover-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#171717;pointer-events:none;z-index:2}.own-poster .own-play{z-index:3;pointer-events:none}</style><style>.ig-reel .hover-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#111;z-index:3;pointer-events:none}.ig-view .vimg video{object-fit:contain;background:#111}.ig-reel .ph>img.fit{object-fit:cover}.ig-reels .ig-reel{aspect-ratio:9/16}</style><style id="v18-font-fix">@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-1Thin.ttf') format('truetype');font-weight:100;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-2ExtraLight.ttf') format('truetype');font-weight:200;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-3Light.ttf') format('truetype');font-weight:300;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-4Regular.ttf') format('truetype');font-weight:400;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-5Medium.ttf') format('truetype');font-weight:500;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-6SemiBold.ttf') format('truetype');font-weight:600;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-7Bold.ttf') format('truetype');font-weight:700;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-8ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap;}@font-face{font-family:Paperlogy;src:url('assets/fonts/Paperlogy-9Black.ttf') format('truetype');font-weight:900;font-display:swap;}:root {
     --sans: 'Paperlogy', 'Pretendard', sans-serif;
     --serif: var(--sans);
@@ -615,6 +627,10 @@ button,input,textarea,select {
 </style>
 <!-- PORTFOLIO-V18-REPAIR -->
 </head>
+=======
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css">
+<style>.promo-cover-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;grid-template-rows:repeat(2,minmax(0,1fr));gap:8px!important;align-items:stretch!important}.promo-cover-grid>div{grid-column:span 2;display:flex;flex-direction:column;min-height:0;gap:4px}.promo-cover-grid>div:nth-child(n+4){grid-column:span 3}.promo-cover-grid img{width:100%!important;height:0!important;flex:1;min-height:0;object-fit:contain;max-height:none!important;margin:0!important}.promo-cover-grid span{margin:0!important;font-size:10px!important;line-height:1.25}.campaign-layout>div:first-child figure+figure{margin-top:12px}</style><style>.own-videos{margin:32px 0 48px}.own-videos h4{font-size:24px;margin:8px 0}.own-videos p{color:var(--mute);font-size:14px;margin-bottom:18px}.own-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.own-tile{border:0;background:transparent;text-align:left;color:inherit;min-width:0}.own-poster{display:grid;place-items:center;position:relative;aspect-ratio:9/14;background:#e8e5e2;border-radius:14px;overflow:hidden}.own-poster img{width:100%;height:100%;object-fit:contain}.own-play{position:absolute;bottom:12px;right:12px;background:#171717;color:white;border-radius:50%;width:40px;height:40px;display:grid;place-items:center}.own-tile strong{display:block;font-size:14px;margin-top:8px}.own-tile small{color:var(--mute)}.own-player{border:0;border-radius:16px;background:#181818;color:white;padding:18px;width:min(92vw,700px);max-height:94vh;margin:auto;z-index:9999}.own-player::backdrop{background:#000b}.own-player header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.own-player button{border:0;border-radius:20px;padding:8px 16px}.own-player video{display:block;max-height:76vh;max-width:100%;margin:auto;width:auto;height:auto}.own-player p{font-size:12px;color:#ccc;margin-top:10px}@media(max-width:600px){.own-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}</style><style>.own-poster{position:relative}.own-poster .hover-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#171717;pointer-events:none;z-index:2}.own-poster .own-play{z-index:3;pointer-events:none}</style><style>.ig-reel .hover-preview{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#111;z-index:3;pointer-events:none}.ig-view .vimg video{object-fit:contain;background:#111}.ig-reel .ph>img.fit{object-fit:cover}.ig-reels .ig-reel{aspect-ratio:9/16}</style></head>
+>>>>>>> 1071d7af0e45b863d40578bf6dc5652ba44b3de5
 <body>
 
 <div class="loader"><span class="mono">Park Jiha — Portfolio 2026</span><div class="loader-num">0</div><span class="mono">Loading content that sells…</span></div>
@@ -853,13 +869,15 @@ button,input,textarea,select {
     <div class="kit-card rv" style="--d:.08s"><h4 class="mono">Web · Commerce</h4><p class="big">HTML · CSS · JavaScript · 카페24 · 쿠팡 · 스마트스토어</p><p>웹 표준·접근성, 자사몰·오픈마켓 상품 등록 · 운영</p></div>
     <div class="kit-card rv" style="--d:.16s"><h4 class="mono">Marketing · Channels</h4><p class="big">Instagram · Reels · Meta Ads · GDN · 인플루언서 협업</p><p>SNS 채널 운영 · 광고 소재 A/B · 시즈널 프로모션 기획</p></div>
   </div>
-  <div class="certs rv">
-    <span class="cert" style="background:var(--cherry);color:#fff;--r:-3deg">마케팅 기획전문가 1급</span>
-    <span class="cert" style="background:var(--butter);--r:2deg">쇼핑몰관리사 1급</span>
-    <span class="cert" style="background:var(--sky);--r:-1deg">ITQ(컴퓨터) 1급</span>
-    <span class="cert" style="background:var(--blush);--r:3deg">운전면허 2종 보통</span>
-    <span class="cert" style="background:#fff;--r:-2deg">미디어와 커뮤니케이션 전공</span>
-  </div>
+ <div class="certs rv">
+  <span class="cert" style="background:#222;color:#fff;--r:-2deg">GTQ 그래픽기술자격</span>
+  <span class="cert" style="background:var(--cherry);color:#fff;--r:-3deg">마케팅 기획전문가 1급</span>
+  <span class="cert" style="background:var(--butter);--r:2deg">쇼핑몰관리사 1급</span>
+  <span class="cert" style="background:var(--sky);--r:1deg">ITQ(컴퓨터) 1급</span>
+  <span class="cert" style="background:var(--blush);--r:3deg">운전면허 2종 보통</span>
+  <span class="cert" style="background:#fff;--r:-2deg">미디어와 커뮤니케이션 전공</span>
+</div>
+
 </div></section>
 
 <!-- ================= CONTACT ================= -->
@@ -1215,6 +1233,7 @@ function igFilter(root,cat){stopHover();
   root.querySelectorAll('.ig-hl button,.ig-cat').forEach(b=>b.classList.toggle('on',b.dataset.cat===cat));
   root.querySelectorAll('.ig-post:not(.ig-magi)').forEach(p=>{const show=cat==='all'||p.dataset.cat===cat;p.hidden=!show;if(show){p.style.animation='none';p.offsetWidth;p.style.animation=''}});
 }
+<<<<<<< HEAD
 function igTab(root, tab) {
     stopHover();
     const g = CASES.now.insta;
@@ -1262,6 +1281,61 @@ function igTab(root, tab) {
     }
 }
 
+=======
+
+function igTab(root, tab) {
+  stopHover();
+
+  const g = CASES.now.insta;
+  const items = tab === 'reel' ? g.reels : g.posts;
+  const allowed = ['all', 'own', 'disney'];
+
+  root.querySelectorAll('[data-tab]').forEach(b => {
+    const on = b.dataset.tab === tab;
+    b.classList.toggle('on', on);
+    if (b.hasAttribute('aria-selected')) {
+      b.setAttribute('aria-selected', on);
+    }
+  });
+
+  root.querySelectorAll('.ig-pane').forEach(p => {
+    p.hidden = p.dataset.pane !== tab;
+  });
+
+  root.querySelectorAll('.ig-cat').forEach(b => {
+    const id = b.dataset.cat;
+    const n = items.filter(p =>
+      id === 'all' || p.cat === id
+    ).length;
+
+    b.querySelector('small').textContent =
+      n + (tab === 'reel' ? ' reels' : ' posts');
+  });
+
+  root.querySelectorAll('.ig-cat, .ig-hl button').forEach(b => {
+    b.style.display =
+      tab === 'mag' ||
+      (tab === 'reel' && !allowed.includes(b.dataset.cat))
+      ? 'none' : '';
+
+    b.style.opacity = '';
+  });
+
+  root.querySelector('.ig-hl').style.display =
+    tab === 'mag' ? 'none' : '';
+
+  igFilter(root, 'all');
+
+  const s = root.querySelector('.ig-scroll');
+  const t = root.querySelector('.ig-tabs');
+
+  if (s.scrollTop > t.offsetTop) {
+    s.scrollTop = t.offsetTop;
+  }
+}
+
+
+>>>>>>> 1071d7af0e45b863d40578bf6dc5652ba44b3de5
 function igOpen(root,c,kind,i){
   const g=c.insta,v=root.querySelector('.ig-view');
   const head=(sub)=>`<div class="vh"><button class="ig-back" aria-label="뒤로">‹</button><span class="ig-ring mini"><i class="ph" data-img="${g.avatar}" data-label=""></i></span><span>${g.user}<br><small>${sub}</small></span></div>`;
@@ -1298,7 +1372,173 @@ mBody.addEventListener('click',e=>{const b=e.target.closest('[data-promo-brand]'
 const ownVideos=[{"title": "스트랩 · 자막 영상", "video": "videos/ds-own-01.mp4", "img": "images/ds-own-01.jpg", "duration": 20, "source": "1080×1920"}, {"title": "자사 제품 광고 소재", "video": "videos/ds-own-02.mp4", "img": "images/ds-own-02.jpg", "duration": 14, "source": "1080×1080"}, {"title": "클래식 릴스", "video": "videos/ds-own-03.mp4", "img": "images/ds-own-03.jpg", "duration": 12, "source": "1080×1920"}, {"title": "카드포켓 & 스마트링", "video": "videos/ds-own-04.mp4", "img": "images/ds-own-04.jpg", "duration": 13, "source": "1080×1920"}, {"title": "그립스탠드", "video": "videos/ds-own-05.mp4", "img": "images/ds-own-05.jpg", "duration": 14, "source": "1080×1920"}, {"title": "아이폰 17 · 맥세이프 조합", "video": "videos/ds-own-06.mp4", "img": "images/ds-own-06.jpg", "duration": 18, "source": "1080×1920"}, {"title": "폴드6 · 스트랩", "video": "videos/ds-own-07.mp4", "img": "images/ds-own-07.jpg", "duration": 12, "source": "1080×1920"}, {"title": "자사 제품 릴스", "video": "videos/ds-own-08.mp4", "img": "images/ds-own-08.jpg", "duration": 16.4, "source": "1080×1920"}, {"title": "자사 그래픽 · EP.05", "video": "videos/ds-own-09.mp4", "img": "images/ds-own-09.jpg", "duration": 19.0, "source": "1080×1920"}, {"title": "자사 그래픽 · EP.18–19", "video": "videos/ds-own-10.mp4", "img": "images/ds-own-10.jpg", "duration": 57.0, "source": "1080×1920"}, {"title": "자사 그래픽 · EP.20–21", "video": "videos/ds-own-11.mp4", "img": "images/ds-own-11.jpg", "duration": 12.2, "source": "1080×1920"}, {"title": "자사 그래픽 · EP.22–23", "video": "videos/ds-own-12.mp4", "img": "images/ds-own-12.jpg", "duration": 15.5, "source": "1080×1920"}];const disneyVideos=[{"title": "퍼피 해피니스", "video": "videos/ds-disney-01.mp4", "img": "images/ds-disney-01.jpg", "duration": 19.5, "source": "1080×1920"}, {"title": "위니 더 푸", "video": "videos/ds-disney-02.mp4", "img": "images/ds-disney-02.jpg", "duration": 11.2, "source": "1080×1920"}, {"title": "디즈니 컬렉션 · 묶음 영상", "video": "videos/ds-disney-03.mp4", "img": "images/ds-disney-03.jpg", "duration": 19.2, "source": "1080×1920"}];const allProductVideos=[...ownVideos,...disneyVideos];CASES.now.insta.reels=allProductVideos.map((v,i)=>({cat:i<ownVideos.length?'own':'disney',img:v.img,video:v.video,cap:v.title,views:'—'}));function videoSection(items,offset,label,title,desc){return `<section class="own-videos"><span class="mono">${label}</span><h4>${title}</h4><p>${desc}</p><div class="own-grid">${items.map((v,i)=>`<button class="own-tile" data-own-video="${i+offset}"><span class="own-poster"><img src="${asset(v.img)}" alt="${v.title}"><span class="own-play">▶</span></span><strong>${v.title}</strong><small>${v.duration}초 · 영상 보기</small></button>`).join('')}</div></section>`}function renderOwnVideos(){return videoSection(ownVideos,0,'DESIGN SKIN · OWN PRODUCTS','자사 제품 영상 제작','제품 소개 · 그래픽 · 릴스 · 광고 영상 대표 작업물 12종')+videoSection(disneyVideos,ownVideos.length,'DESIGN SKIN · DISNEY IP','디즈니 IP 협업 릴스','캐릭터 협업 영상 대표 작업물 3종')}
 document.body.insertAdjacentHTML('beforeend','<dialog class="own-player"><header><strong></strong><button type="button">닫기 ×</button></header><video controls playsinline controlslist="nodownload" disablepictureinpicture preload="metadata"></video><p>포트폴리오 열람용 · 무단 복제 및 재사용 금지</p></dialog>');const ownDialog=document.querySelector('.own-player'),ownVideo=ownDialog.querySelector('video');function closeOwn(){ownVideo.pause();ownVideo.removeAttribute('src');ownVideo.load();ownDialog.close()}ownDialog.querySelector('button').onclick=closeOwn;ownDialog.addEventListener('cancel',e=>{e.preventDefault();e.stopPropagation();closeOwn()});ownDialog.addEventListener('click',e=>{if(e.target===ownDialog)closeOwn()});mBody.addEventListener('click',e=>{const b=e.target.closest('[data-own-video]');if(!b)return;stopHover();const v=allProductVideos[+b.dataset.ownVideo];ownDialog.querySelector('strong').textContent=v.title;ownVideo.src=asset(v.video);ownDialog.showModal();ownVideo.play().catch(()=>{})});
 let hoverTile=null,hoverVideo=null;function stopHover(){if(hoverVideo){hoverVideo.pause();hoverVideo.removeAttribute('src');hoverVideo.load();hoverVideo.remove()}hoverTile=null;hoverVideo=null}mBody.addEventListener('pointerover',e=>{if(!matchMedia('(hover:hover) and (pointer:fine)').matches||reduce||ownDialog.open)return;const b=e.target.closest('[data-own-video],.ig-reel');if(!b||b===hoverTile)return;stopHover();hoverTile=b;const v=document.createElement('video');hoverVideo=v;v.muted=true;v.defaultMuted=true;v.loop=true;v.playsInline=true;v.preload='none';v.className='hover-preview';v.setAttribute('aria-hidden','true');b.querySelector('.own-poster,.ph').append(v);v.src=asset(b.classList.contains('ig-reel')?CASES.now.insta.reels[+b.dataset.i].video:allProductVideos[+b.dataset.ownVideo].video);v.play().catch(()=>{if(hoverVideo===v)stopHover()})});mBody.addEventListener('pointerout',e=>{if(hoverTile&&!hoverTile.contains(e.relatedTarget))stopHover()});document.addEventListener('visibilitychange',()=>{if(document.hidden)stopHover()});
-function openCase(id){stopHover();
+
+  
+/* ===== V18 : DESIGNSKIN NEW CONTENT ===== */
+
+const feedBase = 'assets/other/own-feed/';
+const reelBase = 'assets/other/own-reels/';
+
+/* 신규 자사 피드 */
+const newFeedGroups = [
+  ['251121', '4회차_KOR ', 9, '자사 그래픽 · 4회차'],
+  ['251128', '_', 5, '자사 제품 피드'],
+  ['251201', '_KOR ', 5, '자사 제품 피드'],
+  ['251208(이벤트,원본)', '17회차_KOR ', 4, '이벤트 콘텐츠 · 17회차']
+];
+
+const newFeedPosts = newFeedGroups.map(
+  ([folder, prefix, count, title]) => {
+    const images = Array.from(
+      {length: count},
+      (_, i) => feedBase + folder + '/' + prefix + i + '.jpg'
+    );
+
+    images.forEach(path => {
+      ASSETS[path] = path;
+    });
+
+    return {
+      cat: 'own',
+      img: images[0],
+      images: images,
+      cap: title,
+      likes: '—'
+    };
+  }
+);
+
+CASES.now.insta.posts.unshift(...newFeedPosts);
+
+/* 신규 자사 릴스 */
+const newOwnReels = [
+  {
+    folder: '251117',
+    video: '1,2회차_KOR_RE_3.mp4',
+    img: '1,2회차_IMG_KOR.jpg',
+    title: '자사 그래픽 · 1–2회차'
+  },
+  {
+    folder: '251125',
+    video: '6회차_KOR_수정_3.mp4',
+    img: '',
+    title: '자사 그래픽 · 6회차'
+  },
+  {
+    folder: '251203',
+    video: '12회차_re_2.mp4',
+    img: '12회차_KOR_1.jpg',
+    title: '자사 그래픽 · 12회차'
+  },
+  {
+    folder: '251205',
+    video: '13회차_KOR 2.mp4',
+    img: '13회차_KOR.jpg',
+    title: '자사 그래픽 · 13회차'
+  },
+  {
+    folder: '251210',
+    video: '18회차.mp4',
+    img: '18회차_KOR.jpg',
+    title: '자사 그래픽 · 18회차'
+  }
+];
+
+const newReelPosts = newOwnReels.map(r => {
+  const video = reelBase + r.folder + '/' + r.video;
+  const img = r.img
+    ? reelBase + r.folder + '/' + r.img
+    : '';
+
+  if (img) ASSETS[img] = img;
+
+  return {
+    cat: 'own',
+    img: img,
+    video: video,
+    cap: r.title,
+    views: '—'
+  };
+});
+
+CASES.now.insta.reels.unshift(...newReelPosts);
+
+/* 여러 장의 피드를 순서대로 열람 */
+const originalIgOpen = igOpen;
+
+igOpen = function(root, c, kind, i) {
+  originalIgOpen(root, c, kind, i);
+
+  if (kind !== 'post') return;
+
+  const p = c.insta.posts[i];
+
+  if (!p.images || p.images.length < 2) return;
+
+  const view = root.querySelector('.ig-view');
+  const imageArea = view.querySelector('.vimg');
+
+  let current = 0;
+
+  imageArea.innerHTML = `
+    <img class="feed-carousel-img"
+         draggable="false"
+         style="width:100%;height:100%;object-fit:contain;background:#fff">
+    <button class="feed-prev" type="button"
+            aria-label="이전 이미지"
+            style="position:absolute;left:5px;top:45%;z-index:3;background:#fff;border:0;border-radius:50%;width:28px;height:28px">‹</button>
+    <button class="feed-next" type="button"
+            aria-label="다음 이미지"
+            style="position:absolute;right:5px;top:45%;z-index:3;background:#fff;border:0;border-radius:50%;width:28px;height:28px">›</button>
+    <span class="feed-count"
+          style="position:absolute;right:8px;top:8px;background:#222;color:#fff;padding:3px 8px;border-radius:20px;font-size:10px"></span>
+  `;
+
+  function showImage() {
+    imageArea.querySelector('img').src =
+      asset(p.images[current]);
+
+    imageArea.querySelector('.feed-count').textContent =
+      (current + 1) + '/' + p.images.length;
+  }
+
+  imageArea.querySelector('.feed-prev').onclick = () => {
+    current = (current - 1 + p.images.length) % p.images.length;
+    showImage();
+  };
+
+  imageArea.querySelector('.feed-next').onclick = () => {
+    current = (current + 1) % p.images.length;
+    showImage();
+  };
+
+  showImage();
+};
+
+/* 초기 게시물 카운트 수정 */
+const originalRenderInsta = renderInsta;
+
+renderInsta = function(c) {
+  const html = originalRenderInsta(c);
+
+  if (!c.insta) return html;
+
+  const template = document.createElement('template');
+  template.innerHTML = html;
+
+  template.content.querySelectorAll('.ig-cat').forEach(b => {
+    const id = b.dataset.cat;
+    const n = c.insta.posts.filter(p =>
+      id === 'all' || p.cat === id
+    ).length;
+
+    b.querySelector('small').textContent = n + ' posts';
+  });
+
+  return template.innerHTML;
+};
+
+  function openCase(id){stopHover();
   const c=CASES[id];if(!c)return;
   const sec=(lab,html)=>html?`<div class="m-sec"><span class="mono">${lab}</span><div>${html}</div></div>`:'';
   const ul=a=>a&&a.length?`<ul>${a.map(x=>`<li>${x}</li>`).join('')}</ul>`:'';
