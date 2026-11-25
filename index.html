@@ -789,6 +789,424 @@ button,input,textarea,select {
     opacity: 0 !important;
 }
 </style>
+<style id="v21-sanho-style">
+
+.sanho-archive-card {
+    cursor: pointer;
+}
+
+.sanho-archive-card .sanho-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.sanho-timeline {
+    cursor: pointer;
+}
+
+.sanho-modal {
+    width: min(1080px, 94vw);
+    max-width: 94vw;
+    max-height: 92vh;
+    padding: 0;
+    border: 0;
+    border-radius: 22px;
+    background: #f5f3ef;
+    color: #354239;
+    font-family: var(--sans, sans-serif);
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.sanho-modal::backdrop {
+    background: rgba(15,20,17,.78);
+    backdrop-filter: blur(5px);
+}
+
+.sanho-inner {
+    padding: clamp(20px, 4vw, 48px);
+}
+
+.sanho-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d5d9d1;
+}
+
+.sanho-eyebrow {
+    font-size: 11px;
+    letter-spacing: .12em;
+    color: #77867c;
+}
+
+.sanho-close {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: #354239;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sanho-heading {
+    padding: 30px 0;
+}
+
+.sanho-heading h2 {
+    margin: 8px 0;
+    font-size: clamp(32px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -.045em;
+    color: #354239;
+}
+
+.sanho-heading p {
+    font-size: 14px;
+    color: #7c897e;
+}
+
+.sanho-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr)
+                           minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(20px, 4vw, 48px);
+}
+
+.sanho-editorial {
+    min-width: 0;
+}
+
+.sanho-hero-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #e1e8e3;
+    cursor: zoom-in;
+}
+
+.sanho-hero-button img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .4s ease;
+}
+
+.sanho-hero-button:hover img {
+    transform: scale(1.025);
+}
+
+.sanho-image-label {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    background: rgba(255,255,255,.94);
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 10px;
+    color: #354239;
+}
+
+.sanho-editorial h3 {
+    margin: 22px 0 10px;
+    font-size: clamp(23px, 3vw, 36px);
+    letter-spacing: -.04em;
+    color: #354239;
+}
+
+.sanho-editorial p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #707c72;
+    word-break: keep-all;
+}
+
+.sanho-phone {
+    width: 100%;
+    max-width: 365px;
+    margin: 0 auto;
+    border: 7px solid #242424;
+    border-radius: 38px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 25px 45px -15px #293a3035;
+    color: #222;
+}
+
+.sanho-notch {
+    width: 82px;
+    height: 17px;
+    border-radius: 20px;
+    margin: 10px auto 12px;
+    background: #242424;
+}
+
+.sanho-ig-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+}
+
+.sanho-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 15px 12px;
+}
+
+.sanho-avatar {
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #d1e4d9;
+    overflow: hidden;
+}
+
+.sanho-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sanho-profile strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.sanho-profile small {
+    color: #777;
+    font-size: 11px;
+}
+
+.sanho-bio {
+    padding: 0 15px 18px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #535b55;
+}
+
+.sanho-feed-heading {
+    margin: 0 15px 15px;
+    padding: 10px;
+    background: #f2f5f2;
+    border-radius: 7px;
+    text-align: center;
+    color: #596e60;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.sanho-feed {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3px;
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+.sanho-tile {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #e6e9e4;
+    cursor: zoom-in;
+}
+
+.sanho-tile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.sanho-tile:hover img {
+    transform: scale(1.07);
+}
+
+.sanho-title-tile {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    background: #e8ede6;
+    color: #526758;
+    font-size: 10px;
+    letter-spacing: .06em;
+    line-height: 1.5;
+}
+
+.sanho-title-tile b {
+    font-size: 12px;
+}
+
+.sanho-ig-bottom {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 10px;
+    border-top: 1px solid #eee;
+}
+
+.sanho-ig-bottom svg {
+    width: 21px;
+    height: 21px;
+    stroke: #222;
+    stroke-width: 1.7;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sanho-homebar {
+    width: 95px;
+    height: 4px;
+    border-radius: 20px;
+    background: #222;
+    margin: 0 auto 9px;
+}
+
+.sanho-role {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 12px;
+    margin-top: 34px;
+    padding-top: 24px;
+    border-top: 1px solid #d5d9d1;
+}
+
+.sanho-role article {
+    padding: 16px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.sanho-role small {
+    display: block;
+    color: #87968a;
+    font-size: 10px;
+    margin-bottom: 7px;
+}
+
+.sanho-role strong {
+    color: #354239;
+    font-size: 14px;
+}
+
+.sanho-footer {
+    margin-top: 24px;
+    font-size: 11px;
+    color: #879087;
+}
+
+.sanho-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: rgba(19,24,21,.96);
+    display: grid;
+    grid-template-rows: auto minmax(0,1fr) auto;
+    color: #fff;
+    padding: 18px;
+}
+
+.sanho-viewer[hidden] {
+    display: none !important;
+}
+
+.sanho-viewer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.sanho-viewer-image {
+    min-height: 0;
+    display: grid;
+    place-items: center;
+    overflow: auto;
+}
+
+.sanho-viewer-image img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sanho-viewer-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px;
+}
+
+.sanho-viewer button {
+    width: 38px;
+    height: 38px;
+    background: #ffffff18;
+    color: #fff;
+    border: 1px solid #ffffff44;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+    .sanho-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sanho-phone {
+        max-width: 340px;
+    }
+
+    .sanho-role {
+        grid-template-columns: 1fr;
+    }
+
+    .sanho-inner {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sanho-modal *,
+    .sanho-archive-card * {
+        transition: none !important;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -1806,9 +2224,7 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
             'images/campaign-black-cover.jpg',
             'images/campaign-spring-cover.jpg'
         ],
-        'SANHO MANSION': [
-            'images/archive-03.jpg'
-        ],
+        'SANHO MANSION': ["assets/other/sanho-mansion/sanho-01.jpg.jpg","assets/other/sanho-mansion/sanho-02.jpg.jpg","assets/other/sanho-mansion/sanho-03.jpg.jpg","assets/other/sanho-mansion/sanho-04.jpg.jpg","assets/other/sanho-mansion/sanho-05.jpg.jpg","assets/other/sanho-mansion/sanho-06.jpg.jpg","assets/other/sanho-mansion/sanho-07.jpg.jpg","assets/other/sanho-mansion/sanho-08.jpg.jpg"],
         'EDUCATION': [
             'assets/other/web-publishing/web-kellogg-pc.jpg.png',
             'assets/other/web-publishing/web-subway-project.png.png',
@@ -1918,6 +2334,421 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
     });
 
     preview.classList.add('career-empty');
+})();
+</script>
+<script id="v21-sanho-script">
+/* V21-SANHO-MANSION */
+
+(() => {
+
+    const photos = ["assets/other/sanho-mansion/sanho-01.jpg.jpg","assets/other/sanho-mansion/sanho-02.jpg.jpg","assets/other/sanho-mansion/sanho-03.jpg.jpg","assets/other/sanho-mansion/sanho-04.jpg.jpg","assets/other/sanho-mansion/sanho-05.jpg.jpg","assets/other/sanho-mansion/sanho-06.jpg.jpg","assets/other/sanho-mansion/sanho-07.jpg.jpg","assets/other/sanho-mansion/sanho-08.jpg.jpg"];
+    const order = [1, 4, 2, 5, 6, 0, 3, 7];
+
+    const captions = [
+        'Side Profile',
+        'Blue Flower Portrait',
+        'Classic Portrait',
+        'Floral Concept',
+        'Pink Studio Portrait',
+        'Water & Flower Concept',
+        'Purple Flower Portrait',
+        'Natural Portrait'
+    ];
+
+    const cover = photos[1];
+
+    const timeline = document.querySelector(
+        '.tl-item[data-label="SANHO MANSION"]'
+    );
+
+    const archiveImage = document.querySelector(
+        '.sleeve .ph[data-label="SANHO MANSION"]'
+    );
+
+    const archive = archiveImage
+        ? archiveImage.closest('.sleeve')
+        : null;
+
+    if (archiveImage) {
+        archiveImage.replaceChildren();
+
+        const image = document.createElement('img');
+        image.src = cover;
+        image.alt = 'Sanho Mansion portrait photography';
+        image.className = 'sanho-cover';
+        image.loading = 'lazy';
+
+        archiveImage.appendChild(image);
+    }
+
+    const dialog = document.createElement('dialog');
+    dialog.className = 'sanho-modal';
+    dialog.setAttribute('aria-label','Sanho Mansion Photography');
+
+    dialog.innerHTML = `
+
+    <div class="sanho-inner">
+
+        <header class="sanho-top">
+            <span class="sanho-eyebrow">
+                CASE STUDY — PHOTOGRAPHY / 2021
+            </span>
+
+            <button type="button"
+                    class="sanho-close"
+                    aria-label="Close">×</button>
+        </header>
+
+        <div class="sanho-heading">
+
+            <span class="sanho-eyebrow">
+                PORTRAIT STUDIO · 2021.09 — 2021.12
+            </span>
+
+            <h2>SANHO<br>MANSION.</h2>
+
+            <p>산호맨숀 스튜디오 · Portrait Photography</p>
+
+        </div>
+
+        <div class="sanho-layout">
+
+            <section class="sanho-editorial">
+
+                <button type="button"
+                        class="sanho-hero-button"
+                        data-sanho-photo="1">
+
+                    <img src="${cover}"
+                         alt="Blue Flower Portrait"
+                         loading="lazy">
+
+                    <span class="sanho-image-label">
+                        SELECTED PORTRAIT ↗
+                    </span>
+
+                </button>
+
+                <h3>A Moment of Portrait.</h3>
+
+                <p>
+                    프로필 및 콘셉트 촬영을 통해
+                    인물의 자연스러운 분위기를 표현하고,
+                    색감과 디테일을 살리는 후보정 작업을
+                    경험했습니다.
+                </p>
+
+            </section>
+
+            <section class="sanho-phone">
+
+                <div class="sanho-notch"></div>
+
+                <header class="sanho-ig-top">
+                    <span>‹</span>
+                    <span>sanhomansion</span>
+                    <span>···</span>
+                </header>
+
+                <div class="sanho-profile">
+                    <div class="sanho-avatar">
+                        <img src="${cover}" alt="">
+                    </div>
+
+                    <div>
+                        <strong>8 Selected Works</strong>
+                        <small>Portrait Photography</small>
+                    </div>
+                </div>
+
+                <div class="sanho-bio">
+                    <b>산호맨숀 스튜디오</b><br>
+                    Portrait · Concept · Retouching<br>
+                    Photography Archive / 2021
+                </div>
+
+                <div class="sanho-feed-heading">
+                    SELECTED PHOTOGRAPHY
+                </div>
+
+                <div class="sanho-feed">
+
+                    ${order.map(i => `
+                        <button type="button"
+                                class="sanho-tile"
+                                data-sanho-photo="${i}"
+                                aria-label="${captions[i]}">
+
+                            <img src="${photos[i]}"
+                                 alt="${captions[i]}"
+                                 loading="lazy">
+
+                        </button>
+                    `).join('')}
+
+                    <div class="sanho-title-tile">
+                        <b>SANHO</b>
+                        <b>MANSION</b>
+                        <span>EST. ARCHIVE</span>
+                    </div>
+
+                </div>
+
+                <div class="sanho-ig-bottom"
+                     aria-hidden="true">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 10L12 3L21 10V21H15V14H9V21H3Z"/>
+                    </svg>
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="10" cy="10" r="6"/>
+                        <path d="M15 15L21 21"/>
+                    </svg>
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21L4 13C-2 6 7 1 12 8C17 1 26 6 20 13Z"/>
+                    </svg>
+
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 21C4 12 20 12 20 21"/>
+                    </svg>
+
+                </div>
+
+                <div class="sanho-homebar"></div>
+
+            </section>
+
+        </div>
+
+        <section class="sanho-role">
+
+            <article>
+                <small>01 — PORTRAIT</small>
+                <strong>프로필 · 인물 촬영</strong>
+            </article>
+
+            <article>
+                <small>02 — CONCEPT</small>
+                <strong>콘셉트 촬영</strong>
+            </article>
+
+            <article>
+                <small>03 — RETOUCHING</small>
+                <strong>인물 후보정 · 콘텐츠 제작</strong>
+            </article>
+
+        </section>
+
+        <footer class="sanho-footer">
+            SANHO MANSION — SELECTED WORKS 2021
+        </footer>
+
+    </div>
+
+    <section class="sanho-viewer" hidden>
+
+        <div class="sanho-viewer-top">
+            <span class="sanho-viewer-caption"></span>
+            <button type="button"
+                    data-sanho-action="close"
+                    aria-label="Close photo">×</button>
+        </div>
+
+        <div class="sanho-viewer-image">
+            <img alt="" draggable="false">
+        </div>
+
+        <div class="sanho-viewer-controls">
+
+            <button type="button"
+                    data-sanho-action="prev"
+                    aria-label="Previous photo">‹</button>
+
+            <span class="sanho-count">1 / 8</span>
+
+            <button type="button"
+                    data-sanho-action="next"
+                    aria-label="Next photo">›</button>
+
+        </div>
+
+    </section>
+    `;
+
+    document.body.appendChild(dialog);
+
+    const viewer = dialog.querySelector('.sanho-viewer');
+    const viewerImage = viewer.querySelector('img');
+
+    let current = 0;
+    let previousOverflow = '';
+    let lastTrigger = null;
+
+    function showPhoto(i) {
+
+        current = (i + order.length) % order.length;
+
+        const photoIndex = order[current];
+
+        viewerImage.src = photos[photoIndex];
+        viewerImage.alt = captions[photoIndex];
+
+        viewer.querySelector(
+            '.sanho-viewer-caption'
+        ).textContent = captions[photoIndex];
+
+        viewer.querySelector(
+            '.sanho-count'
+        ).textContent = `${current + 1} / ${order.length}`;
+
+        viewer.hidden = false;
+    }
+
+    function closeViewer() {
+        viewer.hidden = true;
+        viewerImage.removeAttribute('src');
+
+        if (lastTrigger) {
+            lastTrigger.focus();
+        }
+    }
+
+    function openSanho() {
+
+        if (dialog.open) return;
+
+        previousOverflow = document.body.style.overflow;
+        dialog.showModal();
+        dialog.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+
+        document.querySelector(
+            '.tl-preview'
+        )?.classList.remove('show');
+    }
+
+    function closeSanho() {
+        closeViewer();
+        dialog.close();
+    }
+
+    dialog.addEventListener('close', () => {
+        viewer.hidden = true;
+        viewerImage.removeAttribute('src');
+        document.body.style.overflow = previousOverflow;
+    });
+
+    dialog.querySelector(
+        '.sanho-close'
+    ).addEventListener('click',closeSanho);
+
+    dialog.addEventListener('click',e => {
+
+        const photo = e.target.closest('[data-sanho-photo]');
+
+        if (photo) {
+            lastTrigger = photo;
+            showPhoto(order.indexOf(Number(photo.dataset.sanhoPhoto)));
+            return;
+        }
+
+        const action = e.target.closest('[data-sanho-action]');
+
+        if (!action) return;
+
+        if (action.dataset.sanhoAction === 'close') {
+            closeViewer();
+        }
+
+        if (action.dataset.sanhoAction === 'prev') {
+            showPhoto(current - 1);
+        }
+
+        if (action.dataset.sanhoAction === 'next') {
+            showPhoto(current + 1);
+        }
+    });
+
+    dialog.addEventListener('cancel',e => {
+        e.preventDefault();
+
+        if (!viewer.hidden) {
+            closeViewer();
+        } else {
+            closeSanho();
+        }
+    });
+
+    dialog.addEventListener('keydown',e => {
+
+        if (viewer.hidden) return;
+
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            showPhoto(current - 1);
+        }
+
+        if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            showPhoto(current + 1);
+        }
+    });
+
+    function connect(element, className) {
+
+        if (!element) return;
+
+        element.classList.add(className);
+        element.setAttribute('role','button');
+        element.setAttribute('tabindex','0');
+
+        element.setAttribute(
+            'aria-label',
+            'View Sanho Mansion Photography'
+        );
+
+        element.addEventListener('click',openSanho);
+
+        element.addEventListener('keydown',e => {
+
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openSanho();
+            }
+        });
+    }
+
+    connect(archive,'sanho-archive-card');
+    connect(timeline,'sanho-timeline');
+
+    if (timeline) {
+
+        timeline.dataset.img = cover;
+
+        timeline.addEventListener('mouseenter',() => {
+
+            const preview = document.querySelector('.tl-preview');
+            if (!preview) return;
+
+            preview.style.backgroundImage = `url("${cover}")`;
+            preview.style.backgroundPosition = 'center';
+            preview.style.backgroundSize = 'contain';
+            preview.style.backgroundRepeat = 'no-repeat';
+        });
+
+        timeline.addEventListener('mouseleave',() => {
+
+            const preview = document.querySelector('.tl-preview');
+            if (!preview) return;
+
+            preview.style.backgroundSize = '';
+            preview.style.backgroundRepeat = '';
+        });
+    }
+
 })();
 </script>
 </body>
