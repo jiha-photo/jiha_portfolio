@@ -625,6 +625,132 @@ button,input,textarea,select {
 }
 </style>
 <!-- PORTFOLIO-V18-REPAIR -->
+<style id="v19-web-style">
+.v19-device {
+    display:block;
+    cursor:pointer;
+}
+.v19-hover {
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.58);
+    color:white;
+    font-size:clamp(9px,1.2vw,14px);
+    font-weight:700;
+    opacity:0;
+    transition:opacity .25s ease;
+    z-index:5;
+    pointer-events:none;
+}
+.v19-device:hover .v19-hover,
+.v19-device:focus-visible .v19-hover,
+.v19-project-link:hover .v19-hover,
+.v19-project-link:focus-visible .v19-hover {
+    opacity:1;
+}
+.wp-stage .ph>img.fit {
+    object-fit:cover;
+    object-position:center top;
+}
+.v19-subway {
+    display:grid;
+    grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+    align-items:center;
+    gap:20px;
+    padding:22px;
+    margin:26px 0 10px;
+    border-radius:20px;
+    background:linear-gradient(
+        90deg,#f4f4f4 0 75%,#009a3a 75%
+    );
+}
+.v19-art {
+    display:block;
+    width:100%;
+    min-width:0;
+    border:0;
+    background:transparent;
+    cursor:zoom-in;
+}
+.v19-art img,
+.v19-project img {
+    display:block;
+    width:auto;
+    max-width:100%;
+    height:auto;
+    margin:auto;
+    border-radius:8px;
+}
+.v19-phone {
+    width:100%;
+    max-width:250px;
+    aspect-ratio:9/19.5;
+    border:6px solid #171717;
+    border-radius:24px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 15px 25px #0003;
+    margin:auto;
+}
+.v19-phone-scroll {
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+}
+.v19-phone-scroll img {
+    display:block;
+    width:100%;
+    height:auto;
+}
+.v19-project {
+    margin:26px 0 14px;
+    border-radius:16px;
+    overflow:hidden;
+    background:white;
+}
+.v19-project-link {
+    display:block;
+    position:relative;
+    overflow:hidden;
+}
+.v19-caption {
+    font-size:11px;
+    color:var(--mute);
+    text-align:center;
+    margin:10px 0;
+}
+.v19-guide {
+    display:inline-block;
+    border:1px solid var(--line);
+    border-radius:99px;
+    background:white;
+    color:var(--ink);
+    padding:10px 16px;
+    font-size:11px;
+    font-weight:600;
+    margin:4px 6px 20px 0;
+    cursor:zoom-in;
+}
+.v19-guide:hover {
+    background:var(--ink);
+    color:white;
+}
+@media(max-width:600px) {
+    .v19-subway {
+        gap:10px;
+        padding:12px;
+    }
+    .v19-phone {
+        border-width:4px;
+        border-radius:16px;
+    }
+}
+</style>
 </head>
 <body>
 
@@ -1069,6 +1195,8 @@ const canHover=matchMedia('(hover: hover) and (pointer: fine)').matches;
    .jpg가 없으면 .jpeg → .png → .webp 순서로 자동 재시도. */
 const ASSETS=window.PORTFOLIO_ASSETS||{};
 const asset=p=>ASSETS[p]||p;
+/* V19-WEB-PUBLISHING */
+Object.assign(ASSETS,{"images/web-kellogg-pc.jpg":"assets/other/web-publishing/web-kellogg-pc.jpg.png","images/web-kellogg-m-01.jpg":"assets/other/web-publishing/web-kellogg-m-01.jpg.png","images/web-kellogg-m-02.jpg":"assets/other/web-publishing/web-kellogg-m-02.jpg.png","images/web-kellogg-m-03.jpg":"assets/other/web-publishing/web-kellogg-m-03.jpg.png","images/web-subway-m-full.png":"assets/other/web-publishing/web-subway-m-full.png.png","images/web-subway-project.png":"assets/other/web-publishing/web-subway-project.png.png","images/web-subway-guide.jpg":"assets/other/web-publishing/web-subway-guide.png.jpg","images/web-hyosung-project.jpg":"assets/other/web-publishing/web-hyosung-project.jpg.jpg","images/web-hyosung-guide.jpg":"assets/other/web-publishing/web-hyosung-guide.jpg.jpg"});
 document.querySelectorAll("[data-selected-src]").forEach(im=>{im.src=asset(im.dataset.selectedSrc)});
 const IMG_EXTS=['.jpg','.jpeg','.png','.webp'];
 function applyImgs(root=document){$$('[data-img]',root).forEach(el=>{
@@ -1171,13 +1299,109 @@ requestAnimationFrame(loop);
 const modal=$('.modal'),mBody=$('.m-body');
 function renderProjects(c){
   if(!c.projects)return'';
-  const dv=d=>`<div class="dv dv-${d[0]}"><div class="scr"><div class="ph" data-img="${d[1]}"${d[3]?` data-crop="${d[3]}"`:''} data-pos="top" data-label="${d[2]}"></div></div></div>`;
+    const projectUrl=p=>p.link?.[1]||
+        (p.id==='kellogg-m'
+        ? CASES.web.projects.find(x=>x.id==='kellogg-pc')?.link?.[1]
+        : '');
+
+    const dv=(d,p)=>{
+        const url=projectUrl(p);
+
+        const screen=`<div class="scr">
+            <div class="ph"
+                 data-img="${d[1]}"
+                 data-pos="top"
+                 data-label="${d[2]}"></div>
+            ${url?'<span class="v19-hover">VIEW WEBSITE ↗</span>':''}
+        </div>`;
+
+        return url
+        ? `<a class="dv dv-${d[0]} v19-device"
+              href="${url}" target="_blank"
+              rel="noopener noreferrer">
+              ${screen}
+           </a>`
+        : `<div class="dv dv-${d[0]}">${screen}</div>`;
+    };
+
+    const originalArt=(path,label)=>`
+        <button type="button"
+                class="v19-art"
+                data-art="${asset(path)}"
+                data-art-title="${label}">
+            <img src="${asset(path)}"
+                 alt="${label}"
+                 loading="lazy">
+        </button>`;
+
+    const guide=(path)=>`
+        <button type="button"
+                class="v19-guide"
+                data-art="${asset(path)}"
+                data-art-title="Original Design Guide">
+            ORIGINAL DESIGN GUIDE ↗
+        </button>`;
+
+    const stage=p=>{
+        if(p.id==='subway-m'){
+            return `
+            <div class="v19-subway">
+                ${originalArt(
+                    'images/web-subway-project.png',
+                    'Subway Mobile Project'
+                )}
+                <div class="v19-phone">
+                    <div class="v19-phone-scroll"
+                         tabindex="0"
+                         aria-label="Scroll Subway mobile page">
+                        <img src="${asset('images/web-subway-m-full.png')}"
+                             alt="Subway mobile full page"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <p class="v19-caption">
+                SCROLL TO EXPLORE · MOBILE UI
+            </p>
+            ${guide('images/web-subway-guide.jpg')}`;
+        }
+
+        if(p.id==='hyosung'){
+            const url=projectUrl(p);
+            const image='images/web-hyosung-project.jpg';
+
+            return `
+            <div class="v19-project">
+                ${url?`
+                <a href="${url}" target="_blank"
+                   rel="noopener noreferrer"
+                   class="v19-project-link">
+                    <img src="${asset(image)}"
+                         alt="Hyosung responsive project">
+                    <span class="v19-hover">
+                        VIEW WEBSITE ↗
+                    </span>
+                </a>`:originalArt(image,'Hyosung Project')}
+            </div>
+            <button type="button"
+                    class="v19-guide"
+                    data-art="${asset(image)}"
+                    data-art-title="Hyosung Responsive Project">
+                ORIGINAL PROJECT ↗
+            </button>
+            ${guide('images/web-hyosung-guide.jpg')}`;
+        }
+
+        return `<div class="wp-stage ${p.layout||''}">
+            ${p.devices.map(d=>dv(d,p)).join('')}
+        </div>`;
+    };
   const font=f=>`<p style="font-size:${Math.max(12,Math.round(f[1]*.6))}px;font-weight:${f[2]}${f[3]?";font-family:'Nanum Gothic',var(--sans)":''}">${f[0]}</p>`;
   return `<div class="wp-wrap"><div class="wp-intro"><h4>Projects <span class="mono">(${c.projects.length})</span></h4><nav class="wp-nav">${c.projects.map(p=>`<a href="#wp-${p.id}" style="--a:${p.a}">${p.no} · ${p.title}</a>`).join('')}</nav></div>
   ${c.projects.map(p=>`<article class="wp" id="wp-${p.id}" style="--a:${p.a};--a2:${p.a2};--soft:${p.soft}">
     <div class="wp-head"><span class="wp-no">${p.no}</span><h4 class="wp-title">${p.title}</h4><div class="wp-type"><span class="wp-chip">${p.type}</span><span class="mono">${p.en}</span></div></div>
     <dl class="wp-meta"><dt>작업기간</dt><dd>${p.period}</dd><dt>작업프로그램</dt><dd>${p.tools}</dd></dl>
-    <div class="wp-stage ${p.layout||''}">${p.devices.map(dv).join('')}</div>
+    ${stage(p)}
     <div class="wp-notes">${p.notes.map((n,i)=>`<div class="wp-note"><b>0${i+1}</b><p>${n}</p></div>`).join('')}</div>
     <div class="wp-guide"><p class="wp-guide-title">DESIGN GUIDE</p>
       <div><h5>01 · COLORS</h5><div class="sw">${p.colors.map(x=>`<span style="--c:${x[0]}"><i></i><small>${x[1]}<br>${x[0]}</small></span>`).join('')}</div></div>
