@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transparent Asset Preview</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f7f3ef;
+    padding:30px;
+}
+section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+article{
+    background:white;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+article div{
+    height:250px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:repeating-conic-gradient(
+        #e4b8cb 0% 25%,
+        #f5dce7 0% 50%
+    ) 0 0/24px 24px;
+}
+img{
+    max-width:92%;
+    max-height:92%;
+    object-fit:contain;
+}
+p{text-align:center}
+</style>
+</head>
+<body>
+<h1>V30.3.2 Transparent Assets</h1>
+<section>
+<article><div><img src='camera.webp'></div><p>camera.webp</p></article>
+<article><div><img src='film-strip.webp'></div><p>film-strip.webp</p></article>
+<article><div><img src='folder-glossy.webp'></div><p>folder-glossy.webp</p></article>
+<article><div><img src='folder-paper.webp'></div><p>folder-paper.webp</p></article>
+<article><div><img src='polaroid.webp'></div><p>polaroid.webp</p></article>
+</section>
+</body>
+</html>

@@ -16,7 +16,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-
 body:not(.loaded){overflow:hidden}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer}
-.cur,.cur *{cursor:none!important}
+.cur,.cur *{cursor:auto !important}
 ::selection{background:var(--pink);color:#fff}
 .mono{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 em{font-style:normal}
@@ -574,16 +574,6 @@ footer{display:flex;justify-content:space-between;padding:28px 32px;border-top:1
 .art-view{position:fixed;inset:0;z-index:1100;background:rgba(20,20,20,.82);backdrop-filter:blur(10px);display:grid;place-items:center;padding:20px}.art-view[hidden]{display:none}.art-panel{width:min(900px,100%);height:92vh;height:92dvh;background:var(--bg);border-radius:22px;display:flex;flex-direction:column;overflow:hidden}.art-head{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}.art-head strong{flex:1;font-size:16px}.art-head button{border:1px solid var(--line);border-radius:99px;background:#fff;padding:10px 16px;color:var(--ink)}.art-scroll{flex:1;overflow:auto;overscroll-behavior:contain;padding:20px;background:#e9e7e3;text-align:center}.art-scroll img{display:block;margin:auto;width:min(100%,760px);height:auto;user-select:none;-webkit-user-drag:none}.art-scroll.original img{width:auto;max-width:100%}.art-note{font-size:11px;color:var(--mute);padding:10px 20px;text-align:center}.art-error{padding:30px;color:var(--mute)}@media(max-width:600px){.art-view{padding:8px}.art-panel{height:96dvh;border-radius:14px}.art-head{padding:12px;gap:6px}.art-head button{padding:8px 10px}.art-scroll{padding:8px}}
 
 </style>
-  html, body,
-h1, h2, h3, h4, h5, h6,
-p, span, a, div,
-button, input, textarea, select {
-    font-family: 'Paperlogy', sans-serif !important;
-}
-
-body {
-    word-break: keep-all;
-}
 <style id="native-image-policy">
 /* Preserve native pixel dimensions; only shrink to fit. */
 .art-scroll img,.b1-gallery .scroll img,.m-gallery img{width:auto;max-width:100%;height:auto;margin-inline:auto;image-rendering:auto}
@@ -2823,65 +2813,7 @@ button,input,textarea,select {
 </style>
 
 
-<style id="v273-cherry-style">
 
-@media (hover:hover) and (pointer:fine) {
-
-    html .cursor,
-    html .cursor-ring {
-        opacity:0 !important;
-        visibility:hidden !important;
-        pointer-events:none !important;
-    }
-
-    html:not(.v273-ready),
-    html:not(.v273-ready) body,
-    html:not(.v273-ready) body * {
-        cursor:auto !important;
-    }
-
-    html.v273-ready,
-    html.v273-ready body,
-    html.v273-ready body * {
-        cursor:none !important;
-    }
-}
-
-#v273-cherry-pointer {
-
-    position:fixed !important;
-    top:0 !important;
-    left:0 !important;
-
-    width:40px !important;
-    height:40px !important;
-
-    object-fit:contain !important;
-
-    margin:0 !important;
-    padding:0 !important;
-    border:0 !important;
-
-    pointer-events:none !important;
-    user-select:none !important;
-
-    z-index:2147483647 !important;
-
-    opacity:0;
-    visibility:hidden;
-
-    transition:none !important;
-    animation:none !important;
-
-    will-change:transform;
-}
-
-#v273-cherry-pointer.v273-visible {
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-</style>
 <style id="v284-promotion-style">
 
 #v284-promotion{
@@ -3236,6 +3168,753 @@ button,input,textarea,select {
 }
 
 </style>
+
+<style id="v30-cover-style">
+
+#top.hero {
+    position:relative;
+    display:block;
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:0;
+    height:auto;
+    min-height:640px;
+    min-height:clamp(640px,calc(100svh - 68px),920px);
+    overflow:hidden;
+    isolation:isolate;
+    background:linear-gradient(
+        180deg,
+        #f8f6f3 0%,
+        #f8f6f3 37%,
+        #f7e6ec 64%,
+        #f1b8ce 88%,
+        #ebd0da 100%
+    );
+}
+
+#top > .keychain,
+#top > .hero-eyebrow,
+#top > .hero-title,
+#top > .hero-row,
+#top > .scroll-cue,
+#top > .blob-wrap,
+#top > .blob,
+#top > #jp-archive {
+    display:none !important;
+}
+
+#jp-v30-cover {
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    text-align:center;
+}
+
+#jp-v30-cover * {
+    box-sizing:border-box;
+}
+
+.jp-v30-copy {
+    position:relative;
+    z-index:3;
+    padding:clamp(115px,18vh,180px) 20px 0;
+}
+
+.jp-v30-edition {
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.22em;
+    color:#997480;
+    margin-bottom:22px;
+}
+
+.jp-v30-title {
+    display:block;
+    font-size:clamp(78px,12vw,184px);
+    font-weight:700;
+    line-height:1.03;
+    letter-spacing:-.065em;
+    color:#222;
+    white-space:nowrap;
+    margin:0;
+}
+
+.jp-v30-title em {
+    color:#d74780;
+    font-style:normal;
+}
+
+.jp-v30-role {
+    margin:20px auto 0;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.18em;
+    color:#896c77;
+}
+
+.jp-v30-author {
+    margin-top:14px;
+    font-size:15px;
+    color:#75666d;
+}
+
+.jp-v30-art {
+    position:absolute;
+    z-index:1;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(88vw,1080px);
+    height:43%;
+    pointer-events:none;
+}
+
+.jp-v30-art svg {
+    width:100%;
+    height:100%;
+    display:block;
+    overflow:visible;
+}
+
+.jp-v30-fade {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:65px;
+    z-index:2;
+    pointer-events:none;
+    background:linear-gradient(
+        to bottom,
+        rgba(235,208,218,0),
+        rgba(235,208,218,.92)
+    );
+}
+
+#jp-v30-cover .jp-v30-explore {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:23px;
+    padding:9px 19px;
+    border:1px solid #bda4ae;
+    border-radius:40px;
+    color:#79616b;
+    text-decoration:none;
+    font-size:10px;
+    letter-spacing:.12em;
+    background:transparent;
+    transition:background .2s ease;
+}
+
+#jp-v30-cover .jp-v30-explore:hover {
+    background:#fff8f5;
+}
+
+@media(max-width:900px) {
+
+    #top.hero {
+        min-height:620px;
+        min-height:clamp(620px,calc(100svh - 64px),820px);
+    }
+
+    .jp-v30-copy {
+        padding-top:130px;
+    }
+
+    .jp-v30-title {
+        font-size:clamp(65px,12.5vw,115px);
+    }
+
+    .jp-v30-art {
+        width:100%;
+        height:39%;
+    }
+}
+
+@media(max-width:600px) {
+
+    #top.hero {
+        min-height:540px;
+        min-height:clamp(540px,calc(100svh - 54px),730px);
+    }
+
+    .jp-v30-copy {
+        padding:105px 18px 0;
+    }
+
+    .jp-v30-edition {
+        font-size:9px;
+        letter-spacing:.16em;
+        margin-bottom:24px;
+    }
+
+    .jp-v30-title {
+        font-size:clamp(46px,14vw,83px);
+        letter-spacing:-.065em;
+    }
+
+    .jp-v30-role {
+        font-size:10px;
+        line-height:1.85;
+        letter-spacing:.09em;
+        max-width:260px;
+        margin-top:14px;
+    }
+
+    .jp-v30-author {
+        font-size:12px;
+        margin-top:10px;
+    }
+
+    #jp-v30-cover .jp-v30-explore {
+        margin-top:18px;
+        font-size:9px;
+        padding:8px 15px;
+    }
+
+    .jp-v30-art {
+        width:110%;
+        height:34%;
+        bottom:0;
+    }
+
+    .jp-v30-fade {
+        height:38px;
+    }
+
+    .jp-v30-film {
+        opacity:.75;
+    }
+}
+
+@media(max-width:360px) {
+
+    .jp-v30-copy {
+        padding-top:90px;
+    }
+
+    .jp-v30-art {
+        width:108%;
+        height:32%;
+    }
+}
+
+@media(max-height:600px) and (min-width:901px) {
+
+    .jp-v30-copy {
+        padding-top:100px;
+    }
+
+    .jp-v30-title {
+        font-size:105px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    #jp-v30-cover * {
+        animation:none !important;
+        transition:none !important;
+    }
+}
+
+</style>
+<style id="v302-position-fix">
+
+/* Desktop */
+
+#jp-v30-cover .jp-v30-copy {
+    transform: translateY(-30px);
+}
+
+#jp-v30-cover .jp-v30-art {
+    bottom: 40px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    #jp-v30-cover .jp-v30-copy {
+        transform: translateY(-20px);
+    }
+
+    #jp-v30-cover .jp-v30-art {
+        bottom: 28px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #jp-v30-cover .jp-v30-copy {
+        transform: translateY(-15px);
+    }
+
+    #jp-v30-cover .jp-v30-art {
+        bottom: 20px;
+    }
+}
+
+</style>
+<style id="v3033-real-assets">
+
+#jp-v30-cover .jp-v30-art {
+    pointer-events:none;
+    bottom:40px;
+}
+
+#jp-v30-cover .jp-v30-art svg {
+    overflow:visible;
+}
+
+#jp-v30-cover .jp-v30-art image {
+    image-rendering:auto;
+}
+
+#jp-v30-cover .jp-v30-fade {
+    height:75px;
+    background:linear-gradient(
+        to bottom,
+        rgba(235,208,218,0),
+        rgba(235,208,218,.95)
+    );
+}
+
+@media (max-width:900px) {
+
+    #jp-v30-cover .jp-v30-art {
+        bottom:28px;
+    }
+}
+
+@media (max-width:600px) {
+
+    #jp-v30-cover .jp-v30-art {
+        width:110%;
+        height:34%;
+        bottom:20px;
+    }
+
+    #jp-v30-cover .jp-v30-fade {
+        height:44px;
+    }
+
+    .v3033-film {
+        opacity:.85;
+    }
+}
+
+@media (max-width:360px) {
+
+    #jp-v30-cover .jp-v30-art {
+        width:108%;
+        height:32%;
+    }
+}
+
+</style>
+<style id="v304-interaction-style">
+
+/* Enable interaction only on artwork objects */
+
+#jp-v30-cover .jp-v30-art {
+    pointer-events:none;
+}
+
+#jp-v30-cover .jp-v30-art .v304-interactive {
+    pointer-events:visiblePainted;
+    cursor:pointer;
+    transform-box:fill-box;
+    transform-origin:center;
+    transition:
+        translate .45s cubic-bezier(.2,.75,.3,1),
+        scale .35s ease,
+        filter .35s ease;
+}
+
+#jp-v30-cover .jp-v30-art .v304-interactive:focus-visible {
+    outline:2px solid #d74780;
+    outline-offset:5px;
+}
+
+/* Creative Works paper */
+
+#jp-v30-cover .v304-work-paper {
+    translate:0 -5px;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+    #jp-v30-cover .v304-work-paper:hover,
+    #jp-v30-cover .v304-work-paper:focus-visible {
+        translate:0 -32px;
+    }
+
+    /* Main folder */
+
+    #jp-v30-cover .v3033-folder-main:hover {
+        translate:0 -8px;
+    }
+
+    /* Polaroid */
+
+    #jp-v30-cover .v3033-polaroid:hover {
+        translate:0 -48px;
+    }
+
+    /* Camera */
+
+    #jp-v30-cover .v3033-camera:hover {
+        translate:0 -8px;
+        scale:1.045;
+    }
+
+    /* Film */
+
+    #jp-v30-cover .v3033-film:hover {
+        translate:0 -34px;
+        scale:1.035;
+    }
+}
+
+/* Polaroid default exposure */
+
+#jp-v30-cover .v3033-polaroid {
+    translate:0 -18px;
+}
+
+/* Flash overlay */
+
+#jp-v30-cover::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:20;
+    background:
+        radial-gradient(
+            ellipse at 22% 83%,
+            #ffffff 0%,
+            #ffffffed 12%,
+            #ffffff66 45%,
+            transparent 85%
+        );
+    opacity:0;
+    pointer-events:none;
+}
+
+#jp-v30-cover.v304-flash::after {
+    animation:v304CameraFlash .55s ease-out both;
+}
+
+@keyframes v304CameraFlash {
+    0%   { opacity:0; }
+    10%  { opacity:.8; }
+    32%  { opacity:.35; }
+    100% { opacity:0; }
+}
+
+/* Camera shutter feedback */
+
+#jp-v30-cover .v3033-camera.v304-shooting {
+    animation:v304CameraClick .28s ease-out;
+}
+
+@keyframes v304CameraClick {
+    0%   { scale:1; }
+    30%  { scale:.97; }
+    100% { scale:1; }
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    #jp-v30-cover .v3033-polaroid {
+        translate:0 -12px;
+    }
+
+    #jp-v30-cover .v304-work-paper {
+        translate:0 -3px;
+    }
+}
+
+/* Reduced motion accessibility */
+
+@media(prefers-reduced-motion:reduce) {
+
+    #jp-v30-cover .v304-interactive {
+        transition:none !important;
+        animation:none !important;
+    }
+
+    #jp-v30-cover.v304-flash::after {
+        animation:none;
+        opacity:0;
+    }
+}
+
+</style>
+<!-- V305-FAVICON-START -->
+
+<link rel="icon"
+      type="image/svg+xml"
+      sizes="any"
+      href="assets/ui/favicon/cherry.svg?v=305">
+
+<!-- V305-FAVICON-END -->
+<style id="v306-navigation-style">
+
+/* Camera: remove unwanted mouse focus box */
+
+#jp-v30-cover .v3033-camera,
+#jp-v30-cover .v3033-camera:active,
+#jp-v30-cover .v3033-camera:focus:not(:focus-visible),
+#jp-v30-cover .v3033-camera image {
+    outline:none !important;
+    -webkit-tap-highlight-color:transparent;
+}
+
+/* Preserve keyboard accessibility */
+
+#jp-v30-cover .v3033-camera:focus-visible {
+    outline:2px solid #d74780 !important;
+    outline-offset:4px;
+}
+
+/* Polaroid navigation */
+
+#jp-v30-cover .v3033-polaroid {
+    pointer-events:visiblePainted;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+}
+
+#jp-v30-cover .v3033-polaroid:focus:not(:focus-visible) {
+    outline:none !important;
+}
+
+#jp-v30-cover .v3033-polaroid:focus-visible {
+    outline:2px solid #d74780;
+}
+
+/* Keep original mobile layout */
+
+@media(max-width:600px) {
+
+    #jp-v30-cover .v3033-camera {
+        -webkit-tap-highlight-color:transparent;
+    }
+}
+
+</style>
+
+
+
+<style id="v307-stability-style">
+
+/* Native cherry cursor: no extra moving layers */
+
+@media (hover:hover) and (pointer:fine) {
+
+    html,
+    html body,
+    html body *,
+    html dialog,
+    html dialog * {
+        cursor:url("assets/ui/cursor/cherry-cursor.png")
+            3 3, auto !important;
+    }
+
+    html .cursor,
+    html .cursor-ring,
+    #v273-cherry-pointer,
+    .v3061-dialog-pointer {
+        display:none !important;
+        visibility:hidden !important;
+        pointer-events:none !important;
+    }
+}
+
+/* SANHO: same right drawer as other projects */
+
+dialog.sanho-modal {
+    position:fixed !important;
+    inset:0 0 0 auto !important;
+    margin:0 !important;
+
+    width:var(--sanho-drawer-width,900px) !important;
+    max-width:100vw !important;
+
+    height:100vh !important;
+    height:100dvh !important;
+
+    max-height:100vh !important;
+    max-height:100dvh !important;
+
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+
+    background:var(--bg,#f7f5f2);
+    box-sizing:border-box;
+
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+
+    pointer-events:auto !important;
+    transform:none;
+    translate:none;
+    overscroll-behavior:contain;
+}
+
+dialog.sanho-modal[open] {
+    display:block !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    animation:sanhoDrawerEnter .5s ease-out;
+}
+
+dialog.sanho-modal:not([open]) {
+    display:none !important;
+}
+
+@keyframes sanhoDrawerEnter {
+    from { transform:translateX(100%); }
+    to   { transform:translateX(0); }
+}
+
+dialog.sanho-modal::backdrop {
+    background:rgba(20,20,20,.5);
+    backdrop-filter:blur(6px);
+}
+
+dialog.sanho-modal .sanho-inner {
+    min-width:0;
+    max-width:100%;
+    padding:36px 40px 80px;
+    box-sizing:border-box;
+}
+
+dialog.sanho-modal .sanho-close {
+    position:relative;
+    z-index:30;
+    display:grid;
+    place-items:center;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:#20201f;
+    color:#fff;
+    pointer-events:auto !important;
+    touch-action:manipulation;
+}
+
+/* Keep the photo viewer independent */
+
+dialog.sanho-modal .sanho-viewer[hidden] {
+    display:none !important;
+    pointer-events:none !important;
+}
+
+dialog.sanho-modal [data-sanho-photo],
+dialog.sanho-modal [data-sanho-action],
+dialog.sanho-modal button {
+    pointer-events:auto !important;
+}
+
+@media(max-width:600px) {
+
+    dialog.sanho-modal {
+        width:100vw !important;
+    }
+
+    dialog.sanho-modal .sanho-inner {
+        padding:24px 20px 60px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    dialog.sanho-modal[open] {
+        animation:none !important;
+    }
+}
+
+</style>
+
+<style id="v3072-cursor-style">
+
+/* Disable old decorative cursor layers */
+
+.cursor,
+.cursor-ring,
+#v273-cherry-pointer,
+.v3061-dialog-pointer {
+    display:none !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+}
+
+/* Always provide a visible cursor */
+
+@media (any-pointer:fine) {
+
+    html:root,
+    html:root body,
+    html:root body *,
+    html:root dialog,
+    html:root dialog *,
+    html:root dialog::backdrop {
+
+        cursor:url("assets/ui/cursor/cherry-native.png")
+            0 0, default !important;
+    }
+
+    html:root body.cur,
+    html:root body.cur *,
+    html:root.cur *,
+    html:root.v273-ready *,
+    html:root .cur,
+    html:root .cur * {
+
+        cursor:url("assets/ui/cursor/cherry-native.png")
+            0 0, default !important;
+    }
+}
+
+</style>
+<style id="v3073-close-motion">
+
+dialog.sanho-modal .sanho-close {
+    transform:rotate(0deg);
+    transform-origin:center;
+    transition:transform .65s
+        cubic-bezier(.22,1,.36,1) !important;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+    dialog.sanho-modal .sanho-close:hover {
+        transform:rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    dialog.sanho-modal .sanho-close {
+        transition:none !important;
+    }
+
+    dialog.sanho-modal .sanho-close:hover {
+        transform:none;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -3256,6 +3935,280 @@ button,input,textarea,select {
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
+<!-- V30-COVER-START -->
+
+<div id="jp-v30-cover">
+
+    <div class="jp-v30-copy">
+
+        <div class="jp-v30-edition">
+            CREATIVE ARCHIVE / 2026
+        </div>
+
+        <h1 class="jp-v30-title">
+            Portfolio<em>.</em>
+        </h1>
+
+        <div class="jp-v30-role">
+            CONTENT &middot; DESIGN &middot;
+            PHOTOGRAPHY &middot; COMMERCE
+        </div>
+
+        <div class="jp-v30-author">
+            Selected works by Jiha Park
+        </div>
+
+        
+
+    </div>
+
+    <div class="jp-v30-art" aria-hidden="true">
+
+    <svg viewBox="0 0 800 300"
+         preserveAspectRatio="xMidYMax meet"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <defs>
+
+            <filter id="v3033-shadow"
+                x="-40%" y="-40%"
+                width="180%" height="180%">
+
+                <feDropShadow
+                    dx="2"
+                    dy="7"
+                    stdDeviation="5"
+                    flood-color="#633346"
+                    flood-opacity=".18"/>
+            </filter>
+
+            <linearGradient id="v3033-cherry"
+                x1="0" y1="0" x2="1" y2="1">
+
+                <stop stop-color="#f27796"/>
+                <stop offset=".5" stop-color="#c92e52"/>
+                <stop offset="1" stop-color="#9e2140"/>
+
+            </linearGradient>
+
+            <clipPath id="v3033-photo-clip">
+                <polygon points="
+                    31,128
+                    286,67
+                    348,323
+                    92,383
+                "/>
+            </clipPath>
+
+        </defs>
+
+        <!-- POLAROID -->
+
+        <g class="v3033-polaroid"
+           transform="translate(117 107) rotate(-7 85 100)"
+           filter="url(#v3033-shadow)">
+
+            <svg width="183" height="235"
+                 viewBox="0 0 400 520">
+
+                <image
+                    href="assets/ui/hero/transparent/polaroid.webp"
+                    width="400"
+                    height="520"
+                    preserveAspectRatio="none"/>
+
+                <image
+    href="assets/other/sanho-mansion/sanho-02.jpg.jpg"
+    x="20"
+    y="55"
+    width="340"
+    height="340"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#v3033-photo-clip)"/>
+
+            </svg>
+
+        </g>
+
+        <!-- LEFT PAPER FOLDER -->
+
+        <g class="v3033-folder-left"
+           transform="translate(170 133) rotate(-20 130 90)"
+           filter="url(#v3033-shadow)">
+
+            <image
+                href="assets/ui/hero/transparent/folder-paper.webp"
+                width="260"
+                height="220"
+                preserveAspectRatio="xMidYMid meet"/>
+
+        </g>
+
+        <!-- RIGHT PAPER FOLDER -->
+
+        <g class="v3033-folder-right"
+           transform="translate(461 110) rotate(17 135 90)"
+           filter="url(#v3033-shadow)">
+
+            <image
+                href="assets/ui/hero/transparent/folder-paper.webp"
+                width="270"
+                height="225"
+                opacity=".86"
+                preserveAspectRatio="xMidYMid meet"/>
+
+        </g>
+
+        <!-- CREATIVE WORKS PAPER -->
+
+        <g transform="translate(327 46) rotate(-4 105 85)"
+           filter="url(#v3033-shadow)">
+
+            <rect
+                width="205"
+                height="220"
+                rx="4"
+                fill="#fffaf1"/>
+
+            <text x="17" y="25"
+                font-size="10"
+                letter-spacing="1.5"
+                fill="#9e7180">
+                JIHA PARK / INDEX
+            </text>
+
+            <text x="16" y="53"
+                font-family="Georgia,serif"
+                font-style="italic"
+                font-size="25"
+                fill="#30282b">
+                Creative Works.
+            </text>
+
+            <g font-size="11" fill="#947581">
+
+                <text x="17" y="79">01. CONTENT</text>
+                <text x="17" y="99">02. DESIGN</text>
+                <text x="17" y="119">03. PHOTOGRAPHY</text>
+                <text x="17" y="139">04. COMMERCE</text>
+
+            </g>
+
+        </g>
+
+        <!-- MAIN GLOSSY FOLDER -->
+
+        <g class="v3033-folder-main"
+           transform="translate(274 120) rotate(-5 155 110)"
+           filter="url(#v3033-shadow)">
+
+            <image
+                href="assets/ui/hero/transparent/folder-glossy.webp"
+                width="310"
+                height="245"
+                preserveAspectRatio="xMidYMid meet"/>
+
+            <text x="155" y="141"
+                font-family="Georgia,serif"
+                font-style="italic"
+                font-size="43"
+                text-anchor="middle"
+                fill="#fff8fb">
+                Archive.
+            </text>
+
+            <text x="155" y="164"
+                text-anchor="middle"
+                font-size="11"
+                letter-spacing="2"
+                fill="#fff4f8">
+                2026 COLLECTION
+            </text>
+
+            <!-- CHERRY STICKER -->
+
+            <g transform="translate(269 70) rotate(-12)">
+
+                <path
+                    d="M-13 3Q0 -12 0 -32
+                       M15 3Q8 -15 0 -32"
+                    fill="none"
+                    stroke="#fffaf2"
+                    stroke-width="12"
+                    stroke-linecap="round"/>
+
+                <path
+                    d="M-13 3Q0 -12 0 -32
+                       M15 3Q8 -15 0 -32"
+                    fill="none"
+                    stroke="#79894a"
+                    stroke-width="4"/>
+
+                <path
+                    d="M0 -32Q19 -46 29 -32
+                       Q15 -21 0 -32Z"
+                    fill="#8d9f52"
+                    stroke="#fffaf2"
+                    stroke-width="3"/>
+
+                <circle cx="-14" cy="9" r="15"
+                    fill="url(#v3033-cherry)"
+                    stroke="#fffaf2"
+                    stroke-width="4"/>
+
+                <circle cx="15" cy="9" r="15"
+                    fill="url(#v3033-cherry)"
+                    stroke="#fffaf2"
+                    stroke-width="4"/>
+
+                <ellipse cx="-20" cy="3"
+                    rx="3.5" ry="5.5"
+                    fill="#ffc5d2"/>
+
+                <ellipse cx="9" cy="3"
+                    rx="3.5" ry="5.5"
+                    fill="#ffc5d2"/>
+
+            </g>
+
+        </g>
+
+        <!-- CAMERA -->
+
+        <g class="v3033-camera"
+           transform="translate(65 205) rotate(-12 115 65)"
+           filter="url(#v3033-shadow)">
+
+            <image
+                href="assets/ui/hero/transparent/camera.webp"
+                width="230"
+                height="145"
+                preserveAspectRatio="xMidYMid meet"/>
+
+        </g>
+
+        <!-- FILM STRIP -->
+
+        <g class="v3033-film"
+           transform="translate(681 178) rotate(15 36 100)"
+           filter="url(#v3033-shadow)">
+
+            <image
+                href="assets/ui/hero/transparent/film-strip.webp"
+                width="79"
+                height="263"
+                preserveAspectRatio="xMidYMid meet"/>
+
+        </g>
+
+    </svg>
+
+</div>
+<div class="jp-v30-fade" aria-hidden="true"></div>
+
+</div>
+
+<!-- V30-COVER-END -->
   <div class="blob-wrap" id="heroBlob"><div class="blob"></div></div>
   <div class="blob sky"></div>
 
@@ -3496,8 +4449,8 @@ button,input,textarea,select {
     <div class="btns rv" style="--d:.2s">
       <button class="btn magnetic" data-copy="wlgk0604@gmail.com">wlgk0604@gmail.com <span>⧉</span></button>
       <!-- 노션 포트폴리오 주소로 교체하세요 -->
-      <a class="btn ghost magnetic" href="#" target="_blank" rel="noopener">Notion Portfolio ↗</a>
-      <a class="btn ghost magnetic" href="https://www.instagram.com/jayeongikkeo_/" target="_blank" rel="noopener">Instagram ↗</a>
+      
+      <a class="btn ghost magnetic" href="https://www.instagram.com/jiha_photo/" target="_blank" rel="noopener">Instagram ↗</a>
     </div>
     <div class="contact-info">
       <div><p class="mono">Email</p><a href="mailto:wlgk0604@gmail.com">wlgk0604@gmail.com</a><small>Preferred contact</small></div>
@@ -3531,7 +4484,7 @@ const CASES={
     work:['"오늘의 귀여움" 브랜드 톤에 맞춰 피드 9-grid 재편','주 3~4회 릴스 포맷 A/B 테스트 (훅 · BGM · 자막 스타일)','캐릭터 · 시즌 · 신상 카테고리별 콘텐츠 캘린더 운영','고객 댓글 · DM 반응을 다음 콘텐츠 소재로 재활용'],
     results:[['+35%','월간 도달률 향상'],['2.0×','릴스 평균 조회수'],['SAVE↑','저장 · 공유수 증가']],
     learned:'"감각적인 피드"보다 "고객이 저장하고 싶은 피드"가 결과를 만든다.',
-    links:[['@jayeongikkeo_','https://www.instagram.com/jayeongikkeo_/']]},
+    links:[['@jayeongikkeo_','https://www.instagram.com/jiha_photo/']]},
   site:{no:'02',tag:'Site Design · UI/UX',title:'자영이꺼 자사몰 디자인',sub:'jayeongikkeo.com · 브랜드 톤 · 상세페이지 · 상품 리스트 UI 직접 디자인 · 웹 표준 · 접근성 준수',c:'var(--sky)',img:'images/site-pc.jpg',
     problem:'상품은 좋지만 브랜드감 · 구매동선이 정돈되지 않았던 상태.',
     work:['브랜드 톤 · 컬러 재정의','메인 배너 · 슬로건 카피 ("오늘의 귀여움을 고르는 곳")','상품 리스트 UI · 상세페이지 구조 및 디자인','PC / Mobile 최적화','카페24 자사몰 운영'],
@@ -7682,104 +8635,7 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
 
 })();
 </script>
-<script id="v273-cherry-script">
-(() => {
 
-    'use strict';
-
-    const finePointer = matchMedia(
-        '(hover:hover) and (pointer:fine)'
-    );
-
-    if (!finePointer.matches) return;
-
-    const pointer = document.createElement('img');
-
-    pointer.id = 'v273-cherry-pointer';
-    pointer.alt = '';
-    pointer.draggable = false;
-
-    pointer.setAttribute('aria-hidden','true');
-
-    const root = document.documentElement;
-
-    let loaded = false;
-
-    function hidePointer() {
-
-        pointer.classList.remove('v273-visible');
-        root.classList.remove('v273-ready');
-    }
-
-    function movePointer(event) {
-
-        if (!loaded || event.pointerType !== 'mouse') {
-            hidePointer();
-            return;
-        }
-
-        const x = event.clientX - 5;
-        const y = event.clientY - 3;
-
-        pointer.style.transform =
-            'translate3d(' + x + 'px,' + y + 'px,0)';
-
-        pointer.classList.add('v273-visible');
-        root.classList.add('v273-ready');
-    }
-
-    pointer.addEventListener('load',() => {
-
-        loaded = true;
-
-        console.info('V27.3 CHERRY IMAGE LOADED', {
-            width:pointer.naturalWidth,
-            height:pointer.naturalHeight
-        });
-    });
-
-    pointer.addEventListener('error',() => {
-
-        loaded = false;
-        hidePointer();
-
-        console.warn('V27.3 Cursor image failed to load');
-    });
-
-    document.body.appendChild(pointer);
-
-    pointer.src =
-        'assets/ui/cursor/cherry-cursor.png';
-
-    document.addEventListener(
-        'pointermove',
-        movePointer,
-        {passive:true}
-    );
-
-    document.documentElement.addEventListener(
-        'pointerleave',
-        hidePointer
-    );
-
-    window.addEventListener('blur',hidePointer);
-
-    document.addEventListener(
-        'visibilitychange',
-        () => {
-            if (document.hidden) hidePointer();
-        }
-    );
-
-    finePointer.addEventListener(
-        'change',
-        hidePointer
-    );
-
-    console.info('V27.3 CHERRY TRACKING READY');
-
-})();
-</script>
 <script id="v284-promotion-script">
 (() => {
 
@@ -8333,6 +9189,705 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
     );
 
     mount();
+
+})();
+</script>
+
+<script id="v304-interaction-script">
+(() => {
+
+    'use strict';
+
+    const cover = document.getElementById('jp-v30-cover');
+
+    if (!cover) return;
+
+    const art = cover.querySelector('.jp-v30-art');
+
+    if (!art) return;
+
+    const svg = art.querySelector('svg');
+
+    if (!svg) return;
+
+    // Keep interactive SVG accessible
+
+    art.removeAttribute('aria-hidden');
+
+    const folder = svg.querySelector('.v3033-folder-main');
+    const camera = svg.querySelector('.v3033-camera');
+    const photo = svg.querySelector('.v3033-polaroid');
+    const film = svg.querySelector('.v3033-film');
+
+    // Locate the Creative Works paper
+
+    const paper = Array.from(svg.children).find(el => {
+
+        if (el.tagName.toLowerCase() !== 'g') {
+            return false;
+        }
+
+        return Array.from(el.children).some(child => {
+
+            return child.tagName.toLowerCase() === 'text' &&
+                child.textContent.trim() === 'Creative Works.';
+        });
+    });
+
+    // Find existing portfolio work section
+
+    function findWork() {
+
+        const direct =
+            document.getElementById('work') ||
+            document.getElementById('works');
+
+        if (direct && !cover.contains(direct)) {
+            return direct;
+        }
+
+        const headings = document.querySelectorAll(
+            'main h2, section h2, section h3'
+        );
+
+        for (const heading of headings) {
+
+            if (
+                /selected\s*works|selected\s*projects/i
+                    .test(heading.textContent)
+                && !cover.contains(heading)
+            ) {
+                return heading.closest('section') || heading;
+            }
+        }
+
+        const card = document.querySelector(
+            'button.card[data-case]'
+        );
+
+        return card ? card.closest('section') : null;
+    }
+
+    function goToWork() {
+
+        const target = findWork();
+
+        if (!target) {
+
+            console.warn('V30.4: Work section not found');
+            return;
+        }
+
+        const reduced = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+
+        const nav = document.querySelector('.nav');
+
+        const offset = nav
+            ? nav.getBoundingClientRect().height + 16
+            : 72;
+
+        const y = target.getBoundingClientRect().top +
+            window.scrollY - offset;
+
+        window.scrollTo({
+            top:Math.max(0,y),
+            behavior:reduced ? 'auto' : 'smooth'
+        });
+    }
+
+    // Register hover and accessible click
+
+    function register(el,label,action) {
+
+        if (!el) return;
+
+        el.classList.add('v304-interactive');
+
+        if (!action) return;
+
+        el.setAttribute('role','button');
+        el.setAttribute('tabindex','0');
+        el.setAttribute('aria-label',label);
+        el.setAttribute('data-cursor','VIEW');
+
+        el.addEventListener('click',event => {
+
+            event.preventDefault();
+            action();
+        });
+
+        el.addEventListener('keydown',event => {
+
+            if (
+                event.key === 'Enter' ||
+                event.key === ' '
+            ) {
+
+                event.preventDefault();
+                action();
+            }
+        });
+    }
+
+    if (paper) {
+
+        paper.classList.add('v304-work-paper');
+
+        register(
+            paper,
+            'Explore selected works',
+            goToWork
+        );
+    }
+
+    register(
+        folder,
+        'Open portfolio works',
+        goToWork
+    );
+
+    register(photo,'Photography preview');
+    register(film,'Film preview');
+
+    // Generate a short camera shutter sound
+
+    let audioContext = null;
+
+    async function shutterSound() {
+
+        try {
+
+            const AudioClass =
+                window.AudioContext ||
+                window.webkitAudioContext;
+
+            if (!AudioClass) return;
+
+            if (!audioContext) {
+                audioContext = new AudioClass();
+            }
+
+            if (audioContext.state === 'suspended') {
+                await audioContext.resume();
+            }
+
+            const ctx = audioContext;
+            const now = ctx.currentTime;
+
+            // Two mechanical shutter pulses
+
+            [0,.065].forEach((delay,i) => {
+
+                const length = Math.floor(
+                    ctx.sampleRate * .045
+                );
+
+                const buffer = ctx.createBuffer(
+                    1,length,ctx.sampleRate
+                );
+
+                const samples = buffer.getChannelData(0);
+
+                for (let n=0;n<length;n++) {
+
+                    samples[n] =
+                        (Math.random()*2-1) *
+                        Math.exp(-n/(length*.15));
+                }
+
+                const source = ctx.createBufferSource();
+                source.buffer = buffer;
+
+                const filter = ctx.createBiquadFilter();
+
+                filter.type = 'bandpass';
+                filter.frequency.value = i===0 ? 2200 : 1300;
+                filter.Q.value = .7;
+
+                const gain = ctx.createGain();
+
+                gain.gain.setValueAtTime(
+                    i===0 ? .22 : .13,
+                    now+delay
+                );
+
+                gain.gain.exponentialRampToValueAtTime(
+                    .001,now+delay+.045
+                );
+
+                source.connect(filter);
+                filter.connect(gain);
+                gain.connect(ctx.destination);
+
+                source.start(now+delay);
+            });
+
+        } catch(error) {
+
+            console.warn('Camera sound unavailable',error);
+        }
+    }
+
+    // Camera click and flash
+
+    let shooting = false;
+
+    function takePhoto() {
+
+        if (shooting) return;
+
+        shooting = true;
+
+        shutterSound();
+
+        cover.classList.add('v304-flash');
+
+        if (camera) {
+            camera.classList.add('v304-shooting');
+        }
+
+        window.setTimeout(() => {
+
+            cover.classList.remove('v304-flash');
+
+            if (camera) {
+                camera.classList.remove('v304-shooting');
+            }
+
+        },600);
+
+        // Prevent rapid repeated flashes
+
+        window.setTimeout(() => {
+            shooting = false;
+        },1200);
+    }
+
+    register(
+        camera,
+        'Take a photo',
+        takePhoto
+    );
+
+    if (camera) {
+        camera.setAttribute('data-cursor','CLICK');
+    }
+
+    console.info('V30.4 Interactive Archive Ready',{
+        paper:!!paper,
+        folder:!!folder,
+        photo:!!photo,
+        film:!!film,
+        camera:!!camera,
+        workTarget:!!findWork()
+    });
+
+})();
+</script>
+<script id="v306-navigation-script">
+(() => {
+
+    'use strict';
+
+    const cover = document.getElementById('jp-v30-cover');
+
+    if (!cover) return;
+
+    const svg = cover.querySelector('.jp-v30-art > svg');
+
+    if (!svg) return;
+
+    const camera = svg.querySelector('.v3033-camera');
+    const photo = svg.querySelector('.v3033-polaroid');
+
+    // Move camera to the front SVG layer
+
+    if (camera) {
+
+        svg.appendChild(camera);
+
+        camera.setAttribute(
+            'transform',
+            'translate(48 198) rotate(-10 115 65)'
+        );
+
+        // Prevent unwanted custom cursor label
+
+        camera.removeAttribute('data-cursor');
+
+        camera.setAttribute(
+            'aria-label',
+            'Take a photo and explore B1 Studio'
+        );
+    }
+
+    function isVisible(el) {
+
+        return !!el &&
+            el.getClientRects().length > 0 &&
+            getComputedStyle(el).visibility !== 'hidden';
+    }
+
+    // Find existing project cards
+
+    function findProject(type) {
+
+        const selectors = type === 'sanho'
+            ? [
+                '.sanho-archive-card',
+                '.sanho-timeline'
+            ]
+            : [
+                'button.card[data-case="b1"]',
+                '.sleeve[data-case="b1"]',
+                '[data-case="b1"]'
+            ];
+
+        for (const selector of selectors) {
+
+            const elements =
+                document.querySelectorAll(selector);
+
+            for (const el of elements) {
+
+                if (isVisible(el) && !cover.contains(el)) {
+                    return el;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    let navigating = false;
+
+    // Smooth scroll then open existing project
+
+    function navigateToProject(type) {
+
+        if (navigating) return;
+
+        const target = findProject(type);
+
+        if (!target) {
+
+            console.warn(
+                'V30.6: Project target not found:',
+                type
+            );
+
+            return;
+        }
+
+        navigating = true;
+
+        const reduced = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+
+        target.scrollIntoView({
+            behavior:reduced ? 'auto' : 'smooth',
+            block:'center',
+            inline:'nearest'
+        });
+
+        const start = performance.now();
+
+        let lastY = window.scrollY;
+        let stableFrames = 0;
+
+        function finish() {
+
+            try {
+                target.click();
+            } finally {
+                navigating = false;
+            }
+        }
+
+        function checkScroll(now) {
+
+            if (Math.abs(window.scrollY - lastY) < 1) {
+                stableFrames++;
+            } else {
+                stableFrames = 0;
+            }
+
+            lastY = window.scrollY;
+
+            const elapsed = now - start;
+
+            if (
+                (elapsed > 350 && stableFrames >= 8) ||
+                elapsed > 2000
+            ) {
+                finish();
+                return;
+            }
+
+            requestAnimationFrame(checkScroll);
+        }
+
+        if (reduced) {
+            finish();
+        } else {
+            requestAnimationFrame(checkScroll);
+        }
+    }
+
+    // Polaroid click: open SANHO MANSION
+
+    if (photo) {
+
+        photo.setAttribute('role','button');
+        photo.setAttribute('tabindex','0');
+
+        photo.setAttribute(
+            'aria-label',
+            'Explore Sanho Mansion photography'
+        );
+
+        photo.addEventListener('click',event => {
+
+            event.preventDefault();
+            navigateToProject('sanho');
+        });
+
+        photo.addEventListener('keydown',event => {
+
+            if (
+                event.key === 'Enter' ||
+                event.key === ' '
+            ) {
+
+                event.preventDefault();
+                navigateToProject('sanho');
+            }
+        });
+    }
+
+    // Camera: retain V30.4 shutter and flash
+
+    let cameraPending = false;
+
+    function cameraNavigation() {
+
+        if (cameraPending || navigating) return;
+
+        cameraPending = true;
+
+        // Allow original flash and sound to finish
+
+        window.setTimeout(() => {
+
+            navigateToProject('b1');
+            cameraPending = false;
+
+        },650);
+    }
+
+    if (camera) {
+
+        camera.addEventListener(
+            'click',
+            cameraNavigation
+        );
+
+        camera.addEventListener('keydown',event => {
+
+            if (
+                event.key === 'Enter' ||
+                event.key === ' '
+            ) {
+
+                cameraNavigation();
+            }
+        });
+
+        camera.addEventListener('pointerup',() => {
+
+            if (
+                document.activeElement === camera &&
+                !camera.matches(':focus-visible')
+            ) {
+                camera.blur();
+            }
+        });
+    }
+
+    console.info('V30.6 Project Navigation Ready',{
+        camera:!!camera,
+        polaroid:!!photo,
+        sanhoTarget:!!findProject('sanho'),
+        b1Target:!!findProject('b1')
+    });
+
+})();
+</script>
+
+
+
+<script id="v307-stability-script">
+(() => {
+    'use strict';
+
+    function syncWidth() {
+
+        const panel =
+            document.querySelector('.modal-panel');
+
+        const dialog =
+            document.querySelector('dialog.sanho-modal');
+
+        if (!panel || !dialog) return;
+
+        const width = panel.getBoundingClientRect().width;
+
+        if (width > 0) {
+            dialog.style.setProperty(
+                '--sanho-drawer-width',
+                width + 'px'
+            );
+        }
+    }
+
+    // Remove old floating cursor elements if present
+
+    document.documentElement.classList.remove(
+        'v273-ready'
+    );
+
+    document.querySelectorAll(
+        '#v273-cherry-pointer,' +
+        '.v3061-dialog-pointer'
+    ).forEach(el => el.remove());
+
+    // Handle the main close button directly
+
+    window.addEventListener('click',event => {
+
+        if (!(event.target instanceof Element)) return;
+
+        const close = event.target.closest(
+            'dialog.sanho-modal .sanho-close'
+        );
+
+        if (!close) return;
+
+        const dialog = close.closest(
+            'dialog.sanho-modal'
+        );
+
+        if (!dialog || !dialog.open) return;
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        dialog.close();
+
+    },true);
+
+    // Match the existing drawer width on opening
+
+    const observer = new MutationObserver(records => {
+
+        for (const record of records) {
+
+            if (
+                record.target.matches &&
+                record.target.matches(
+                    'dialog.sanho-modal'
+                ) &&
+                record.target.open
+            ) {
+                syncWidth();
+            }
+        }
+    });
+
+    observer.observe(document.body,{
+        subtree:true,
+        attributes:true,
+        attributeFilter:['open']
+    });
+
+    window.addEventListener(
+        'resize',syncWidth,{passive:true}
+    );
+
+    syncWidth();
+
+    console.info(
+        'V30.7 Stable Drawer and Native Cursor Ready'
+    );
+
+})();
+</script>
+<script id="v3072-cursor-script">
+(() => {
+
+    const root = document.documentElement;
+
+    root.classList.remove('v273-ready');
+
+    function restoreCursor() {
+
+        document.querySelectorAll(
+            '#v273-cherry-pointer,' +
+            '.v3061-dialog-pointer'
+        ).forEach(el => el.remove());
+
+        document.querySelectorAll(
+            '[style*="cursor"]'
+        ).forEach(el => {
+
+            if (el.style.cursor === 'none') {
+                el.style.removeProperty('cursor');
+            }
+        });
+    }
+
+    restoreCursor();
+
+    if (!matchMedia('(any-pointer:fine)').matches) {
+        return;
+    }
+
+    const image = new Image();
+
+    image.onload = () => {
+
+        root.style.setProperty(
+            'cursor',
+            'url("assets/ui/cursor/cherry-native.png") 0 0, default',
+            'important'
+        );
+
+        console.info(
+            'V30.7.2 CURSOR IMAGE LOADED',
+            image.naturalWidth,
+            image.naturalHeight
+        );
+    };
+
+    image.onerror = () => {
+
+        root.style.setProperty(
+            'cursor','default','important'
+        );
+
+        console.warn(
+            'V30.7.2 CURSOR IMAGE FAILED'
+        );
+    };
+
+    image.src = 'assets/ui/cursor/cherry-native.png';
+
+    console.info(
+        'V30.7.2 Cursor Reset Ready'
+    );
 
 })();
 </script>
