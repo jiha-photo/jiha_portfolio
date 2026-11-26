@@ -4164,6 +4164,725 @@ dialog.sanho-modal .sanho-close {
 }
 
 </style>
+<style id="v3093-lookbook-style">
+
+.v3093-lookbook {
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.15fr)
+        minmax(0,.85fr);
+
+    gap:32px;
+
+    align-items:start;
+
+    margin:36px 0 48px;
+
+    padding:28px 0;
+
+    border-top:1px solid rgba(30,25,25,.13);
+    border-bottom:1px solid rgba(30,25,25,.13);
+
+    --fashion-accent:#d74780;
+}
+
+.v3093-lookbook.mojanara {
+    --fashion-accent:#a88065;
+}
+
+.v3093-editorial,
+.v3093-device-column {
+    min-width:0;
+}
+
+.v3093-kicker {
+    font-size:10px;
+    letter-spacing:.14em;
+    color:var(--fashion-accent);
+    margin-bottom:14px;
+}
+
+/* Representative original image */
+
+.v3093-cover {
+    display:block;
+    position:relative;
+
+    width:100%;
+
+    padding:0;
+    border:0;
+    border-radius:8px;
+
+    overflow:hidden;
+
+    background:#fff;
+}
+
+.v3093-cover img {
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    transition:transform .45s ease;
+}
+
+.v3093-cover span {
+    position:absolute;
+
+    left:12px;
+    bottom:12px;
+
+    background:rgba(255,255,255,.94);
+
+    border-radius:20px;
+
+    padding:8px 12px;
+
+    color:#222;
+    font-size:10px;
+}
+
+.v3093-editorial h4 {
+    font-size:clamp(23px,3vw,38px);
+    letter-spacing:-.045em;
+    line-height:1.13;
+
+    margin:22px 0 14px;
+}
+
+.v3093-editorial p {
+    color:var(--mute,#777);
+
+    font-size:13px;
+    line-height:1.8;
+}
+
+.v3093-actions {
+    margin-top:22px;
+}
+
+.v3093-full {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    border:0 !important;
+    border-radius:30px !important;
+
+    background:#222 !important;
+    color:#fff !important;
+
+    padding:13px 18px !important;
+
+    font-family:inherit;
+    font-size:11px;
+
+    transition:background .25s ease;
+}
+
+/* Phone body */
+
+.v3093-phone {
+
+    position:relative;
+
+    width:100%;
+    max-width:340px;
+
+    margin:0 auto;
+
+    padding:7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #666 0%,
+            #222 16%,
+            #181818 55%,
+            #454545 100%
+        );
+
+    border-radius:42px;
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.16),
+        inset 0 0 0 1px #777;
+
+    box-sizing:border-box;
+}
+
+.v3093-phone::before {
+
+    content:"";
+
+    position:absolute;
+
+    left:-3px;
+    top:105px;
+
+    width:3px;
+    height:48px;
+
+    border-radius:2px 0 0 2px;
+
+    background:#444;
+}
+
+.v3093-phone::after {
+
+    content:"";
+
+    position:absolute;
+
+    right:-3px;
+    top:130px;
+
+    width:3px;
+    height:58px;
+
+    border-radius:0 2px 2px 0;
+
+    background:#444;
+}
+
+.v3093-screen {
+
+    display:flex;
+    flex-direction:column;
+
+    height:clamp(420px,52vw,650px);
+
+    overflow:hidden;
+
+    background:#fff;
+
+    border-radius:35px;
+}
+
+/* iPhone status bar */
+
+.v3093-status {
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    flex-shrink:0;
+
+    height:39px;
+
+    padding:0 17px;
+
+    font-size:10px;
+    font-weight:600;
+
+    background:#fff;
+    color:#222;
+}
+
+.v3093-island {
+
+    position:absolute;
+
+    left:50%;
+    top:8px;
+
+    transform:translateX(-50%);
+
+    width:31%;
+    height:19px;
+
+    border-radius:20px;
+
+    background:#151515;
+}
+
+.v3093-mobile-header {
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    padding:10px 15px;
+
+    flex-shrink:0;
+
+    border-bottom:1px solid #eee;
+
+    font-size:13px;
+    background:#fff;
+    color:#222;
+}
+
+/* Real detail page scroll area */
+
+.v3093-page-scroll {
+
+    flex:1;
+    min-height:0;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    overscroll-behavior:contain;
+
+    background:#fff;
+
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#c9c5c2 transparent;
+}
+
+.v3093-page-scroll img {
+
+    display:block;
+
+    width:100%;
+    max-width:none;
+    height:auto;
+
+    margin:0;
+    padding:0;
+
+    object-fit:contain;
+}
+
+.v3093-page-scroll::-webkit-scrollbar {
+    width:4px;
+}
+
+.v3093-page-scroll::-webkit-scrollbar-thumb {
+    background:#c9c5c2;
+    border-radius:10px;
+}
+
+.v3093-home {
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    height:22px;
+
+    flex-shrink:0;
+
+    background:#fff;
+}
+
+.v3093-home span {
+
+    width:33%;
+    height:4px;
+
+    border-radius:10px;
+
+    background:#222;
+}
+
+.v3093-scroll-note {
+
+    margin:18px 0 6px;
+
+    font-size:10px;
+    letter-spacing:.14em;
+
+    text-align:center;
+    color:var(--fashion-accent);
+}
+
+.v3093-scroll-description {
+
+    font-size:11px;
+    text-align:center;
+    color:var(--mute,#777);
+}
+
+/* Hover animation */
+
+@media(hover:hover) and (pointer:fine) {
+
+    .v3093-cover:hover img {
+        transform:scale(1.025);
+    }
+
+    .v3093-full:hover {
+        background:var(--fashion-accent) !important;
+    }
+}
+
+/* Keyboard accessibility */
+
+.v3093-page-scroll:focus-visible,
+.v3093-cover:focus-visible,
+.v3093-full:focus-visible {
+
+    outline:2px solid var(--fashion-accent);
+    outline-offset:3px;
+}
+
+/* Mobile layout */
+
+@media(max-width:650px) {
+
+    .v3093-lookbook {
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+        margin:24px 0 35px;
+
+        padding:22px 0;
+    }
+
+    .v3093-cover {
+
+        width:100%;
+        max-width:420px;
+
+        margin:0 auto;
+    }
+
+    .v3093-phone {
+        max-width:310px;
+    }
+
+    .v3093-screen {
+
+        height:clamp(420px,125vw,560px);
+    }
+
+    .v3093-editorial h4 {
+        font-size:27px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .v3093-cover img,
+    .v3093-full {
+        transition:none;
+    }
+
+    .v3093-cover:hover img {
+        transform:none;
+    }
+}
+
+</style>
+<style id="v3094-editorial-style">
+
+.v3094-editorial {
+    margin:34px 0 40px;
+}
+
+.v3094-collection-header {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:8px;
+
+    margin-bottom:14px;
+
+    color:var(--mute,#817975);
+    font-size:10px;
+    letter-spacing:.11em;
+}
+
+.v3094-tabs {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:10px;
+}
+
+.v3094-tab {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+
+    min-width:0;
+    min-height:78px;
+
+    padding:16px;
+
+    background:#fff;
+    color:#222;
+
+    border:1px solid #dedad6;
+    border-radius:13px;
+
+    text-align:left;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.v3094-tab small {
+    display:block;
+    margin-bottom:7px;
+
+    font-size:9px;
+    letter-spacing:.05em;
+    opacity:.7;
+}
+
+.v3094-tab strong {
+    font-size:clamp(12px,1.4vw,16px);
+    line-height:1.3;
+}
+
+.v3094-tab.active {
+    background:#222;
+    color:#fff;
+    border-color:#222;
+}
+
+.v3094-tab:focus-visible {
+    outline:2px solid #d74780;
+    outline-offset:3px;
+}
+
+.v3094-editorial .v3093-lookbook {
+    margin-top:20px;
+}
+
+.v3094-content {
+    animation:v3094FadeIn .4s ease both;
+}
+
+@keyframes v3094FadeIn {
+    from {
+        opacity:0;
+        transform:translateY(7px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(hover:hover) and (pointer:fine) {
+    .v3094-tab:hover {
+        transform:translateY(-3px);
+    }
+}
+
+@media(max-width:650px) {
+
+    .v3094-tabs {
+        gap:6px;
+    }
+
+    .v3094-tab {
+        min-height:75px;
+        padding:10px 8px;
+        border-radius:10px;
+    }
+
+    .v3094-tab strong {
+        font-size:11px;
+    }
+
+    .v3094-tab small {
+        font-size:8px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .v3094-content {
+        animation:none;
+    }
+
+    .v3094-tab {
+        transition:none;
+    }
+
+    .v3094-tab:hover {
+        transform:none;
+    }
+}
+
+</style>
+<style id="v3097-archive-style">
+
+/* NAUNAU archive card */
+
+.sleeve[data-case="naunau"] {
+    position:relative;
+}
+
+/* Direct thumbnail */
+
+.sleeve[data-case="naunau"] .ph {
+    position:relative;
+    overflow:hidden;
+}
+
+.sleeve[data-case="naunau"] .v3097-cover {
+    position:absolute;
+    inset:0;
+
+    display:block !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:cover !important;
+    object-position:center top !important;
+
+    border-radius:inherit;
+
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+/* Vertical tool stickers */
+
+.sleeve[data-case="naunau"] .v3097-tools {
+
+    position:absolute;
+
+    top:32px;
+    right:-11px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:8px;
+
+    z-index:7;
+
+    pointer-events:none;
+}
+
+.v3097-tool {
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:32px;
+    height:32px;
+
+    border-radius:9px;
+
+    box-sizing:border-box;
+
+    font-family:Arial,sans-serif;
+    font-size:15px;
+    font-weight:700;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.18);
+
+    transition:
+        transform .3s cubic-bezier(.22,1,.36,1);
+
+    user-select:none;
+}
+
+/* Photoshop */
+
+.v3097-tool.ps {
+
+    background:#001e36;
+    color:#31a8ff;
+
+    border:1.5px solid #31a8ff;
+
+    transform:rotate(-8deg);
+}
+
+/* Capture One */
+
+.v3097-tool.captureone {
+
+    background:
+        linear-gradient(145deg,#303030,#111);
+
+    color:#fff;
+
+    border:1.5px solid #777;
+
+    transform:rotate(8deg);
+}
+
+.v3097-tool.captureone svg {
+
+    display:block;
+
+    width:74%;
+    height:74%;
+
+    flex-shrink:0;
+}
+
+/* Hover motion */
+
+@media(hover:hover) and (pointer:fine) {
+
+    .sleeve[data-case="naunau"]:hover
+    .v3097-tool.ps {
+
+        transform:
+            translateY(-3px)
+            rotate(-12deg);
+    }
+
+    .sleeve[data-case="naunau"]:hover
+    .v3097-tool.captureone {
+
+        transform:
+            translateY(-3px)
+            rotate(12deg);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    .sleeve[data-case="naunau"] .v3097-tools {
+
+        top:24px;
+        right:-5px;
+        gap:6px;
+    }
+
+    .v3097-tool {
+
+        width:28px;
+        height:28px;
+
+        font-size:13px;
+
+        border-radius:8px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .v3097-tool {
+        transition:none !important;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -4873,8 +5592,8 @@ dialog.sanho-modal .sanho-close {
     <div class="tl-item" data-c="var(--sky)" data-img="" data-label="SANHO MANSION"><span class="tl-date">2021.09 — 2021.12</span><div><div class="tl-title">산호맨숀 스튜디오</div><div class="tl-desc">촬영 인턴 · 프로필 · 증명사진 촬영 · 후보정 · 콘텐츠 제작</div></div><span class="tl-tag">Intern</span></div>
     <div class="tl-item" data-c="var(--mint)" data-img="" data-label="EDUCATION"><span class="tl-date">2021.03 — 2021.07</span><div><div class="tl-title">UI/UX 웹디자인 퍼블리셔 과정 수료</div><div class="tl-desc">Photoshop · HTML/CSS/JavaScript · 반응형 · 웹 표준 · 접근성</div></div><span class="tl-tag">Education</span></div>
     <div class="tl-item" data-c="var(--butter)" data-img="" data-label="CHAAKAN"><span class="tl-date">2020.09 — 2020.12</span><div><div class="tl-title">착한구두</div><div class="tl-desc">마케터 + 포토그래퍼 · 연출컷 · 착용 촬영 · 상세페이지 제작</div></div><span class="tl-tag">Marketer</span></div>
-    <div class="tl-item" data-c="var(--peach)" data-img="" data-label="MOJANARA"><span class="tl-date">2019.10 — 2020.09</span><div><div class="tl-title">(주)모자나라</div><div class="tl-desc">포토그래퍼 · 룩북 · 착용 상세 · 컬러 배리에이션 촬영</div></div><span class="tl-tag">Photographer</span></div>
-    <div class="tl-item" data-c="#E8E3DC" data-img="images/naunau-01.jpg" data-pos="top" data-label="NAUNAU.JP"><span class="tl-date">2018.03 — 2018.05</span><div><div class="tl-title">naunau.jp</div><div class="tl-desc">일본 패션 매거진 · 상세페이지 컨셉 · 촬영 · 보정 · 디자인 전 과정 직접 기획 및 제작</div></div><span class="tl-tag">Magazine</span></div>
+    <div class="tl-item" data-c="var(--peach)" data-img="assets/other/mojanara/thumbnails/mojanara-cover.webp" data-label="MOJANARA"><span class="tl-date">2019.10 — 2020.09</span><div><div class="tl-title">(주)모자나라</div><div class="tl-desc">포토그래퍼 · 룩북 · 착용 상세 · 컬러 배리에이션 촬영</div></div><span class="tl-tag">Photographer</span></div>
+    <div class="tl-item" data-c="#E8E3DC" data-img="assets/other/naunau/editorials/thumbnails/enjoy-frill-cover.webp" data-pos="top" data-label="NAUNAU.JP"><span class="tl-date">2018.03 — 2018.05</span><div><div class="tl-title">naunau.jp</div><div class="tl-desc">일본 패션 매거진 · 상세페이지 컨셉 · 촬영 · 보정 · 디자인 전 과정 직접 기획 및 제작</div></div><span class="tl-tag">Magazine</span></div>
     <div class="tl-item" data-c="var(--blush)" data-img="images/b1-forest-cover.jpg" data-label="B1 STUDIO"><span class="tl-date">2014.02 — 2016</span><div><div class="tl-title">B1 studio · Blooming</div><div class="tl-desc">자체 프로젝트 · 기획 · 촬영 · 편집 · 제작판매 1인 완결형</div></div><span class="tl-tag">Self</span></div>
   </div>
 </div></section>
@@ -4884,9 +5603,9 @@ dialog.sanho-modal .sanho-close {
   <div class="sec-head rv"><h2 class="sec-title">Photo <em>archive</em></h2><p class="sec-desc">촬영 → 편집 → 상세페이지를 혼자 완결.<br>외주 없이 필요한 컷을 아는 기획자.</p></div>
   <div class="sleeves">
     <div class="sleeve rv" style="--r:-3deg"><div class="ph" data-img="images/archive-01.jpg" data-label="CHAAKAN" style="--c:var(--butter)"></div><div class="app ps tool">Ps</div><h4>착한구두</h4><p class="mono">2020 · Marketer + Photo</p><div class="shine"></div></div>
-    <div class="sleeve rv" style="--r:2deg;--d:.08s"><div class="ph" data-img="images/archive-02.jpg" data-label="MOJANARA" style="--c:var(--peach)"></div><div class="app lr tool">Lr</div><h4>(주)모자나라</h4><p class="mono">2019–20 · Lookbook</p><div class="shine"></div></div>
+    <div class="sleeve rv" style="--r:2deg;--d:.08s" data-case="mojanara" data-cursor="VIEW" role="button" tabindex="0" aria-label="MOJANARA Lookbook"><div class="ph" data-img="assets/other/mojanara/thumbnails/mojanara-cover.webp" data-label="MOJANARA" style="--c:var(--peach)"></div><div class="app lr tool">Lr</div><h4>(주)모자나라</h4><p class="mono">2019–20 · Lookbook</p><div class="shine"></div></div>
     <div class="sleeve rv" style="--r:-1.5deg;--d:.16s"><div class="ph" data-img="images/archive-03.jpg" data-label="SANHO MANSION" style="--c:var(--sky)"></div><div class="app ps tool">Ps</div><h4>산호맨숀 스튜디오</h4><p class="mono">2021 · Portrait</p><div class="shine"></div></div>
-    <div class="sleeve rv" style="--r:3deg;--d:.24s" data-case="naunau" data-cursor="VIEW" role="button" tabindex="0" aria-label="naunau.jp 상세페이지 보기"><div class="ph" data-img="images/naunau-01.jpg" data-pos="top" data-alt="naunau.jp 상세페이지" data-label="NAUNAU.JP" style="--c:#E8E3DC"></div><div class="app lr tool">Lr</div><h4>naunau.jp ↗</h4><p class="mono">2018 · Detail page · 기획/제작</p><div class="shine"></div></div>
+    <div class="sleeve rv" style="--r:3deg;--d:.24s" data-case="naunau" data-cursor="VIEW" role="button" tabindex="0" aria-label="naunau.jp 상세페이지 보기"><div class="ph" data-img="assets/other/naunau/editorials/thumbnails/enjoy-frill-cover.webp" data-pos="top" data-alt="naunau.jp 상세페이지" data-label="NAUNAU.JP" style="--c:#E8E3DC"></div><div class="app lr tool">Lr</div><h4>naunau.jp ↗</h4><p class="mono">2018 · Detail page · 기획/제작</p><div class="shine"></div></div>
     <div class="sleeve rv" style="--r:-2deg;--d:.32s" data-case="b1" data-cursor="VIEW" role="button" tabindex="0" aria-label="B1 Studio 상세 프로젝트 보기"><div class="ph" data-img="images/b1-forest-cover.jpg" data-label="B1 STUDIO" style="--c:var(--blush)"></div><div class="app ai tool">Ai</div><h4>B1 studio · Blooming</h4><p class="mono">2014– · Self project</p><div class="shine"></div></div>
   </div>
 </div></section>
@@ -5104,6 +5823,26 @@ const canHover=matchMedia('(hover: hover) and (pointer: fine)').matches;
    .jpg가 없으면 .jpeg → .png → .webp 순서로 자동 재시도. */
 const ASSETS=window.PORTFOLIO_ASSETS||{};
 const asset=p=>ASSETS[p]||p;
+/* V3093-FASHION-ASSETS */
+
+Object.assign(ASSETS,{
+
+    "images/naunau-01.jpg":
+        "assets/other/naunau/thumbnails/naunau-cover.webp",
+
+    "images/naunau-04.jpg":
+        "assets/other/naunau/thumbnails/naunau-cover.webp",
+
+    "images/archive-02.jpg":
+        "assets/other/mojanara/thumbnails/mojanara-cover.webp",
+
+    "assets/other/naunau/thumbnails/naunau-cover.webp":
+        "assets/other/naunau/thumbnails/naunau-cover.webp",
+
+    "assets/other/mojanara/thumbnails/mojanara-cover.webp":
+        "assets/other/mojanara/thumbnails/mojanara-cover.webp"
+
+});
 /* V19-WEB-PUBLISHING */
 Object.assign(ASSETS,{"images/web-kellogg-pc.jpg":"assets/other/web-publishing/web-kellogg-pc.jpg.png","images/web-kellogg-m-01.jpg":"assets/other/web-publishing/web-kellogg-m-01.jpg.png","images/web-kellogg-m-02.jpg":"assets/other/web-publishing/web-kellogg-m-02.jpg.png","images/web-kellogg-m-03.jpg":"assets/other/web-publishing/web-kellogg-m-03.jpg.png","images/web-subway-m-full.png":"assets/other/web-publishing/web-subway-m-full.png.png","images/web-subway-project.png":"assets/other/web-publishing/web-subway-project.png.png","images/web-subway-guide.jpg":"assets/other/web-publishing/web-subway-guide.png.jpg","images/web-hyosung-project.jpg":"assets/other/web-publishing/web-hyosung-project.jpg.jpg","images/web-hyosung-guide.jpg":"assets/other/web-publishing/web-hyosung-guide.jpg.jpg"});
 document.querySelectorAll("[data-selected-src]").forEach(im=>{im.src=asset(im.dataset.selectedSrc)});
@@ -5610,7 +6349,278 @@ renderInsta = function(c) {
   return template.innerHTML;
 };
 
-  function openCase(id){
+  /* V3093-LOOKBOOK-START */
+
+CASES.naunau.fashion = {
+
+    name:'NAUNAU.JP',
+    cover:'assets/other/naunau/thumbnails/naunau-cover.webp',
+    full:'assets/other/naunau/naunau-full.webp',
+
+    heading:'Style in every frame.',
+    description:'모델 촬영부터 스타일링, 사진 보정과 상세페이지 디자인까지 하나의 흐름으로 구성한 패션 매거진 콘텐츠.',
+
+    theme:'naunau'
+};
+
+CASES.naunau.results = [
+    ['ALL','컨셉 · 촬영 · 보정 · 디자인'],
+    ['01','통합 상세페이지 아카이브']
+];
+
+CASES.mojanara = {
+
+    no:'09',
+
+    tag:'MOJANARA · Photography · 2019–2020',
+
+    title:'MOJANARA. — 패션 룩북',
+
+    sub:'모델 및 패션 제품 촬영을 중심으로 스타일링과 사진 보정을 진행한 포토그래피 작업물.',
+
+    c:'#E9D8C9',
+
+    credit:[
+        '모델 촬영',
+        '제품 촬영',
+        '스타일링',
+        '사진 보정'
+    ],
+
+    fashion:{
+
+        name:'MOJANARA',
+
+        cover:'assets/other/mojanara/thumbnails/mojanara-cover.webp',
+
+        full:'assets/other/mojanara/mojanara-full.webp',
+
+        heading:'A story in every look.',
+
+        description:'상품의 실루엣과 소재, 착용했을 때의 분위기가 자연스럽게 전달되도록 구성한 패션 촬영 아카이브.',
+
+        theme:'mojanara'
+    },
+
+    work:[
+        '모델 및 패션 제품 촬영',
+        '착용 이미지와 룩북 콘텐츠 제작',
+        '사진 색감 보정 및 리터칭'
+    ],
+
+    results:[
+        ['PHOTO','패션 및 제품 촬영'],
+        ['01','통합 룩북 아카이브']
+    ]
+};
+
+function renderV3093BaseLookbook(c) {
+
+    const f = c.fashion;
+
+    if (!f) return '';
+
+    return `
+
+    <section class="v3093-lookbook ${f.theme}">
+
+        <div class="v3093-editorial">
+
+            <div class="v3093-kicker">
+                SELECTED PHOTOGRAPHY
+            </div>
+
+            <button type="button"
+                    class="v3093-cover"
+                    data-art="${asset(f.cover)}"
+                    data-art-title="${f.name} — Selected Visual">
+
+                <img src="${asset(f.cover)}"
+                     alt="${f.name} 대표 작업물"
+                     decoding="async">
+
+                <span>SELECTED VISUAL ↗</span>
+
+            </button>
+
+            <h4>${f.heading}</h4>
+
+            <p>${f.description}</p>
+
+            <div class="v3093-actions">
+
+                <button type="button"
+                        class="v3093-full art-open"
+                        data-art="${asset(f.full)}"
+                        data-art-title="${f.name} — Full Detail Page">
+
+                    FULL DETAIL PAGE ↗
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="v3093-device-column">
+
+            <div class="v3093-phone">
+
+                <div class="v3093-screen">
+
+                    <div class="v3093-status">
+
+                        <span>9:41</span>
+
+                        <div class="v3093-island"></div>
+
+                        <span>● ▰</span>
+
+                    </div>
+
+                    <div class="v3093-mobile-header">
+
+                        <span>‹</span>
+
+                        <strong>${f.name}</strong>
+
+                        <span>···</span>
+
+                    </div>
+
+                    <div class="v3093-page-scroll"
+                         tabindex="0"
+                         role="region"
+                         aria-label="${f.name} 상세페이지 스크롤">
+
+                        <img src="${asset(f.full)}"
+                             alt="${f.name} 전체 상세페이지"
+                             decoding="async">
+
+                    </div>
+
+                    <div class="v3093-home">
+
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="v3093-scroll-note">
+                SCROLL TO EXPLORE ↕
+            </p>
+
+            <p class="v3093-scroll-description">
+                화면 안에서 상세페이지를 스크롤해 보세요.
+            </p>
+
+        </div>
+
+    </section>
+
+    `;
+}
+
+/* V3093-LOOKBOOK-END */
+
+/* V3094-EDITORIAL-START */
+
+const V3094_EDITORIALS = [{"name":"ENJOY FRILL","issue":"APRIL / WEEK 03","cover":"assets/other/naunau/editorials/thumbnails/enjoy-frill-cover.webp","full":"assets/other/naunau/editorials/web/enjoy-frill.jpg","heading":"ENJOY FRILL.","description":"프릴 블라우스를 중심으로 모델 촬영, 스타일링, 사진 보정 및 패션 매거진 상세페이지를 제작했습니다.","theme":"naunau"},{"name":"CHECK YOUR STYLE","issue":"APRIL / WEEK 04","cover":"assets/other/naunau/editorials/thumbnails/check-your-style-cover.webp","full":"assets/other/naunau/editorials/web/check-your-style.jpg","heading":"Check your style.","description":"체크 패턴과 다양한 착장 스타일을 중심으로 구성한 패션 매거진 콘텐츠입니다.","theme":"naunau"},{"name":"FASHION ARCHIVE","issue":"SELECTED WORKS","cover":"assets/other/naunau/thumbnails/naunau-cover.webp","full":"assets/other/naunau/naunau-full.webp","heading":"Style in every frame.","description":"모델 촬영과 스타일링, 사진 보정 및 상세페이지 디자인 작업을 모은 패션 아카이브입니다.","theme":"naunau"}];
+
+CASES.naunau.editorials = V3094_EDITORIALS;
+
+CASES.naunau.results = [
+    ['ALL','컨셉 · 촬영 · 보정 · 디자인'],
+    ['03','상세페이지 및 패션 아카이브']
+];
+
+function renderV3093Lookbook(c) {
+
+    if (!c.editorials) {
+        return renderV3093BaseLookbook(c);
+    }
+
+    return renderV3094Editorial(c,0);
+}
+
+function renderV3094Editorial(c,index) {
+
+    const selected = c.editorials[index];
+
+    const tabs = c.editorials.map((item,i) => `
+
+        <button type="button"
+                class="v3094-tab ${i===index?'active':''}"
+                data-v3094-index="${i}"
+                aria-pressed="${i===index}">
+
+            <small>
+                0${i+1} — ${item.issue}
+            </small>
+
+            <strong>${item.name}</strong>
+
+        </button>
+
+    `).join('');
+
+    return `
+
+        <div class="v3094-editorial"
+             data-active="${index}">
+
+            <div class="v3094-collection-header">
+
+                <span>NAUNAU.JP / EDITORIAL COLLECTION</span>
+
+                <span>03 SELECTED WORKS</span>
+
+            </div>
+
+            <div class="v3094-tabs"
+                 role="group"
+                 aria-label="패션 프로젝트 선택">
+
+                ${tabs}
+
+            </div>
+
+            <div class="v3094-content">
+
+                ${renderV3093BaseLookbook({
+                    ...c,
+                    fashion:selected
+                })}
+
+            </div>
+
+        </div>
+
+    `;
+}
+
+/* Restore archive and career images */
+
+Object.assign(ASSETS,{
+
+    'images/naunau-01.jpg':
+        V3094_EDITORIALS[0].cover,
+
+    'images/naunau-04.jpg':
+        V3094_EDITORIALS[1].cover
+
+});
+
+V3094_EDITORIALS.forEach(item => {
+    ASSETS[item.cover] = item.cover;
+});
+
+/* V3094-EDITORIAL-END */
+
+function openCase(id){
     /* V23-ADS-HOOK */
     if (
         id === 'ads' &&
@@ -5628,7 +6638,7 @@ stopHover();
     ${c.credit?`<div style="height:28px"></div><div class="m-credit">${c.credit.map(x=>`<span>${x}</span>`).join('')}</div>`:''}
     ${renderInsta(c)}
     ${c.b1?`<div class="b1-gallery">${[['forest','Crossroads Forest'],['train','Red subway train']].map(([f,t])=>`<figure><div class="scroll" tabindex="0" aria-label="${t} 상세페이지 스크롤"><img src="${asset(`images/b1-${f}.jpg`)}" alt="${t} 전체 상세페이지" data-art="${asset(`images/b1-${f}.jpg`)}" data-art-title="${t}" style="cursor:zoom-in"></div><figcaption>${t}</figcaption><button type="button" class="art-open" data-art="${asset(`images/b1-${f}.jpg`)}" data-art-title="${t}">상세페이지 크게 보기 ↗</button></figure>`).join('')}</div>`:''}
-    ${c.campaigns?renderBrandCampaigns(c):c.b1?'':c.gallery?`<div class="m-gallery${c.covers?' selected-modal-gallery':''}">${c.gallery.map((g,i)=>`<figure><div class="scroll"><img src="${asset(c.covers?.[i]||g[0])}" alt="${c.title} — ${g[1]}" data-art="${asset(g[0])}" data-art-title="${g[1]}" style="cursor:zoom-in" loading="eager"></div><figcaption>${g[1]}</figcaption><button type="button" class="art-open" data-art="${asset(g[0])}" data-art-title="${g[1]}">크게 보기 ↗</button></figure>`).join('')}</div><p class="mono" style="color:var(--mute);margin:10px 0 36px">${c.covers?'대표 작업물 5종 · 이미지를 클릭하면 전체 상세페이지를 볼 수 있습니다.':'↕ 각 상세페이지 안에서 스크롤해 보세요'}</p>`:(c.projects||c.insta)?'<div style="height:28px"></div>':`<div class="m-hero ph" data-img="${c.img||''}" data-label="CASE IMAGE — ${c.title}" style="--c:${c.c}"></div>`}
+    ${c.fashion?renderV3093Lookbook(c):c.campaigns?renderBrandCampaigns(c):c.b1?'':c.gallery?`<div class="m-gallery${c.covers?' selected-modal-gallery':''}">${c.gallery.map((g,i)=>`<figure><div class="scroll"><img src="${asset(c.covers?.[i]||g[0])}" alt="${c.title} — ${g[1]}" data-art="${asset(g[0])}" data-art-title="${g[1]}" style="cursor:zoom-in" loading="eager"></div><figcaption>${g[1]}</figcaption><button type="button" class="art-open" data-art="${asset(g[0])}" data-art-title="${g[1]}">크게 보기 ↗</button></figure>`).join('')}</div><p class="mono" style="color:var(--mute);margin:10px 0 36px">${c.covers?'대표 작업물 5종 · 이미지를 클릭하면 전체 상세페이지를 볼 수 있습니다.':'↕ 각 상세페이지 안에서 스크롤해 보세요'}</p>`:(c.projects||c.insta)?'<div style="height:28px"></div>':`<div class="m-hero ph" data-img="${c.img||''}" data-label="CASE IMAGE — ${c.title}" style="--c:${c.c}"></div>`}
     ${c.campaigns?'<div class="promo-jy-summary">':''}${sec('Problem',c.problem?`<p>${c.problem}</p>`:'')}${sec('My work',ul(c.work))}${sec('IP Collab',ipCards(c.ip))}${sec('공구 · Influencer',ipCards(c.collab))}${renderProjects(c)}${sec('Cases',ul(c.cases))}
     ${sec('Result',`<div class="m-res">${c.results.map(r=>`<div><b>${r[0]}</b><span>${r[1]}</span></div>`).join('')}</div>`)}
     ${sec('Learned',c.learned?`<p class="m-learn">${c.learned}</p>`:'')}
@@ -10491,6 +11501,207 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
         tools:buttons.length,
         groups:area.querySelectorAll('.v308-group').length
     });
+
+})();
+</script>
+<script id="v3094-editorial-script">
+(() => {
+
+    document.addEventListener('click',event => {
+
+        if (!(event.target instanceof Element)) return;
+
+        const button = event.target.closest(
+            '[data-v3094-index]'
+        );
+
+        if (!button) return;
+
+        const root = button.closest(
+            '.v3094-editorial'
+        );
+
+        if (!root) return;
+
+        const index = Number(button.dataset.v3094Index);
+
+        if (!Number.isInteger(index)) return;
+
+        if (!CASES.naunau.editorials[index]) return;
+
+        if (Number(root.dataset.active) === index) return;
+
+        event.preventDefault();
+
+        const keyboard = event.detail === 0;
+
+        const content = root.querySelector('.v3094-content');
+
+        const selected = CASES.naunau.editorials[index];
+
+        content.innerHTML = renderV3093BaseLookbook({
+            ...CASES.naunau,
+            fashion:selected
+        });
+
+        root.dataset.active = String(index);
+
+        root.querySelectorAll('.v3094-tab').forEach(tab => {
+
+            const active =
+                Number(tab.dataset.v3094Index) === index;
+
+            tab.classList.toggle('active',active);
+
+            tab.setAttribute(
+                'aria-pressed',
+                String(active)
+            );
+
+        });
+
+        const scroll = content.querySelector(
+            '.v3093-page-scroll'
+        );
+
+        if (scroll) scroll.scrollTop = 0;
+
+        if (!matchMedia(
+            '(prefers-reduced-motion:reduce)'
+        ).matches && content.animate) {
+
+            content.animate(
+                [
+                    {opacity:0,transform:'translateY(6px)'},
+                    {opacity:1,transform:'translateY(0)'}
+                ],
+                {
+                    duration:300,
+                    easing:'ease-out'
+                }
+            );
+        }
+
+        if (keyboard) {
+            button.focus({preventScroll:true});
+        }
+
+    });
+
+    console.info(
+        'V30.9.4 NAUNAU Editorial Collection Ready'
+    );
+
+})();
+</script>
+<script id="v3097-archive-script">
+(() => {
+
+    'use strict';
+
+    const cover =
+        'assets/other/naunau/editorials/thumbnails/enjoy-frill-cover.webp';
+
+    const cards = document.querySelectorAll(
+        '.sleeve[data-case="naunau"]'
+    );
+
+    cards.forEach(card => {
+
+        const photo = card.querySelector('.ph');
+
+        if (photo) {
+
+            const image = new Image();
+
+            image.className = 'fit v3097-cover';
+            image.alt = 'NAUNAU.JP — ENJOY FRILL';
+            image.decoding = 'async';
+
+            image.onload = () => {
+
+                photo.querySelectorAll('img')
+                    .forEach(old => old.remove());
+
+                photo.removeAttribute('data-img');
+                photo.removeAttribute('data-crop');
+
+                photo.appendChild(image);
+
+                photo.classList.add('has-img');
+
+                console.info(
+                    'V30.9.7 NAUNAU COVER LOADED',
+                    image.naturalWidth,
+                    image.naturalHeight
+                );
+            };
+
+            image.onerror = () => {
+
+                console.error(
+                    'V30.9.7 COVER FAILED',
+                    image.src
+                );
+            };
+
+            image.src = cover;
+        }
+
+        // Remove old Lightroom and previous icons
+
+        card.querySelectorAll(
+            ':scope > .app.tool,' +
+            ':scope > .v3095-tools,' +
+            ':scope > .v3097-tools'
+        ).forEach(el => el.remove());
+
+        // New vertical icon group
+
+        const tools = document.createElement('div');
+
+        tools.className = 'v3097-tools';
+
+        tools.innerHTML = `
+
+            <span class="v3097-tool ps"
+                  title="Adobe Photoshop"
+                  aria-label="Adobe Photoshop">
+
+                Ps
+
+            </span>
+
+            <span class="v3097-tool captureone"
+                  title="Capture One"
+                  aria-label="Capture One">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 40 40"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="3.2"
+                     aria-hidden="true">
+
+                    <path d="M35 11 A17 17 0 1 0 35 29"/>
+
+                    <circle cx="20"
+                            cy="20"
+                            r="10.5"/>
+
+                </svg>
+
+            </span>
+        `;
+
+        card.appendChild(tools);
+
+    });
+
+    console.info(
+        'V30.9.7 NAUNAU ARCHIVE READY',
+        {cards:cards.length}
+    );
 
 })();
 </script>

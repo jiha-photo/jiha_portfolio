@@ -1,0 +1,30 @@
+﻿{
+    "Project":  "mojanara",
+    "Width":  1440,
+    "Height":  14864,
+    "FullPage":  "mojanara-full.webp",
+    "Thumbnail":  "thumbnails/mojanara-cover.webp",
+    "Sections":  [
+                     "sections/mojanara-01.webp",
+                     "sections/mojanara-02.webp",
+                     "sections/mojanara-03.webp",
+                     "sections/mojanara-04.webp",
+                     "sections/mojanara-05.webp",
+                     "sections/mojanara-06.webp",
+                     "sections/mojanara-07.webp"
+                 ],
+    "CutPositions":  [
+                         0,
+                         2628,
+                         5028,
+                         7428,
+                         8953,
+                         10897,
+                         12848,
+                         14864
+                     ],
+    "ReviewPositions":  [
+                            5028,
+                            7428
+                        ]
+}

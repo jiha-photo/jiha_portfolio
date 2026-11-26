@@ -1,0 +1,33 @@
+﻿{
+    "Project":  "naunau",
+    "Width":  445,
+    "Height":  14625,
+    "FullPage":  "naunau-full.webp",
+    "Thumbnail":  "thumbnails/naunau-cover.webp",
+    "Sections":  [
+                     "sections/naunau-01.webp",
+                     "sections/naunau-02.webp",
+                     "sections/naunau-03.webp",
+                     "sections/naunau-04.webp",
+                     "sections/naunau-05.webp",
+                     "sections/naunau-06.webp",
+                     "sections/naunau-07.webp",
+                     "sections/naunau-08.webp",
+                     "sections/naunau-09.webp"
+                 ],
+    "CutPositions":  [
+                         0,
+                         1736,
+                         3472,
+                         5336,
+                         6897,
+                         8722,
+                         10284,
+                         11713,
+                         13104,
+                         14625
+                     ],
+    "ReviewPositions":  [
+
+                        ]
+}
