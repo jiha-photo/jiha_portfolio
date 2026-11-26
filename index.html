@@ -6889,6 +6889,638 @@ dialog.sanho-modal .sanho-close {
 }
 
 </style>
+<style id="v30152-jy-style">
+
+#v30152-jy-overlay,
+#v30152-jy-viewer {
+    box-sizing:border-box;
+    color:#222;
+    font-family:inherit;
+}
+
+#v30152-jy-overlay[hidden],
+#v30152-jy-viewer[hidden] {
+    display:none !important;
+}
+
+#v30152-jy-overlay {
+    position:fixed;
+    inset:0;
+    z-index:11000;
+
+    display:flex;
+    justify-content:flex-end;
+
+    background:rgba(0,0,0,.48);
+    backdrop-filter:blur(5px);
+}
+
+#v30152-jy-panel {
+    position:relative;
+
+    width:min(880px,100%);
+    height:100%;
+
+    padding:35px 34px 55px;
+
+    background:#f5f3ef;
+    overflow:auto;
+
+    overscroll-behavior:contain;
+}
+
+#v30152-jy-panel *,
+#v30152-jy-viewer * {
+    box-sizing:border-box;
+}
+
+.v30152-jy-close {
+    position:sticky;
+    top:0;
+    float:right;
+
+    width:34px;
+    height:34px;
+
+    display:grid;
+    place-items:center;
+
+    border:0;
+    border-radius:50%;
+
+    background:#222;
+    color:white;
+    font-size:23px;
+    line-height:1;
+
+    cursor:pointer !important;
+    z-index:5;
+    transition:transform .3s ease;
+}
+
+.v30152-jy-close:hover {
+    transform:rotate(90deg);
+}
+
+.v30152-jy-kicker {
+    font-size:10px;
+    letter-spacing:.08em;
+}
+
+.v30152-jy-kicker b {
+    display:inline-block;
+    background:#f1bdd2;
+    border-radius:40px;
+    padding:6px 10px;
+    margin-right:7px;
+}
+
+#v30152-jy-panel h2 {
+    font-size:32px;
+    line-height:1.25;
+    letter-spacing:-.05em;
+    margin:15px 0 8px;
+}
+
+.v30152-jy-sub {
+    font-size:13px;
+    color:#827873;
+    line-height:1.65;
+}
+
+.v30152-jy-tags {
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin:12px 0 25px;
+}
+
+.v30152-jy-tags span {
+    padding:6px 11px;
+    border-radius:30px;
+    background:#222;
+    color:white;
+    font-size:10px;
+}
+
+.v30152-jy-layout {
+    display:grid;
+    grid-template-columns:minmax(240px,320px) minmax(0,1fr);
+    gap:28px;
+    align-items:start;
+}
+
+/* Instagram phone */
+
+.v30152-jy-phone {
+    width:100%;
+    max-width:320px;
+
+    border:7px solid #171717;
+    border-radius:40px;
+
+    padding:0;
+
+    background:#fff;
+    overflow:hidden;
+
+    box-shadow:
+        0 30px 45px -22px rgba(0,0,0,.45),
+        inset 0 0 0 2px #444;
+}
+
+.v30152-jy-screen {
+    border-radius:32px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.v30152-jy-notch {
+    width:35%;
+    height:19px;
+    margin:8px auto;
+    background:#111;
+    border-radius:20px;
+}
+
+.v30152-jy-profile {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 11px 16px;
+}
+
+.v30152-jy-avatar {
+    width:40px;
+    height:40px;
+    flex-shrink:0;
+
+    display:grid;
+    place-items:center;
+
+    border:2px solid #d74780;
+    border-radius:50%;
+
+    background:#f8e4ec;
+    color:#222;
+    font-size:12px;
+    font-weight:700;
+}
+
+.v30152-jy-profile strong {
+    display:block;
+    font-size:13px;
+}
+
+.v30152-jy-profile small {
+    display:block;
+    color:#777;
+    font-size:10px;
+    margin-top:3px;
+}
+
+.v30152-jy-phone-tabs {
+    display:flex;
+    border-bottom:1px solid #ddd;
+}
+
+.v30152-jy-phone-tabs button {
+    flex:1;
+    padding:11px;
+    border:0;
+    background:white;
+    color:#777;
+    font-size:11px;
+    cursor:pointer !important;
+}
+
+.v30152-jy-phone-tabs button.on {
+    color:#111;
+    border-bottom:2px solid #111;
+    font-weight:700;
+}
+
+.v30152-jy-feed-scroll {
+    height:420px;
+    overflow:auto;
+    scrollbar-width:thin;
+    overscroll-behavior:contain;
+}
+
+.v30152-jy-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:2px;
+}
+
+.v30152-jy-tile {
+    position:relative;
+
+    display:block;
+    width:100%;
+    min-width:0;
+
+    aspect-ratio:3/4;
+    padding:0;
+    border:0;
+
+    background:#eee;
+    overflow:hidden;
+
+    cursor:pointer !important;
+}
+
+.v30152-jy-tile img,
+.v30152-jy-tile video {
+    position:absolute;
+    inset:0;
+
+    display:block;
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.v30152-jy-tile img {
+    transition:transform .3s ease;
+}
+
+.v30152-jy-tile:hover img {
+    transform:scale(1.04);
+}
+
+.v30152-jy-tile video {
+    z-index:1;
+    pointer-events:none;
+}
+
+.v30152-jy-play-icon {
+    position:absolute;
+    right:5px;
+    top:5px;
+
+    z-index:2;
+
+    background:rgba(0,0,0,.4);
+    border-radius:5px;
+    color:#fff;
+
+    padding:3px 6px;
+    font-size:9px;
+
+    pointer-events:none;
+}
+
+.v30152-jy-phone-footer {
+    padding:12px;
+    font-size:10px;
+    color:#777;
+    text-align:center;
+    border-top:1px solid #eee;
+}
+
+/* Right side */
+
+.v30152-jy-side {
+    padding-top:5px;
+    min-width:0;
+}
+
+.v30152-jy-side > small {
+    font-size:10px;
+    letter-spacing:.07em;
+}
+
+.v30152-jy-side h3 {
+    font-size:23px;
+    letter-spacing:-.04em;
+    margin:14px 0 8px;
+}
+
+.v30152-jy-side p {
+    font-size:12px;
+    color:#827873;
+    line-height:1.75;
+}
+
+.v30152-jy-segment {
+    display:flex;
+    padding:3px;
+    gap:3px;
+
+    border:1px solid #ddd;
+    border-radius:40px;
+
+    background:#fff;
+    margin:20px 0 12px;
+}
+
+.v30152-jy-segment button {
+    flex:1;
+    border:0;
+    border-radius:40px;
+
+    padding:9px 6px;
+
+    background:transparent;
+    color:#222;
+    font-size:11px;
+
+    cursor:pointer !important;
+}
+
+.v30152-jy-segment button.on {
+    background:#222;
+    color:white;
+}
+
+.v30152-jy-choice {
+    display:block;
+
+    width:100%;
+    text-align:left;
+
+    padding:16px 14px;
+    margin-bottom:9px;
+
+    border:1px solid #dedbd7;
+    border-radius:14px;
+
+    background:#fff;
+    color:#222;
+
+    cursor:pointer !important;
+}
+
+.v30152-jy-choice.on {
+    outline:1px solid #222;
+    border-color:#222;
+}
+
+.v30152-jy-choice strong {
+    display:block;
+    font-size:15px;
+}
+
+.v30152-jy-choice small {
+    display:block;
+    margin-top:6px;
+    color:#827873;
+    font-size:11px;
+}
+
+.v30152-jy-choice em {
+    float:right;
+    font-size:10px;
+    font-style:normal;
+    font-weight:400;
+    color:#777;
+}
+
+.v30152-jy-link {
+    display:inline-flex;
+
+    padding:11px 16px;
+    margin-top:14px;
+
+    border-radius:40px;
+
+    background:#222;
+    color:#fff !important;
+    font-size:12px;
+    text-decoration:none;
+
+    cursor:pointer !important;
+}
+
+/* Full-size viewer */
+
+#v30152-jy-viewer {
+    position:fixed;
+    inset:0;
+
+    z-index:12000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:18px;
+    background:rgba(0,0,0,.88);
+}
+
+.v30152-jy-view-card {
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+
+    width:min(820px,100%);
+    max-height:94vh;
+    max-height:94dvh;
+
+    border-radius:18px;
+    overflow:hidden;
+
+    background:#fff;
+}
+
+.v30152-jy-view-head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:12px;
+    padding:14px 16px;
+
+    border-bottom:1px solid #eee;
+}
+
+.v30152-jy-view-head strong {
+    font-size:13px;
+}
+
+.v30152-jy-view-head button {
+    border:0;
+    border-radius:50%;
+    background:#222;
+    color:#fff;
+
+    width:32px;
+    height:32px;
+    flex-shrink:0;
+
+    font-size:20px;
+    cursor:pointer !important;
+}
+
+.v30152-jy-view-media {
+    min-height:0;
+    overflow:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:10px;
+
+    background:#e9e7e3;
+}
+
+.v30152-jy-view-media img,
+.v30152-jy-view-media video {
+    display:block;
+
+    width:auto;
+    height:auto;
+
+    max-width:100%;
+    max-height:76vh;
+    max-height:76dvh;
+
+    object-fit:contain;
+
+    cursor:auto !important;
+}
+
+.v30152-jy-view-media.is-zoomed {
+    display:block;
+}
+
+.v30152-jy-view-media.is-zoomed img {
+    max-width:none !important;
+    max-height:none !important;
+    width:auto !important;
+    margin:0 auto;
+}
+
+.v30152-jy-view-footer {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 12px;
+}
+
+.v30152-jy-view-footer button {
+    border:1px solid #ddd;
+    border-radius:30px;
+
+    padding:7px 12px;
+
+    background:white;
+    color:#222;
+
+    font-size:11px;
+    cursor:pointer !important;
+}
+
+.v30152-jy-view-footer small {
+    font-size:10px;
+    color:#777;
+}
+
+/* Main case studies card */
+
+.card[data-case="sns"] .v-grid .ph.v30152-ready {
+    background-image:var(--v30152-cover) !important;
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+}
+
+.card[data-case="sns"] .v-grid .ph.v30152-ready img {
+    display:none !important;
+}
+
+.card[data-case="sns"] .v-grid .ph.v30152-ready::before,
+.card[data-case="sns"] .v-grid .ph.v30152-ready::after {
+    content:none !important;
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    #v30152-jy-panel {
+        padding:24px 16px 36px;
+    }
+
+    #v30152-jy-panel h2 {
+        font-size:24px;
+    }
+
+    .v30152-jy-sub {
+        font-size:11px;
+    }
+
+    .v30152-jy-tags {
+        margin-bottom:18px;
+    }
+
+    .v30152-jy-layout {
+        grid-template-columns:minmax(0,1fr);
+        gap:22px;
+    }
+
+    .v30152-jy-phone {
+        max-width:255px;
+        margin:0 auto;
+        border-width:6px;
+        border-radius:31px;
+    }
+
+    .v30152-jy-screen {
+        border-radius:25px;
+    }
+
+    .v30152-jy-notch {
+        height:14px;
+    }
+
+    .v30152-jy-feed-scroll {
+        height:305px;
+    }
+
+    .v30152-jy-side h3 {
+        font-size:19px;
+    }
+
+    .v30152-jy-side p {
+        font-size:12px;
+    }
+
+    .v30152-jy-choice {
+        padding:12px;
+    }
+
+    .v30152-jy-choice strong {
+        font-size:13px;
+    }
+
+    #v30152-jy-viewer {
+        padding:9px;
+    }
+
+    .v30152-jy-view-card {
+        border-radius:12px;
+    }
+
+    .v30152-jy-view-media {
+        padding:4px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    #v30152-jy-overlay *,
+    #v30152-jy-viewer * {
+        transition:none !important;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -8774,6 +9406,14 @@ V3094_EDITORIALS.forEach(item => {
 /* V3094-EDITORIAL-END */
 
 function openCase(id){
+    /* V30152-JAYEONGIKKEO-HOOK */
+    if (
+        id === 'sns' &&
+        typeof window.openV30152SNS === 'function'
+    ) {
+        window.openV30152SNS();
+        return;
+    }
     /* V23-ADS-HOOK */
     if (
         id === 'ads' &&
@@ -15921,6 +16561,713 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
             'load',mountFeed,{once:true}
         );
     }
+
+})();
+</script>
+<script id="v30152-jy-script">
+(() => {
+
+    'use strict';
+
+    const data = {"posts":[{"title":"02","id":"feed-01","image":"assets/other/jayeongikkeo/web/feed/feed-01.webp"},{"title":"03","id":"feed-02","image":"assets/other/jayeongikkeo/web/feed/feed-02.webp"},{"title":"04","id":"feed-03","image":"assets/other/jayeongikkeo/web/feed/feed-03.webp"},{"title":"05","id":"feed-04","image":"assets/other/jayeongikkeo/web/feed/feed-04.webp"},{"title":"06","id":"feed-05","image":"assets/other/jayeongikkeo/web/feed/feed-05.webp"},{"title":"IMG_0488","id":"feed-06","image":"assets/other/jayeongikkeo/web/feed/feed-06.webp"},{"title":"O1CN016bwMnA1TX7lwXPnIR_!!2925632391","id":"feed-07","image":"assets/other/jayeongikkeo/web/feed/feed-07.webp"},{"title":"1","id":"feed-08","image":"assets/other/jayeongikkeo/web/feed/feed-08.webp"},{"title":"2","id":"feed-09","image":"assets/other/jayeongikkeo/web/feed/feed-09.webp"},{"title":"3","id":"feed-10","image":"assets/other/jayeongikkeo/web/feed/feed-10.webp"},{"title":"4","id":"feed-11","image":"assets/other/jayeongikkeo/web/feed/feed-11.webp"},{"title":"5","id":"feed-12","image":"assets/other/jayeongikkeo/web/feed/feed-12.webp"},{"title":"1","id":"feed-13","image":"assets/other/jayeongikkeo/web/feed/feed-13.webp"},{"title":"2","id":"feed-14","image":"assets/other/jayeongikkeo/web/feed/feed-14.webp"},{"title":"3","id":"feed-15","image":"assets/other/jayeongikkeo/web/feed/feed-15.webp"},{"title":"4","id":"feed-16","image":"assets/other/jayeongikkeo/web/feed/feed-16.webp"}],"reels":[{"title":"725853195.773949","id":"reel-01","video":"assets/other/jayeongikkeo/web/reels/reel-01.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-01.webp"},{"title":"a loving family, forever home, a place to play","id":"reel-02","video":"assets/other/jayeongikkeo/web/reels/reel-02.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-02.webp"},{"title":"Glitter case spring case","id":"reel-03","video":"assets/other/jayeongikkeo/web/reels/reel-03.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-03.webp"},{"title":"LOVE STORY","id":"reel-04","video":"assets/other/jayeongikkeo/web/reels/reel-04.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-04.webp"},{"title":"My Video(55)_HIGH_1080p","id":"reel-05","video":"assets/other/jayeongikkeo/web/reels/reel-05.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-05.webp"},{"title":"My Video(56)_HIGH_1080p","id":"reel-06","video":"assets/other/jayeongikkeo/web/reels/reel-06.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-06.webp"},{"title":"갤럭시 s24 모음집","id":"reel-07","video":"assets/other/jayeongikkeo/web/reels/reel-07.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-07.webp"},{"title":"네잎클로버 반구","id":"reel-08","video":"assets/other/jayeongikkeo/web/reels/reel-08.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-08.webp"},{"title":"리본펄의 사본","id":"reel-09","video":"assets/other/jayeongikkeo/web/reels/reel-09.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-09.webp"},{"title":"릴스저장","id":"reel-10","video":"assets/other/jayeongikkeo/web/reels/reel-10.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-10.webp"},{"title":"마카롱 그립톡 (1)","id":"reel-11","video":"assets/other/jayeongikkeo/web/reels/reel-11.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-11.webp"},{"title":"맥세이프 카드지갑","id":"reel-12","video":"assets/other/jayeongikkeo/web/reels/reel-12.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-12.webp"},{"title":"맥세이프 투명 케이스","id":"reel-13","video":"assets/other/jayeongikkeo/web/reels/reel-13.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-13.webp"},{"title":"밤비글리터 크리스탈 버터플라이","id":"reel-14","video":"assets/other/jayeongikkeo/web/reels/reel-14.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-14.webp"},{"title":"앨리스 후기 모음집","id":"reel-15","video":"assets/other/jayeongikkeo/web/reels/reel-15.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-15.webp"},{"title":"카메라 보호필름 단독","id":"reel-16","video":"assets/other/jayeongikkeo/web/reels/reel-16.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-16.webp"},{"title":"핑크 오션 케이스","id":"reel-17","video":"assets/other/jayeongikkeo/web/reels/reel-17.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-17.webp"},{"title":"01","id":"reel-18","video":"assets/other/jayeongikkeo/web/reels/reel-18.mp4","image":"assets/other/jayeongikkeo/thumbnails/reel-18.webp"}]};
+
+    let activeTab = 'posts';
+    let activeIndex = 0;
+    let hoverVideo = null;
+    let previousOverflow = '';
+    let previousFocus = null;
+    let viewerFocus = null;
+
+    const hoverAllowed = matchMedia(
+        '(hover:hover) and (pointer:fine)'
+    ).matches;
+
+    const reducedMotion = matchMedia(
+        '(prefers-reduced-motion:reduce)'
+    ).matches;
+
+    const overlay = document.createElement('div');
+
+    overlay.id = 'v30152-jy-overlay';
+    overlay.hidden = true;
+
+    overlay.innerHTML = `
+        <section id="v30152-jy-panel"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-label="자영이꺼 SNS 운영">
+
+            <button type="button"
+                    class="v30152-jy-close"
+                    aria-label="닫기">×</button>
+
+            <div class="v30152-jy-kicker">
+                <b>01</b> SNS OPERATION · INSTAGRAM
+            </div>
+
+            <h2>자영이꺼 SNS 운영</h2>
+
+            <p class="v30152-jy-sub">
+                아이폰 케이스 · 폰꾸/백꾸 자사몰 브랜드
+                · Instagram @jayeongikkeo_
+            </p>
+
+            <div class="v30152-jy-tags">
+                <span>SNS 운영</span>
+                <span>피드 디자인</span>
+                <span>제품 촬영</span>
+                <span>릴스 제작</span>
+            </div>
+
+            <div class="v30152-jy-layout">
+
+                <div class="v30152-jy-phone">
+
+                    <div class="v30152-jy-screen">
+
+                        <div class="v30152-jy-notch"></div>
+
+                        <div class="v30152-jy-profile">
+
+                            <div class="v30152-jy-avatar">JY</div>
+
+                            <div>
+                                <strong>jayeongikkeo_</strong>
+                                <small>Selected creative works</small>
+                            </div>
+
+                        </div>
+
+                        <div class="v30152-jy-phone-tabs">
+
+                            <button data-jy-tab="posts">
+                                게시물
+                            </button>
+
+                            <button data-jy-tab="reels">
+                                릴스
+                            </button>
+
+                        </div>
+
+                        <div class="v30152-jy-feed-scroll">
+                            <div class="v30152-jy-grid"></div>
+                        </div>
+
+                        <div class="v30152-jy-phone-footer">
+                            SELECTED CONTENTS · JAYEONGIKKEO
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="v30152-jy-side">
+
+                    <small>INSTAGRAM · @JAYEONGIKKEO_</small>
+
+                    <h3>피드를 눌러보세요</h3>
+
+                    <p>
+                        게시물과 릴스를 선택하여 실제 작업물을
+                        확인할 수 있습니다.
+                        이미지를 누르면 크게 볼 수 있으며,
+                        릴스는 영상으로 재생됩니다.
+                    </p>
+
+                    <div class="v30152-jy-segment">
+
+                        <button data-jy-tab="posts">
+                            게시물
+                        </button>
+
+                        <button data-jy-tab="reels">
+                            릴스
+                        </button>
+
+                    </div>
+
+                    <button class="v30152-jy-choice"
+                            data-jy-tab="posts">
+
+                        <strong>
+                            FEED
+                            <em>${data.posts.length} posts</em>
+                        </strong>
+
+                        <small>제품 촬영 · 브랜드 피드 콘텐츠</small>
+
+                    </button>
+
+                    <button class="v30152-jy-choice"
+                            data-jy-tab="reels">
+
+                        <strong>
+                            REELS
+                            <em>${data.reels.length} reels</em>
+                        </strong>
+
+                        <small>숏폼 · 제품 소개 · 영상 콘텐츠</small>
+
+                    </button>
+
+                    <a class="v30152-jy-link"
+                       href="https://www.instagram.com/jayeongikkeo_/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        Instagram에서 보기 ↗
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+    `;
+
+    const viewer = document.createElement('div');
+
+    viewer.id = 'v30152-jy-viewer';
+    viewer.hidden = true;
+
+    viewer.innerHTML = `
+        <div class="v30152-jy-view-card"
+             role="dialog"
+             aria-modal="true"
+             aria-label="작업물 크게 보기">
+
+            <div class="v30152-jy-view-head">
+
+                <strong>JAYEONGIKKEO</strong>
+
+                <button type="button"
+                        data-jy-action="close-view"
+                        aria-label="닫기">×</button>
+
+            </div>
+
+            <div class="v30152-jy-view-media"></div>
+
+            <div class="v30152-jy-view-footer">
+
+                <button type="button"
+                        data-jy-action="prev">
+                    ← 이전
+                </button>
+
+                <small class="v30152-jy-position"></small>
+
+                <button type="button"
+                        data-jy-action="zoom">
+                    확대
+                </button>
+
+                <button type="button"
+                        data-jy-action="next">
+                    다음 →
+                </button>
+
+            </div>
+
+        </div>
+    `;
+
+    document.body.append(overlay,viewer);
+
+    const grid = overlay.querySelector('.v30152-jy-grid');
+    const panel = overlay.querySelector('#v30152-jy-panel');
+    const scroll = overlay.querySelector('.v30152-jy-feed-scroll');
+    const media = viewer.querySelector('.v30152-jy-view-media');
+
+    const closeOverlayButton =
+        overlay.querySelector('.v30152-jy-close');
+
+    function stopHover() {
+
+        if (!hoverVideo) return;
+
+        hoverVideo.pause();
+        hoverVideo.removeAttribute('src');
+        hoverVideo.load();
+        hoverVideo.remove();
+
+        hoverVideo = null;
+    }
+
+    function stopViewerMedia() {
+
+        const video = media.querySelector('video');
+
+        if (video) {
+
+            video.pause();
+            video.removeAttribute('src');
+            video.load();
+        }
+
+        media.replaceChildren();
+        media.classList.remove('is-zoomed');
+    }
+
+    function setTab(tab) {
+
+        stopHover();
+
+        activeTab = tab === 'reels'
+            ? 'reels'
+            : 'posts';
+
+        overlay.querySelectorAll('[data-jy-tab]')
+            .forEach(button => {
+
+                const on =
+                    button.dataset.jyTab === activeTab;
+
+                button.classList.toggle('on',on);
+
+                button.setAttribute(
+                    'aria-pressed',
+                    String(on)
+                );
+            });
+
+        renderGrid();
+        scroll.scrollTop = 0;
+    }
+
+    function renderGrid() {
+
+        grid.replaceChildren();
+
+        data[activeTab].forEach((item,index) => {
+
+            const button =
+                document.createElement('button');
+
+            button.type = 'button';
+            button.className = 'v30152-jy-tile';
+            button.dataset.jyIndex = index;
+
+            button.setAttribute(
+                'aria-label',
+                (activeTab === 'reels' ? 'Reel ' : 'Feed ') +
+                (index + 1)
+            );
+
+            const image = new Image();
+
+            image.src = item.image;
+            image.alt = item.title || '';
+            image.loading = 'lazy';
+
+            button.appendChild(image);
+
+            if (activeTab === 'reels') {
+
+                const icon = document.createElement('span');
+
+                icon.className = 'v30152-jy-play-icon';
+                icon.textContent = '▶';
+
+                button.appendChild(icon);
+            }
+
+            grid.appendChild(button);
+        });
+    }
+
+    function renderViewer() {
+
+        stopViewerMedia();
+
+        const items = data[activeTab];
+        const item = items[activeIndex];
+
+        if (!item) return;
+
+        const isReel = activeTab === 'reels';
+
+        viewer.querySelector(
+            '.v30152-jy-view-head strong'
+        ).textContent =
+            'JAYEONGIKKEO · ' +
+            (isReel ? 'REELS' : 'FEED');
+
+        viewer.querySelector(
+            '.v30152-jy-position'
+        ).textContent =
+            (activeIndex + 1) + ' / ' + items.length;
+
+        const zoom = viewer.querySelector(
+            '[data-jy-action="zoom"]'
+        );
+
+        zoom.hidden = isReel;
+        zoom.textContent = '확대';
+
+        if (isReel) {
+
+            const video = document.createElement('video');
+
+            video.src = item.video;
+            video.poster = item.image;
+
+            video.controls = true;
+            video.playsInline = true;
+            video.muted = true;
+            video.preload = 'metadata';
+
+            media.appendChild(video);
+
+            video.play().catch(()=>{});
+
+        } else {
+
+            const image = new Image();
+
+            image.src = item.image;
+            image.alt = item.title || 'SNS Feed';
+
+            image.addEventListener('click',toggleZoom);
+
+            media.appendChild(image);
+        }
+
+        media.scrollTop = 0;
+        media.scrollLeft = 0;
+    }
+
+    function openViewer(index) {
+
+        stopHover();
+
+        viewerFocus = document.activeElement;
+        activeIndex = index;
+
+        viewer.hidden = false;
+        panel.inert = true;
+
+        renderViewer();
+
+        viewer.querySelector(
+            '[data-jy-action="close-view"]'
+        ).focus({preventScroll:true});
+    }
+
+    function closeViewer() {
+
+        stopViewerMedia();
+
+        viewer.hidden = true;
+        panel.inert = false;
+
+        if (viewerFocus?.isConnected) {
+
+            viewerFocus.focus({
+                preventScroll:true
+            });
+        }
+    }
+
+    function toggleZoom() {
+
+        if (activeTab === 'reels') return;
+
+        const on = media.classList.toggle('is-zoomed');
+
+        viewer.querySelector(
+            '[data-jy-action="zoom"]'
+        ).textContent = on ? '축소' : '확대';
+    }
+
+    function navigate(delta) {
+
+        const length = data[activeTab].length;
+
+        activeIndex =
+            (activeIndex + delta + length) % length;
+
+        renderViewer();
+    }
+
+    function closeArchive() {
+
+        if (overlay.hidden) return;
+
+        if (!viewer.hidden) closeViewer();
+
+        stopHover();
+
+        overlay.hidden = true;
+        document.body.style.overflow = previousOverflow;
+
+        if (previousFocus?.isConnected) {
+
+            previousFocus.focus({
+                preventScroll:true
+            });
+        }
+    }
+
+    window.openV30152SNS = function() {
+
+        if (!overlay.hidden) return;
+
+        previousFocus = document.activeElement;
+        previousOverflow = document.body.style.overflow;
+
+        document.body.style.overflow = 'hidden';
+
+        overlay.hidden = false;
+        panel.scrollTop = 0;
+
+        setTab('posts');
+
+        closeOverlayButton.focus({
+            preventScroll:true
+        });
+    };
+
+    overlay.addEventListener('click',event => {
+
+        const tab = event.target.closest('[data-jy-tab]');
+
+        if (tab) {
+
+            setTab(tab.dataset.jyTab);
+            return;
+        }
+
+        const tile = event.target.closest('[data-jy-index]');
+
+        if (tile) {
+
+            openViewer(Number(tile.dataset.jyIndex));
+            return;
+        }
+
+        if (
+            event.target === overlay ||
+            event.target.closest('.v30152-jy-close')
+        ) {
+            closeArchive();
+        }
+    });
+
+    viewer.addEventListener('click',event => {
+
+        if (event.target === viewer) {
+
+            closeViewer();
+            return;
+        }
+
+        const button = event.target.closest('[data-jy-action]');
+
+        if (!button) return;
+
+        switch (button.dataset.jyAction) {
+
+            case 'close-view':
+                closeViewer();
+                break;
+
+            case 'prev':
+                navigate(-1);
+                break;
+
+            case 'next':
+                navigate(1);
+                break;
+
+            case 'zoom':
+                toggleZoom();
+                break;
+        }
+    });
+
+    if (hoverAllowed && !reducedMotion) {
+
+        grid.addEventListener('pointerover',event => {
+
+            if (event.pointerType === 'touch') return;
+            if (activeTab !== 'reels') return;
+
+            const tile = event.target.closest('[data-jy-index]');
+
+            if (!tile) return;
+
+            if (hoverVideo?.parentNode === tile) return;
+
+            stopHover();
+
+            const item = data.reels[Number(tile.dataset.jyIndex)];
+
+            if (!item) return;
+
+            const video = document.createElement('video');
+
+            video.src = item.video;
+            video.muted = true;
+            video.defaultMuted = true;
+            video.loop = true;
+            video.playsInline = true;
+            video.preload = 'none';
+
+            hoverVideo = video;
+
+            tile.appendChild(video);
+
+            video.play().catch(()=>{
+
+                if (hoverVideo === video) stopHover();
+            });
+        });
+
+        grid.addEventListener('pointerout',event => {
+
+            const tile = event.target.closest('[data-jy-index]');
+
+            if (
+                tile &&
+                !tile.contains(event.relatedTarget)
+            ) {
+                stopHover();
+            }
+        });
+
+        scroll.addEventListener('scroll',stopHover,{
+            passive:true
+        });
+    }
+
+    window.addEventListener('keydown',event => {
+
+        if (overlay.hidden) return;
+
+        if (event.key === 'Escape') {
+
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            if (!viewer.hidden) {
+
+                closeViewer();
+
+            } else {
+
+                closeArchive();
+            }
+
+        } else if (!viewer.hidden && event.key === 'ArrowRight') {
+
+            if (activeTab === 'reels') return;
+
+            event.preventDefault();
+            navigate(1);
+
+        } else if (!viewer.hidden && event.key === 'ArrowLeft') {
+
+            if (activeTab === 'reels') return;
+
+            event.preventDefault();
+            navigate(-1);
+
+        } else if (event.key === 'Tab') {
+
+            const scope = viewer.hidden ? panel : viewer;
+
+            const focusable = Array.from(
+                scope.querySelectorAll(
+                    'button:not([hidden]), a[href], video[controls]'
+                )
+            ).filter(el=>el.getClientRects().length);
+
+            const first = focusable[0];
+            const last = focusable[focusable.length-1];
+
+            if (!first) return;
+
+            if (event.shiftKey &&
+                document.activeElement === first) {
+
+                event.preventDefault();
+                last.focus();
+
+            } else if (!event.shiftKey &&
+                document.activeElement === last) {
+
+                event.preventDefault();
+                first.focus();
+            }
+        }
+
+    },true);
+
+    document.addEventListener('visibilitychange',()=>{
+
+        if (!document.hidden) return;
+
+        stopHover();
+
+        media.querySelector('video')?.pause();
+    });
+
+    // Replace main card with new feed images
+
+    function updateMainCard() {
+
+        const slots = Array.from(
+            document.querySelectorAll(
+                '.card[data-case="sns"] .v-grid .ph'
+            )
+        );
+
+        slots.forEach((slot,index)=>{
+
+            const item = data.posts[index];
+
+            if (!item) return;
+
+            const test = new Image();
+
+            test.onload = ()=>{
+
+                slot.removeAttribute('data-img');
+
+                slot.style.setProperty(
+                    '--v30152-cover',
+                    'url(' + JSON.stringify(item.image) + ')'
+                );
+
+                slot.classList.add(
+                    'v30152-ready',
+                    'has-img'
+                );
+            };
+
+            test.src = item.image;
+        });
+    }
+
+    if (document.readyState === 'complete') {
+
+        updateMainCard();
+
+    } else {
+
+        window.addEventListener(
+            'load',updateMainCard,{once:true}
+        );
+    }
+
+    console.info(
+        'V30.15.2 JAYEONGIKKEO READY',
+        data.posts.length,
+        data.reels.length
+    );
 
 })();
 </script>

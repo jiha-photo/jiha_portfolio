@@ -1,0 +1,267 @@
+{
+    "version":  "V30.15.1a",
+    "brand":  "JAYEONGIKKEO",
+    "account":  "jayeongikkeo_",
+    "feedCount":  16,
+    "reelCount":  18,
+    "posts":  [
+                  {
+                      "id":  "feed-01",
+                      "type":  "feed",
+                      "title":  "02",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/02.JPG",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-01.webp"
+                  },
+                  {
+                      "id":  "feed-02",
+                      "type":  "feed",
+                      "title":  "03",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/03.jpg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-02.webp"
+                  },
+                  {
+                      "id":  "feed-03",
+                      "type":  "feed",
+                      "title":  "04",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/04.JPG",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-03.webp"
+                  },
+                  {
+                      "id":  "feed-04",
+                      "type":  "feed",
+                      "title":  "05",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/05.JPG",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-04.webp"
+                  },
+                  {
+                      "id":  "feed-05",
+                      "type":  "feed",
+                      "title":  "06",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/06.jpeg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-05.webp"
+                  },
+                  {
+                      "id":  "feed-06",
+                      "type":  "feed",
+                      "title":  "IMG_0488",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/IMG_0488.JPG",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-06.webp"
+                  },
+                  {
+                      "id":  "feed-07",
+                      "type":  "feed",
+                      "title":  "O1CN016bwMnA1TX7lwXPnIR_!!2925632391",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/O1CN016bwMnA1TX7lwXPnIR_!!2925632391.jpeg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-07.webp"
+                  },
+                  {
+                      "id":  "feed-08",
+                      "type":  "feed",
+                      "title":  "1",
+                      "original":  "assets/other/jayeongikkeo/original/feed/실버유광 입체하트빔/1.jpg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-08.webp"
+                  },
+                  {
+                      "id":  "feed-09",
+                      "type":  "feed",
+                      "title":  "2",
+                      "original":  "assets/other/jayeongikkeo/original/feed/실버유광 입체하트빔/2.jpg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-09.webp"
+                  },
+                  {
+                      "id":  "feed-10",
+                      "type":  "feed",
+                      "title":  "3",
+                      "original":  "assets/other/jayeongikkeo/original/feed/실버유광 입체하트빔/3.jpg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-10.webp"
+                  },
+                  {
+                      "id":  "feed-11",
+                      "type":  "feed",
+                      "title":  "4",
+                      "original":  "assets/other/jayeongikkeo/original/feed/실버유광 입체하트빔/4.jpg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-11.webp"
+                  },
+                  {
+                      "id":  "feed-12",
+                      "type":  "feed",
+                      "title":  "5",
+                      "original":  "assets/other/jayeongikkeo/original/feed/실버유광 입체하트빔/5.jpg",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-12.webp"
+                  },
+                  {
+                      "id":  "feed-13",
+                      "type":  "feed",
+                      "title":  "1",
+                      "original":  "assets/other/jayeongikkeo/original/feed/알록달록 스트로베리/1.png",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-13.webp"
+                  },
+                  {
+                      "id":  "feed-14",
+                      "type":  "feed",
+                      "title":  "2",
+                      "original":  "assets/other/jayeongikkeo/original/feed/알록달록 스트로베리/2.png",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-14.webp"
+                  },
+                  {
+                      "id":  "feed-15",
+                      "type":  "feed",
+                      "title":  "3",
+                      "original":  "assets/other/jayeongikkeo/original/feed/알록달록 스트로베리/3.png",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-15.webp"
+                  },
+                  {
+                      "id":  "feed-16",
+                      "type":  "feed",
+                      "title":  "4",
+                      "original":  "assets/other/jayeongikkeo/original/feed/알록달록 스트로베리/4.png",
+                      "image":  "assets/other/jayeongikkeo/web/feed/feed-16.webp"
+                  }
+              ],
+    "reels":  [
+                  {
+                      "id":  "reel-01",
+                      "type":  "reel",
+                      "title":  "725853195.773949",
+                      "original":  "assets/other/jayeongikkeo/original/reels/725853195.773949.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-01.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-01.webp"
+                  },
+                  {
+                      "id":  "reel-02",
+                      "type":  "reel",
+                      "title":  "a loving family, forever home, a place to play",
+                      "original":  "assets/other/jayeongikkeo/original/reels/a loving family, forever home, a place to play.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-02.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-02.webp"
+                  },
+                  {
+                      "id":  "reel-03",
+                      "type":  "reel",
+                      "title":  "Glitter case spring case",
+                      "original":  "assets/other/jayeongikkeo/original/reels/Glitter case spring case.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-03.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-03.webp"
+                  },
+                  {
+                      "id":  "reel-04",
+                      "type":  "reel",
+                      "title":  "LOVE STORY",
+                      "original":  "assets/other/jayeongikkeo/original/reels/LOVE STORY.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-04.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-04.webp"
+                  },
+                  {
+                      "id":  "reel-05",
+                      "type":  "reel",
+                      "title":  "My Video(55)_HIGH_1080p",
+                      "original":  "assets/other/jayeongikkeo/original/reels/My Video(55)_HIGH_1080p.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-05.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-05.webp"
+                  },
+                  {
+                      "id":  "reel-06",
+                      "type":  "reel",
+                      "title":  "My Video(56)_HIGH_1080p",
+                      "original":  "assets/other/jayeongikkeo/original/reels/My Video(56)_HIGH_1080p.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-06.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-06.webp"
+                  },
+                  {
+                      "id":  "reel-07",
+                      "type":  "reel",
+                      "title":  "갤럭시 s24 모음집",
+                      "original":  "assets/other/jayeongikkeo/original/reels/갤럭시 s24 모음집.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-07.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-07.webp"
+                  },
+                  {
+                      "id":  "reel-08",
+                      "type":  "reel",
+                      "title":  "네잎클로버 반구",
+                      "original":  "assets/other/jayeongikkeo/original/reels/네잎클로버 반구.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-08.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-08.webp"
+                  },
+                  {
+                      "id":  "reel-09",
+                      "type":  "reel",
+                      "title":  "리본펄의 사본",
+                      "original":  "assets/other/jayeongikkeo/original/reels/리본펄의 사본.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-09.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-09.webp"
+                  },
+                  {
+                      "id":  "reel-10",
+                      "type":  "reel",
+                      "title":  "릴스저장",
+                      "original":  "assets/other/jayeongikkeo/original/reels/릴스저장.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-10.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-10.webp"
+                  },
+                  {
+                      "id":  "reel-11",
+                      "type":  "reel",
+                      "title":  "마카롱 그립톡 (1)",
+                      "original":  "assets/other/jayeongikkeo/original/reels/마카롱 그립톡 (1).mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-11.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-11.webp"
+                  },
+                  {
+                      "id":  "reel-12",
+                      "type":  "reel",
+                      "title":  "맥세이프 카드지갑",
+                      "original":  "assets/other/jayeongikkeo/original/reels/맥세이프 카드지갑.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-12.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-12.webp"
+                  },
+                  {
+                      "id":  "reel-13",
+                      "type":  "reel",
+                      "title":  "맥세이프 투명 케이스",
+                      "original":  "assets/other/jayeongikkeo/original/reels/맥세이프 투명 케이스.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-13.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-13.webp"
+                  },
+                  {
+                      "id":  "reel-14",
+                      "type":  "reel",
+                      "title":  "밤비글리터 크리스탈 버터플라이",
+                      "original":  "assets/other/jayeongikkeo/original/reels/밤비글리터 크리스탈 버터플라이.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-14.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-14.webp"
+                  },
+                  {
+                      "id":  "reel-15",
+                      "type":  "reel",
+                      "title":  "앨리스 후기 모음집",
+                      "original":  "assets/other/jayeongikkeo/original/reels/앨리스 후기 모음집.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-15.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-15.webp"
+                  },
+                  {
+                      "id":  "reel-16",
+                      "type":  "reel",
+                      "title":  "카메라 보호필름 단독",
+                      "original":  "assets/other/jayeongikkeo/original/reels/카메라 보호필름 단독.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-16.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-16.webp"
+                  },
+                  {
+                      "id":  "reel-17",
+                      "type":  "reel",
+                      "title":  "핑크 오션 케이스",
+                      "original":  "assets/other/jayeongikkeo/original/reels/핑크 오션 케이스.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-17.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-17.webp"
+                  },
+                  {
+                      "id":  "reel-18",
+                      "type":  "reel",
+                      "title":  "01",
+                      "original":  "assets/other/jayeongikkeo/original/feed/레트로 러블리 하트케이스/01.mp4",
+                      "video":  "assets/other/jayeongikkeo/web/reels/reel-18.mp4",
+                      "image":  "assets/other/jayeongikkeo/thumbnails/reel-18.webp"
+                  }
+              ]
+}
