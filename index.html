@@ -3915,6 +3915,255 @@ dialog.sanho-modal .sanho-close {
 }
 
 </style>
+<style id="v308-tools-style">
+
+.v308-tools {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    margin-top:30px;
+    padding-bottom:6px;
+}
+
+.v308-group {
+    min-width:0;
+}
+
+.v308-category {
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.12em;
+    color:#817975;
+    margin-bottom:10px;
+}
+
+.v308-row {
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+/* Shared icon design */
+
+.v308-tool {
+    position:relative;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+
+    min-height:43px;
+    padding:0 15px;
+
+    border:1px solid transparent;
+    border-radius:14px;
+
+    font-family:inherit;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.2;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 6px 14px rgba(30,25,25,.10);
+
+    transition:
+        transform .3s cubic-bezier(.22,1,.36,1),
+        box-shadow .3s ease;
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+/* Adobe */
+
+.v308-tool.adobe {
+    width:45px;
+    min-width:45px;
+    height:45px;
+    padding:0;
+    font-size:19px;
+    border-width:1.5px;
+}
+
+.v308-tool.ps,
+.v308-tool.lr {
+    background:#001e36;
+    color:#31a8ff;
+    border-color:#31a8ff;
+}
+
+.v308-tool.ai {
+    background:#330000;
+    color:#ff9a00;
+    border-color:#ff9a00;
+}
+
+.v308-tool.pr {
+    background:#00005b;
+    color:#9999ff;
+    border-color:#9999ff;
+}
+
+/* White tools */
+
+.v308-tool.figma,
+.v308-tool.capcut,
+.v308-tool.chatgpt,
+.v308-tool.cafe24,
+.v308-tool.coupang {
+    background:#fff;
+    color:#252525;
+    border-color:rgba(0,0,0,.035);
+}
+
+/* AI */
+
+.v308-tool.higgsfield {
+    background:#202020;
+    color:#fff;
+}
+
+.v308-tool.claude {
+    background:#f1ded1;
+    color:#ac6045;
+}
+
+/* Web */
+
+.v308-tool.html {
+    background:#ffe17e;
+    color:#252525;
+}
+
+.v308-tool.javascript {
+    background:#f7df1e;
+    color:#252525;
+}
+
+.v308-tool.github {
+    background:#24292f;
+    color:#fff;
+}
+
+/* Commerce */
+
+.v308-tool.meta {
+    background:#d74780;
+    color:#fff;
+}
+
+.v308-tool.smartstore {
+    background:#03c75a;
+    color:#fff;
+}
+
+.v308-tool.coupang {
+    gap:0;
+}
+
+/* Desktop hover */
+
+@media(hover:hover) and (pointer:fine) {
+
+    .v308-tool:hover {
+        transform:translateY(-5px) rotate(-2deg);
+        box-shadow:
+            0 12px 24px rgba(30,25,25,.16);
+        z-index:5;
+    }
+}
+
+.v308-tool:focus-visible {
+    outline:2px solid #d74780;
+    outline-offset:4px;
+}
+
+/* Tooltip */
+
+#v308-tooltip {
+    position:fixed;
+    z-index:10000;
+
+    max-width:calc(100vw - 24px);
+
+    padding:10px 14px;
+    border-radius:9px;
+
+    background:#242424;
+    color:#fff;
+
+    font-family:inherit;
+    font-size:12px;
+    font-weight:500;
+
+    text-align:center;
+    white-space:normal;
+    word-break:keep-all;
+
+    box-shadow:0 7px 20px rgba(0,0,0,.12);
+
+    pointer-events:none !important;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:opacity .15s ease;
+}
+
+#v308-tooltip.visible {
+    opacity:1;
+    visibility:visible;
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    .v308-tools {
+        gap:19px;
+        margin-top:24px;
+    }
+
+    .v308-category {
+        font-size:9px;
+        letter-spacing:.09em;
+        margin-bottom:9px;
+    }
+
+    .v308-row {
+        gap:8px;
+    }
+
+    .v308-tool {
+        min-height:39px;
+        padding:0 12px;
+        font-size:12px;
+        border-radius:12px;
+    }
+
+    .v308-tool.adobe {
+        width:40px;
+        min-width:40px;
+        height:40px;
+        font-size:17px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .v308-tool,
+    #v308-tooltip {
+        transition:none !important;
+    }
+
+    .v308-tool:hover {
+        transform:none;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -4264,10 +4513,232 @@ dialog.sanho-modal .sanho-close {
         <div class="col rv"><h4 class="mono">Who I am</h4><p>미디어와 커뮤니케이션을 전공하고 UI/UX 웹디자인 퍼블리셔 과정을 수료했습니다. 기획 → 제작 → 운영 → 개선, 온라인 판매의 전 과정을 실무로 커버합니다.</p></div>
         <div class="col rv" style="--d:.15s"><h4 class="mono">How I work</h4><p>플랫폼별 특성과 타깃의 관심사를 먼저 관찰합니다. 웹 접근성·사용성을 기준으로 콘텐츠와 화면을 설계하고, 고객 반응을 근거로 지속적으로 개선합니다.</p></div>
       </div>
-      <div class="stickers rv" style="--d:.2s">
-        <div class="app ps" style="--d:0s">Ps</div><div class="app ai" style="--d:.4s">Ai</div><div class="app pr" style="--d:.8s">Pr</div><div class="app lr" style="--d:1.2s">Lr</div>
-        <div class="app txt y" style="--d:.6s">HTML/CSS</div><div class="app txt w" style="--d:1s">Cafe24</div><div class="app txt p" style="--d:1.4s">Meta Ads</div>
-      </div>
+      <!-- V308-TOOLS-START -->
+
+<div class="v308-tools rv" style="--d:.2s">
+
+    <!-- CREATIVE -->
+
+    <div class="v308-group">
+
+        <div class="v308-category">
+            01 — CREATIVE &amp; DESIGN
+        </div>
+
+        <div class="v308-row">
+
+            <button type="button"
+                class="v308-tool adobe ps"
+                data-tip="상세페이지 · 이미지 합성 · 사진 보정"
+                aria-label="Photoshop">
+                Ps
+            </button>
+
+            <button type="button"
+                class="v308-tool adobe ai"
+                data-tip="벡터 그래픽 · 콘텐츠 디자인"
+                aria-label="Illustrator">
+                Ai
+            </button>
+
+            <button type="button"
+                class="v308-tool adobe pr"
+                data-tip="기본 영상 편집 · 컷 편집"
+                aria-label="Premiere Pro">
+                Pr
+            </button>
+
+            <button type="button"
+                class="v308-tool adobe lr"
+                data-tip="사진 색감 보정 · 리터칭"
+                aria-label="Lightroom">
+                Lr
+            </button>
+
+            <button type="button"
+                class="v308-tool figma"
+                data-tip="UI/UX · 상세페이지 · 디자인 템플릿">
+
+                <svg viewBox="0 0 24 36"
+                     width="15" height="22"
+                     aria-hidden="true">
+
+                    <path d="M6 36a6 6 0 0 0 6-6v-6H6a6 6 0 0 0 0 12"
+                          fill="#0ACF83"/>
+
+                    <path d="M0 18a6 6 0 0 1 6-6h6v12H6a6 6 0 0 1-6-6"
+                          fill="#A259FF"/>
+
+                    <path d="M0 6a6 6 0 0 1 6-6h6v12H6A6 6 0 0 1 0 6"
+                          fill="#F24E1E"/>
+
+                    <path d="M12 0h6a6 6 0 0 1 0 12h-6"
+                          fill="#FF7262"/>
+
+                    <circle cx="18" cy="18" r="6"
+                            fill="#1ABCFE"/>
+
+                </svg>
+
+                Figma
+
+            </button>
+
+            <button type="button"
+                class="v308-tool capcut"
+                data-tip="숏폼 · 릴스 · SNS 영상 편집">
+
+                <svg viewBox="0 0 24 24"
+                    width="20" height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true">
+
+                    <path d="M4 4h16v4L4 20h16v-4L4 4Z"/>
+                    <path d="M4 8l16 8"/>
+
+                </svg>
+
+                CapCut
+
+            </button>
+
+        </div>
+    </div>
+
+    <!-- AI -->
+
+    <div class="v308-group">
+
+        <div class="v308-category">
+            02 — AI &amp; CREATIVE TECHNOLOGY
+        </div>
+
+        <div class="v308-row">
+
+            <button type="button"
+                class="v308-tool higgsfield"
+                data-tip="AI 이미지 · 영상 · 광고 크리에이티브">
+                Higgsfield
+            </button>
+
+            <button type="button"
+                class="v308-tool chatgpt"
+                data-tip="콘텐츠 기획 · 카피라이팅 · 프롬프트 설계">
+                ChatGPT
+            </button>
+
+            <button type="button"
+                class="v308-tool claude"
+                data-tip="AI 활용 코드 구현 · 업무 자동화">
+
+                <svg viewBox="0 0 24 24"
+                    width="20" height="20"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    fill="none"
+                    aria-hidden="true">
+
+                    <path d="M12 2v20M2 12h20M5 5l14 14M5 19L19 5"/>
+                    <path d="M8 2l8 20M2 8l20 8"/>
+
+                </svg>
+
+                Claude
+
+            </button>
+
+        </div>
+    </div>
+
+    <!-- WEB -->
+
+    <div class="v308-group">
+
+        <div class="v308-category">
+            03 — WEB &amp; PUBLISHING
+        </div>
+
+        <div class="v308-row">
+
+            <button type="button"
+                class="v308-tool html"
+                data-tip="웹 퍼블리싱 · 반응형 디자인">
+                HTML/CSS
+            </button>
+
+            <button type="button"
+                class="v308-tool javascript"
+                data-tip="AI 활용 웹 인터랙션 구현">
+                JavaScript
+            </button>
+
+            <button type="button"
+                class="v308-tool github"
+                data-tip="웹사이트 배포 · 프로젝트 버전 관리">
+
+                <svg viewBox="0 0 24 24"
+                    width="19" height="19"
+                    fill="currentColor"
+                    aria-hidden="true">
+
+                    <path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.09 1.15A10.7 10.7 0 0 1 12 6.17c.96 0 1.92.13 2.82.38 2.15-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.12 2.98.72.79 1.15 1.79 1.15 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/>
+
+                </svg>
+
+                GitHub
+
+            </button>
+
+        </div>
+    </div>
+
+    <!-- COMMERCE -->
+
+    <div class="v308-group">
+
+        <div class="v308-category">
+            04 — COMMERCE &amp; MARKETING
+        </div>
+
+        <div class="v308-row">
+
+            <button type="button"
+                class="v308-tool cafe24"
+                data-tip="자사몰 관리 · 상품 등록 · 운영">
+                Cafe24
+            </button>
+
+            <button type="button"
+                class="v308-tool meta"
+                data-tip="SNS 광고 소재 제작 · A/B 테스트">
+                Meta Ads
+            </button>
+
+            <button type="button"
+                class="v308-tool smartstore"
+                data-tip="스마트스토어 상품 등록 · 판매 운영">
+                스마트스토어
+            </button>
+
+            <button type="button"
+                class="v308-tool coupang"
+                data-tip="오픈마켓 상품 등록 · 판매 관리">
+
+                <span style="color:#9C713E">쿠</span><span style="color:#D9464E">팡</span>
+
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- V308-TOOLS-END -->
     </div>
   </div>
 </div></section>
@@ -9888,6 +10359,138 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
     console.info(
         'V30.7.2 Cursor Reset Ready'
     );
+
+})();
+</script>
+<script id="v308-tools-script">
+(() => {
+
+    'use strict';
+
+    const area = document.querySelector('.v308-tools');
+
+    if (!area) return;
+
+    const buttons = area.querySelectorAll('.v308-tool');
+
+    let tooltip = document.getElementById('v308-tooltip');
+
+    if (!tooltip) {
+
+        tooltip = document.createElement('div');
+        tooltip.id = 'v308-tooltip';
+        tooltip.setAttribute('role','tooltip');
+
+        document.body.appendChild(tooltip);
+    }
+
+    let active = null;
+
+    function show(button) {
+
+        active = button;
+
+        tooltip.textContent = button.dataset.tip || '';
+
+        tooltip.classList.add('visible');
+
+        button.setAttribute(
+            'aria-describedby',
+            'v308-tooltip'
+        );
+
+        const r = button.getBoundingClientRect();
+        const t = tooltip.getBoundingClientRect();
+
+        let left = r.left + (r.width - t.width)/2;
+        let top = r.top - t.height - 12;
+
+        left = Math.max(
+            12,
+            Math.min(left,innerWidth - t.width - 12)
+        );
+
+        if (top < 12) {
+            top = r.bottom + 12;
+        }
+
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+    }
+
+    function hide() {
+
+        if (active) {
+            active.removeAttribute('aria-describedby');
+        }
+
+        tooltip.classList.remove('visible');
+
+        active = null;
+    }
+
+    buttons.forEach(button => {
+
+        button.addEventListener('pointerenter',e => {
+            if (e.pointerType !== 'touch') {
+                show(button);
+            }
+        });
+
+        button.addEventListener('pointerleave',hide);
+
+        button.addEventListener('focus',() => {
+            show(button);
+        });
+
+        button.addEventListener('blur',hide);
+
+        button.addEventListener('click',e => {
+
+            e.preventDefault();
+
+            if (
+                matchMedia('(pointer:coarse)').matches
+            ) {
+
+                if (active === button &&
+                    tooltip.classList.contains('visible')) {
+
+                    hide();
+
+                } else {
+
+                    show(button);
+                }
+            }
+
+        });
+
+    });
+
+    document.addEventListener('pointerdown',e => {
+
+        if (!area.contains(e.target)) {
+            hide();
+        }
+
+    },{passive:true});
+
+    window.addEventListener('scroll',hide,{passive:true});
+    window.addEventListener('resize',hide,{passive:true});
+
+    document.addEventListener('keydown',e => {
+
+        if (e.key === 'Escape') {
+            hide();
+        }
+
+    });
+
+    console.info('V30.8 Tools & Skills Ready',{
+        tools:buttons.length,
+        groups:area.querySelectorAll('.v308-group').length
+    });
 
 })();
 </script>
