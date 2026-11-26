@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>구슬톡 | DESIGNSKIN</title>
+
+<style>
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+    margin:0;
+    background:#f5f3ef;
+    color:#252525;
+    font-family:Arial,"Malgun Gothic",sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:30;
+    padding:20px 4vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    background:#f5f3ef;
+    border-bottom:1px solid #ccc;
+    font-size:12px;
+}
+
+#progress{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0;
+    height:3px;
+    background:#252525;
+    z-index:100;
+}
+
+.hero{
+    max-width:1280px;
+    margin:auto;
+    padding:60px 25px 35px;
+}
+
+.eyebrow{
+    color:#888;
+    font-size:10px;
+    letter-spacing:.12em;
+}
+
+h1{
+    font-size:clamp(28px,5vw,56px);
+    letter-spacing:-.05em;
+    margin:15px 0;
+}
+
+.hero p{
+    color:#777;
+    font-size:12px;
+}
+
+.layout{
+    display:grid;
+    grid-template-columns:180px minmax(0,1fr);
+    gap:35px;
+    max-width:1480px;
+    margin:auto;
+    padding:0 25px 60px;
+}
+
+.sidebar{
+    position:sticky;
+    top:90px;
+    align-self:start;
+}
+
+.info{
+    border-top:1px solid #bbb;
+    padding:18px 0;
+    font-size:12px;
+    line-height:1.8;
+}
+
+.info small{
+    display:block;
+    color:#888;
+    font-size:10px;
+    letter-spacing:.1em;
+    margin-bottom:10px;
+}
+
+.detail{
+    width:100%;
+    max-width:780px;
+    min-width:0;
+    margin:0 auto;
+}
+
+.detail img{
+    display:block;
+    width:100%;
+    max-width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+    border:0;
+    image-rendering:auto;
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+.detail section{
+    margin:0;
+    padding:0;
+    line-height:0;
+}
+
+.navigation{
+    max-width:1280px;
+    margin:auto;
+    padding:25px;
+    border-top:1px solid #aaa;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    font-size:12px;
+    line-height:1.8;
+}
+
+.disabled{opacity:.35}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    font-size:10px;
+    color:#999;
+}
+
+.back-top{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:42px;
+    height:42px;
+    border:1px solid #aaa;
+    border-radius:50%;
+    background:#f5f3ef;
+    cursor:pointer;
+}
+
+@media(max-width:760px){
+    .layout{
+        display:block;
+        padding:0 0 30px;
+    }
+
+    .sidebar{
+        position:static;
+        padding:0 20px 20px;
+    }
+
+    .hero{
+        padding:35px 20px 20px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+}
+
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header class="topbar">
+    <strong>DESIGNSKIN / DETAIL PAGE</strong>
+    <a href="../../../../index.html#case-detail">
+        PORTFOLIO &#8599;
+    </a>
+</header>
+
+<section class="hero">
+    <div class="eyebrow">
+        IP COLLABORATION / 몬치치
+    </div>
+
+    <h1>구슬톡</h1>
+
+    <p>Figma Template / Product Detail Design</p>
+</section>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="info">
+            <small>BRAND</small>
+            DESIGNSKIN
+        </div>
+
+        <div class="info">
+            <small>IP COLLECTION</small>
+            몬치치
+        </div>
+
+        <div class="info">
+            <small>DESIGN APPROACH</small>
+            공통 상세페이지 템플릿 활용<br>
+            제품별 이미지 및 그래픽 적용
+        </div>
+
+    </aside>
+
+    <main class="detail">
+        <section><img src="../../../../assets/detail-pages/designskin/ip/monchhichi/bead-tok/detail/detail-001.webp" width="780" height="3000" alt="구슬톡" loading="eager" decoding="async" draggable="false"></section>
+<section><img src="../../../../assets/detail-pages/designskin/ip/monchhichi/bead-tok/detail/detail-002.webp" width="780" height="3000" alt="구슬톡" loading="lazy" decoding="async" draggable="false"></section>
+<section><img src="../../../../assets/detail-pages/designskin/ip/monchhichi/bead-tok/detail/detail-003.webp" width="780" height="680" alt="구슬톡" loading="lazy" decoding="async" draggable="false"></section>
+    </main>
+
+</div>
+
+<nav class="navigation">
+    <span class="disabled">PREVIOUS PRODUCT</span>
+    <a href="v265-monchhichi-graphic-tok.html">NEXT PRODUCT &#8594;<br>그래픽톡</a>
+</nav>
+
+<footer>
+    DESIGNSKIN / PRODUCT DETAIL DESIGN
+</footer>
+
+<button class="back-top"
+    aria-label="Back to top"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    &#8593;
+</button>
+
+<script>
+
+function updateProgress(){
+
+    const max =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    document.getElementById('progress').style.width =
+        (max>0 ? Math.min(100,scrollY/max*100) : 0)+'%';
+}
+
+addEventListener('scroll',updateProgress,{passive:true});
+addEventListener('resize',updateProgress);
+addEventListener('load',updateProgress);
+
+document.querySelectorAll('.detail img').forEach(img=>{
+    img.addEventListener('load',updateProgress);
+});
+
+document.addEventListener('contextmenu',e=>{
+    if(e.target.closest('.detail img')){
+        e.preventDefault();
+    }
+});
+
+updateProgress();
+
+</script>
+
+</body>
+</html>

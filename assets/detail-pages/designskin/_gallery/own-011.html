@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<title>피닉스 올 클리어 - Detail Page Archive</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f5f3ef;
+    color: #252525;
+    font-family: Arial,"Malgun Gothic",sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 4vw;
+    background: rgba(245,243,239,.97);
+    border-bottom: 1px solid #d5d2cc;
+}
+
+.brand {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .03em;
+}
+
+.topbar a {
+    font-size: 11px;
+}
+
+.hero {
+    padding: 65px 24px 45px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: #888;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+h1 {
+    font-size: clamp(30px,5vw,60px);
+    line-height: 1.25;
+    letter-spacing: -.05em;
+    margin: 18px 0;
+}
+
+.description {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 200px minmax(0,860px);
+    gap: 40px;
+    max-width: 1200px;
+    padding: 0 24px 70px;
+    margin: auto;
+}
+
+.sidebar {
+    position: sticky;
+    top: 95px;
+    align-self: start;
+}
+
+.info-block {
+    border-top: 1px solid #aaa;
+    padding: 18px 0;
+}
+
+.info-block small {
+    color: #888;
+    display: block;
+    font-size: 10px;
+    letter-spacing: .1em;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.detail-page {
+    min-width: 0;
+    width: 100%;
+    background: white;
+}
+
+.detail-page img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.detail-page section {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.progress-track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    z-index: 100;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background: #252525;
+}
+
+.issue-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 30px 24px;
+    margin: auto;
+    border-top: 1px solid #aaa;
+}
+
+.issue-nav a {
+    max-width: 45%;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.issue-nav a:hover {
+    text-decoration: underline;
+}
+
+.disabled {
+    opacity: .3;
+    font-size: 11px;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 15px;
+    color: #999;
+    font-size: 10px;
+    letter-spacing: .06em;
+}
+
+.back-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background: #f5f3ef;
+    color: #222;
+    cursor: pointer;
+}
+
+@media(max-width:760px) {
+
+    .layout {
+        display: block;
+        padding: 0 0 30px;
+    }
+
+    .sidebar {
+        position: static;
+        padding: 0 20px 20px;
+    }
+
+    .hero {
+        padding: 35px 20px 20px;
+    }
+
+    .info-block {
+        padding: 12px 0;
+    }
+
+    .topbar {
+        padding: 16px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+</style>
+<style id="v264-quality-fix">
+
+.detail-page{
+    background:transparent;
+}
+
+.detail-page img{
+    width:auto !important;
+    max-width:100% !important;
+    height:auto !important;
+    margin:0 auto !important;
+    image-rendering:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="progress-track">
+    <div id="progress"></div>
+</div>
+
+<header class="topbar">
+    <span class="brand">
+        DESIGNSKIN / DETAIL PAGE
+    </span>
+
+    <a href="../../../../index.html#case-detail">
+        PORTFOLIO &#8599;
+    </a>
+</header>
+
+<section class="hero">
+
+    <div class="eyebrow">
+        OWN PRODUCT / SELECTED WORKS
+    </div>
+
+    <h1>피닉스 올 클리어</h1>
+
+    <p class="description">
+        Product Detail Design / Visual Content
+    </p>
+
+</section>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="info-block">
+            <small>BRAND</small>
+            <p>이룸디자인스킨 / DESIGNSKIN</p>
+        </div>
+
+        <div class="info-block">
+            <small>PROJECT TYPE</small>
+            <p>OWN PRODUCT</p>
+        </div>
+
+        <div class="info-block">
+            <small>DESIGN APPROACH</small>
+            <p>제품별 특성과 주요 소구점을 고려한 상세페이지 구성 및 디자인</p>
+        </div>
+
+        <div class="info-block">
+            <small>MY WORK</small>
+            <p>
+                상세페이지 제작<br>
+                비주얼 디자인<br>
+                제품 이미지 구성
+            </p>
+        </div>
+
+    </aside>
+
+    <main class="detail-page">
+
+        <section><img src="../../../../assets/detail-pages/designskin/own/sections/%ED%94%BC%EB%8B%89%EC%8A%A4%20%EC%98%AC%20%ED%81%B4%EB%A6%AC%EC%96%B4/detail-001.webp" alt="피닉스 올 클리어 - 1" loading="eager" decoding="async" draggable="false"></section>
+<section><img src="../../../../assets/detail-pages/designskin/own/sections/%ED%94%BC%EB%8B%89%EC%8A%A4%20%EC%98%AC%20%ED%81%B4%EB%A6%AC%EC%96%B4/detail-002.webp" alt="피닉스 올 클리어 - 2" loading="lazy" decoding="async" draggable="false"></section>
+<section><img src="../../../../assets/detail-pages/designskin/own/sections/%ED%94%BC%EB%8B%89%EC%8A%A4%20%EC%98%AC%20%ED%81%B4%EB%A6%AC%EC%96%B4/detail-003.webp" alt="피닉스 올 클리어 - 3" loading="lazy" decoding="async" draggable="false"></section>
+<section><img src="../../../../assets/detail-pages/designskin/own/sections/%ED%94%BC%EB%8B%89%EC%8A%A4%20%EC%98%AC%20%ED%81%B4%EB%A6%AC%EC%96%B4/detail-004.webp" alt="피닉스 올 클리어 - 4" loading="lazy" decoding="async" draggable="false"></section>
+
+    </main>
+
+</div>
+
+<nav class="issue-nav">
+
+    <a href="own-010.html">&#8592; PREVIOUS PROJECT<br>프리미엄 메탈 렌즈 프로텍터 공통(블루 실버 딥퍼플)</a>
+
+    <a href="own-012.html">NEXT PROJECT &#8594;<br>피닉스 울트라 맥세이프 (1)</a>
+
+</nav>
+
+<footer>
+    DESIGNSKIN / PRODUCT DETAIL DESIGN
+    <br><br>
+    PORTFOLIO ARCHIVE
+</footer>
+
+<button type="button"
+    class="back-top"
+    aria-label="Back to top"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+    &#8593;
+
+</button>
+
+<script>
+
+const progress = document.getElementById('progress');
+
+function updateProgress() {
+
+    const max =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const value = max > 0
+        ? window.scrollY / max * 100
+        : 0;
+
+    progress.style.width =
+        Math.min(100,Math.max(0,value)) + '%';
+}
+
+window.addEventListener(
+    'scroll',updateProgress,{passive:true}
+);
+
+window.addEventListener('resize',updateProgress);
+window.addEventListener('load',updateProgress);
+
+document.querySelectorAll('.detail-page img')
+    .forEach(img => {
+        img.addEventListener('load',updateProgress);
+    });
+
+document.addEventListener('contextmenu',e => {
+    if (e.target.closest('.detail-page img')) {
+        e.preventDefault();
+    }
+});
+
+document.addEventListener('dragstart',e => {
+    if (e.target.closest('.detail-page img')) {
+        e.preventDefault();
+    }
+});
+
+updateProgress();
+
+</script>
+
+</body>
+</html>
