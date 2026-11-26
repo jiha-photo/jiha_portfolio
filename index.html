@@ -4883,6 +4883,755 @@ dialog.sanho-modal .sanho-close {
 }
 
 </style>
+<style id="v3098-mojanara-style">
+
+.sleeve[data-case="mojanara"] {
+    position:relative;
+}
+
+.sleeve[data-case="mojanara"] .ph {
+    position:relative;
+    overflow:hidden;
+}
+
+.sleeve[data-case="mojanara"] .v3098-cover {
+    position:absolute;
+    inset:0;
+
+    display:block !important;
+
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:cover !important;
+    object-position:center top !important;
+
+    border-radius:inherit;
+
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+/* Vertical Photoshop and Capture One */
+
+.sleeve[data-case="mojanara"] .v3097-tools {
+
+    position:absolute;
+
+    top:32px;
+    right:-11px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:8px;
+
+    z-index:7;
+
+    pointer-events:none;
+}
+
+@media(hover:hover) and (pointer:fine) {
+
+    .sleeve[data-case="mojanara"]:hover
+    .v3097-tool.ps {
+
+        transform:
+            translateY(-3px)
+            rotate(-12deg);
+    }
+
+    .sleeve[data-case="mojanara"]:hover
+    .v3097-tool.captureone {
+
+        transform:
+            translateY(-3px)
+            rotate(12deg);
+    }
+}
+
+@media(max-width:600px) {
+
+    .sleeve[data-case="mojanara"] .v3097-tools {
+
+        top:24px;
+        right:-5px;
+        gap:6px;
+    }
+}
+
+</style>
+<style id="v3099-collection-style">
+
+.v3099-collection {
+    margin:32px 0 40px;
+}
+
+.v3099-main-tabs {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+.v3099-main-tab {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    min-height:88px;
+    padding:18px;
+
+    border:1px solid #ddd8d2;
+    border-radius:14px;
+
+    background:#fff;
+    color:#222;
+
+    text-align:left;
+    font-family:inherit;
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s;
+}
+
+.v3099-main-tab strong {
+    font-size:16px;
+}
+
+.v3099-main-tab small {
+    margin-top:7px;
+    font-size:11px;
+    opacity:.7;
+}
+
+.v3099-main-tab.active {
+    background:#222;
+    color:#fff;
+    border-color:#222;
+}
+
+.v3099-look-tabs {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:20px 0;
+}
+
+.v3099-look-tab {
+    padding:10px 15px;
+
+    border:1px solid #ddd8d2;
+    border-radius:30px;
+
+    background:#fff;
+    color:#222;
+
+    font-size:11px;
+    font-family:inherit;
+
+    transition:
+        background .25s,
+        color .25s;
+}
+
+.v3099-look-tab.active {
+    background:#a88065;
+    border-color:#a88065;
+    color:#fff;
+}
+
+.v3099-collection .v3093-lookbook {
+    margin-top:18px;
+}
+
+.v3099-photo-title {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+
+    margin:28px 0 20px;
+
+    font-size:11px;
+    letter-spacing:.08em;
+    color:#81766f;
+}
+
+/* Original image proportions */
+
+.v3099-photo-grid {
+    columns:3;
+    column-gap:13px;
+}
+
+.v3099-photo-card {
+    display:inline-block;
+
+    width:100%;
+    padding:7px;
+    margin:0 0 13px;
+
+    border:0;
+    border-radius:8px;
+
+    background:#fff;
+    text-align:left;
+
+    box-sizing:border-box;
+    break-inside:avoid;
+}
+
+.v3099-photo-frame {
+    display:block;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+.v3099-photo-card img {
+    display:block;
+    width:100%;
+    height:auto;
+
+    transition:transform .4s ease;
+}
+
+.v3099-photo-card small {
+    display:block;
+
+    padding:9px 4px 3px;
+
+    font-size:9px;
+    letter-spacing:.07em;
+    color:#81766f;
+}
+
+.v3099-content {
+    animation:v3099Fade .35s ease both;
+}
+
+@keyframes v3099Fade {
+    from {
+        opacity:0;
+        transform:translateY(5px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(hover:hover) and (pointer:fine) {
+
+    .v3099-main-tab:hover {
+        transform:translateY(-3px);
+    }
+
+    .v3099-photo-card:hover img {
+        transform:scale(1.035);
+    }
+}
+
+@media(max-width:650px) {
+
+    .v3099-main-tabs {
+        gap:8px;
+    }
+
+    .v3099-main-tab {
+        min-height:76px;
+        padding:12px;
+    }
+
+    .v3099-main-tab strong {
+        font-size:12px;
+    }
+
+    .v3099-main-tab small {
+        font-size:10px;
+    }
+
+    .v3099-look-tabs {
+        gap:6px;
+    }
+
+    .v3099-look-tab {
+        padding:8px 11px;
+        font-size:10px;
+    }
+
+    .v3099-photo-grid {
+        columns:2;
+        column-gap:9px;
+    }
+
+    .v3099-photo-card {
+        margin-bottom:9px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .v3099-content {
+        animation:none;
+    }
+
+    .v3099-main-tab,
+    .v3099-photo-card img {
+        transition:none;
+    }
+
+    .v3099-main-tab:hover,
+    .v3099-photo-card:hover img {
+        transform:none;
+    }
+}
+
+</style>
+<style id="v3010-creative-style">
+
+/* PHOTO ARCHIVE TOOL STICKERS */
+
+.sleeve .v3010-tools {
+    position:absolute;
+    top:32px;
+    right:-11px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+
+    z-index:8;
+    pointer-events:none;
+}
+
+.v3010-tool {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:32px;
+    height:32px;
+
+    border-radius:9px;
+    box-sizing:border-box;
+
+    font-family:Arial,sans-serif;
+    font-size:15px;
+    font-weight:700;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.18);
+
+    transition:transform .3s ease;
+
+    transform:rotate(-8deg);
+}
+
+.v3010-tool:nth-child(even) {
+    transform:rotate(8deg);
+}
+
+.v3010-tool.ps,
+.v3010-tool.lr {
+    background:#001e36;
+    color:#31a8ff;
+    border:1.5px solid #31a8ff;
+}
+
+.v3010-tool.ai {
+    background:#330000;
+    color:#ff9a00;
+    border:1.5px solid #ff9a00;
+}
+
+.v3010-tool.c1 {
+    background:linear-gradient(145deg,#303030,#111);
+    color:#fff;
+    border:1.5px solid #777;
+}
+
+.v3010-tool svg {
+    width:74%;
+    height:74%;
+    display:block;
+}
+
+/* CONTACT BUTTON */
+
+#v3010-bank-trigger {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:16px 22px;
+
+    background:transparent;
+    color:#e997b7;
+
+    border:1px solid #d74780;
+    border-radius:40px;
+
+    font-family:inherit;
+    font-size:14px;
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s;
+}
+
+#v3010-bank-trigger svg {
+    width:16px;
+    height:16px;
+    flex-shrink:0;
+}
+
+#v3010-bank-trigger:hover {
+    background:#d74780;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+/* FLOATING INSTAGRAM PREVIEW */
+
+#v3010-bank-panel {
+    position:fixed;
+    z-index:5000;
+
+    width:350px;
+    max-width:calc(100vw - 24px);
+    max-height:calc(100vh - 30px);
+
+    padding:20px;
+
+    background:#fcfaf8;
+    color:#222;
+
+    border:1px solid #ddd6d2;
+    border-radius:20px;
+
+    box-shadow:0 20px 65px rgba(0,0,0,.30);
+
+    overflow:auto;
+    overscroll-behavior:contain;
+
+    box-sizing:border-box;
+}
+
+#v3010-bank-panel[hidden] {
+    display:none !important;
+}
+
+#v3010-bank-panel.open {
+    animation:v3010Appear .28s ease both;
+}
+
+@keyframes v3010Appear {
+    from {
+        opacity:0;
+        transform:translateY(9px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.v3010-bank-profile {
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.v3010-avatar {
+    display:grid;
+    place-items:center;
+
+    width:46px;
+    height:46px;
+
+    flex-shrink:0;
+
+    background:#222;
+    color:#fff;
+
+    border-radius:50%;
+    font-size:20px;
+    font-weight:700;
+}
+
+.v3010-bank-account {
+    flex:1;
+    min-width:0;
+}
+
+.v3010-bank-account strong {
+    display:block;
+    font-size:15px;
+}
+
+.v3010-bank-account small {
+    display:block;
+    margin-top:4px;
+
+    color:#8b7f7d;
+    font-size:9px;
+    letter-spacing:.07em;
+}
+
+.v3010-bank-close {
+    width:28px;
+    height:28px;
+
+    border:0;
+    border-radius:50%;
+
+    background:#eee9e5;
+    color:#222;
+
+    font-size:18px;
+    flex-shrink:0;
+}
+
+.v3010-bank-title {
+    margin:19px 0 5px;
+
+    color:#222;
+
+    font-size:25px;
+    font-weight:700;
+    letter-spacing:-.05em;
+}
+
+.v3010-bank-slogan {
+    color:#d74780;
+
+    font-size:12px;
+    font-weight:600;
+}
+
+.v3010-bank-description {
+    margin:9px 0 17px;
+
+    color:#817773;
+
+    font-size:11px;
+    line-height:1.7;
+}
+
+/* CATEGORY FILTERS */
+
+.v3010-bank-tabs {
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+
+    margin:0 0 12px;
+}
+
+.v3010-bank-tab {
+    padding:7px 10px;
+
+    background:#eeeae6;
+    color:#555;
+
+    border:0;
+    border-radius:20px;
+
+    font-size:9px;
+    font-family:inherit;
+    font-weight:600;
+}
+
+.v3010-bank-tab.active {
+    background:#222;
+    color:#fff;
+}
+
+/* SCROLLABLE FEED */
+
+.v3010-bank-feed {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-content:start;
+    gap:4px;
+
+    max-height:216px;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+
+    scrollbar-width:thin;
+}
+
+.v3010-bank-image {
+    position:relative;
+
+    display:block;
+    width:100%;
+    aspect-ratio:1;
+
+    padding:0;
+    border:0;
+    border-radius:3px;
+
+    overflow:hidden;
+
+    background:#eee8e5;
+}
+
+.v3010-bank-image img {
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .35s ease;
+}
+
+.v3010-bank-count {
+    margin:10px 0 12px;
+    color:#8b807b;
+    font-size:10px;
+}
+
+.v3010-bank-link {
+    display:block;
+
+    padding:13px 10px;
+
+    background:#222;
+    color:#fff !important;
+
+    border-radius:9px;
+
+    text-align:center;
+    text-decoration:none;
+
+    font-size:11px;
+    font-weight:600;
+}
+
+/* FULL IMAGE PREVIEW */
+
+#v3010-bank-image-viewer {
+    position:fixed;
+    inset:0;
+
+    z-index:6000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:24px;
+
+    background:rgba(0,0,0,.88);
+    box-sizing:border-box;
+}
+
+#v3010-bank-image-viewer[hidden] {
+    display:none !important;
+}
+
+#v3010-bank-image-viewer img {
+    display:block;
+
+    max-width:90vw;
+    max-height:85vh;
+
+    width:auto;
+    height:auto;
+    object-fit:contain;
+}
+
+#v3010-bank-image-viewer button {
+    position:absolute;
+    top:20px;
+    right:20px;
+
+    width:38px;
+    height:38px;
+
+    border:0;
+    border-radius:50%;
+
+    background:#fff;
+    color:#222;
+
+    font-size:23px;
+}
+
+/* HOVER */
+
+@media(hover:hover) and (pointer:fine) {
+
+    .sleeve:hover .v3010-tool {
+        transform:translateY(-3px) rotate(-12deg);
+    }
+
+    .sleeve:hover .v3010-tool:nth-child(even) {
+        transform:translateY(-3px) rotate(12deg);
+    }
+
+    .v3010-bank-image:hover img {
+        transform:scale(1.07);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .sleeve .v3010-tools {
+        top:24px;
+        right:-5px;
+        gap:6px;
+    }
+
+    .v3010-tool {
+        width:28px;
+        height:28px;
+
+        border-radius:8px;
+        font-size:13px;
+    }
+
+    #v3010-bank-trigger {
+        padding:13px 17px;
+        font-size:12px;
+    }
+
+    #v3010-bank-panel {
+        width:calc(100vw - 24px);
+        max-width:370px;
+        padding:16px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    #v3010-bank-panel.open {
+        animation:none;
+    }
+
+    .v3010-tool,
+    .v3010-bank-image img,
+    #v3010-bank-trigger {
+        transition:none;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -5592,7 +6341,7 @@ dialog.sanho-modal .sanho-close {
     <div class="tl-item" data-c="var(--sky)" data-img="" data-label="SANHO MANSION"><span class="tl-date">2021.09 — 2021.12</span><div><div class="tl-title">산호맨숀 스튜디오</div><div class="tl-desc">촬영 인턴 · 프로필 · 증명사진 촬영 · 후보정 · 콘텐츠 제작</div></div><span class="tl-tag">Intern</span></div>
     <div class="tl-item" data-c="var(--mint)" data-img="" data-label="EDUCATION"><span class="tl-date">2021.03 — 2021.07</span><div><div class="tl-title">UI/UX 웹디자인 퍼블리셔 과정 수료</div><div class="tl-desc">Photoshop · HTML/CSS/JavaScript · 반응형 · 웹 표준 · 접근성</div></div><span class="tl-tag">Education</span></div>
     <div class="tl-item" data-c="var(--butter)" data-img="" data-label="CHAAKAN"><span class="tl-date">2020.09 — 2020.12</span><div><div class="tl-title">착한구두</div><div class="tl-desc">마케터 + 포토그래퍼 · 연출컷 · 착용 촬영 · 상세페이지 제작</div></div><span class="tl-tag">Marketer</span></div>
-    <div class="tl-item" data-c="var(--peach)" data-img="assets/other/mojanara/thumbnails/mojanara-cover.webp" data-label="MOJANARA"><span class="tl-date">2019.10 — 2020.09</span><div><div class="tl-title">(주)모자나라</div><div class="tl-desc">포토그래퍼 · 룩북 · 착용 상세 · 컬러 배리에이션 촬영</div></div><span class="tl-tag">Photographer</span></div>
+    <div class="tl-item" data-c="var(--peach)" data-img="assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp" data-label="MOJANARA"><span class="tl-date">2019.10 — 2020.09</span><div><div class="tl-title">(주)모자나라</div><div class="tl-desc">포토그래퍼 · 룩북 · 착용 상세 · 컬러 배리에이션 촬영</div></div><span class="tl-tag">Photographer</span></div>
     <div class="tl-item" data-c="#E8E3DC" data-img="assets/other/naunau/editorials/thumbnails/enjoy-frill-cover.webp" data-pos="top" data-label="NAUNAU.JP"><span class="tl-date">2018.03 — 2018.05</span><div><div class="tl-title">naunau.jp</div><div class="tl-desc">일본 패션 매거진 · 상세페이지 컨셉 · 촬영 · 보정 · 디자인 전 과정 직접 기획 및 제작</div></div><span class="tl-tag">Magazine</span></div>
     <div class="tl-item" data-c="var(--blush)" data-img="images/b1-forest-cover.jpg" data-label="B1 STUDIO"><span class="tl-date">2014.02 — 2016</span><div><div class="tl-title">B1 studio · Blooming</div><div class="tl-desc">자체 프로젝트 · 기획 · 촬영 · 편집 · 제작판매 1인 완결형</div></div><span class="tl-tag">Self</span></div>
   </div>
@@ -5603,7 +6352,7 @@ dialog.sanho-modal .sanho-close {
   <div class="sec-head rv"><h2 class="sec-title">Photo <em>archive</em></h2><p class="sec-desc">촬영 → 편집 → 상세페이지를 혼자 완결.<br>외주 없이 필요한 컷을 아는 기획자.</p></div>
   <div class="sleeves">
     <div class="sleeve rv" style="--r:-3deg"><div class="ph" data-img="images/archive-01.jpg" data-label="CHAAKAN" style="--c:var(--butter)"></div><div class="app ps tool">Ps</div><h4>착한구두</h4><p class="mono">2020 · Marketer + Photo</p><div class="shine"></div></div>
-    <div class="sleeve rv" style="--r:2deg;--d:.08s" data-case="mojanara" data-cursor="VIEW" role="button" tabindex="0" aria-label="MOJANARA Lookbook"><div class="ph" data-img="assets/other/mojanara/thumbnails/mojanara-cover.webp" data-label="MOJANARA" style="--c:var(--peach)"></div><div class="app lr tool">Lr</div><h4>(주)모자나라</h4><p class="mono">2019–20 · Lookbook</p><div class="shine"></div></div>
+    <div class="sleeve rv" style="--r:2deg;--d:.08s" data-case="mojanara" data-cursor="VIEW" role="button" tabindex="0" aria-label="MOJANARA Lookbook"><div class="ph" data-img="assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp" data-label="MOJANARA" style="--c:var(--peach)"></div><div class="app lr tool">Lr</div><h4>(주)모자나라</h4><p class="mono">2019–20 · Lookbook</p><div class="shine"></div></div>
     <div class="sleeve rv" style="--r:-1.5deg;--d:.16s"><div class="ph" data-img="images/archive-03.jpg" data-label="SANHO MANSION" style="--c:var(--sky)"></div><div class="app ps tool">Ps</div><h4>산호맨숀 스튜디오</h4><p class="mono">2021 · Portrait</p><div class="shine"></div></div>
     <div class="sleeve rv" style="--r:3deg;--d:.24s" data-case="naunau" data-cursor="VIEW" role="button" tabindex="0" aria-label="naunau.jp 상세페이지 보기"><div class="ph" data-img="assets/other/naunau/editorials/thumbnails/enjoy-frill-cover.webp" data-pos="top" data-alt="naunau.jp 상세페이지" data-label="NAUNAU.JP" style="--c:#E8E3DC"></div><div class="app lr tool">Lr</div><h4>naunau.jp ↗</h4><p class="mono">2018 · Detail page · 기획/제작</p><div class="shine"></div></div>
     <div class="sleeve rv" style="--r:-2deg;--d:.32s" data-case="b1" data-cursor="VIEW" role="button" tabindex="0" aria-label="B1 Studio 상세 프로젝트 보기"><div class="ph" data-img="images/b1-forest-cover.jpg" data-label="B1 STUDIO" style="--c:var(--blush)"></div><div class="app ai tool">Ai</div><h4>B1 studio · Blooming</h4><p class="mono">2014– · Self project</p><div class="shine"></div></div>
@@ -5834,13 +6583,13 @@ Object.assign(ASSETS,{
         "assets/other/naunau/thumbnails/naunau-cover.webp",
 
     "images/archive-02.jpg":
-        "assets/other/mojanara/thumbnails/mojanara-cover.webp",
+        "assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp",
 
     "assets/other/naunau/thumbnails/naunau-cover.webp":
         "assets/other/naunau/thumbnails/naunau-cover.webp",
 
-    "assets/other/mojanara/thumbnails/mojanara-cover.webp":
-        "assets/other/mojanara/thumbnails/mojanara-cover.webp"
+    "assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp":
+        "assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp"
 
 });
 /* V19-WEB-PUBLISHING */
@@ -6391,9 +7140,9 @@ CASES.mojanara = {
 
         name:'MOJANARA',
 
-        cover:'assets/other/mojanara/thumbnails/mojanara-cover.webp',
+        cover:'assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp',
 
-        full:'assets/other/mojanara/mojanara-full.webp',
+        full:'assets/other/mojanara/mojanara-ballcap-full.webp',
 
         heading:'A story in every look.',
 
@@ -11701,6 +12450,1061 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
     console.info(
         'V30.9.7 NAUNAU ARCHIVE READY',
         {cards:cards.length}
+    );
+
+})();
+</script>
+<script id="v3098-mojanara-script">
+(() => {
+
+    'use strict';
+
+    const cover = 'assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp';
+    const full = 'assets/other/mojanara/mojanara-ballcap-full.webp';
+
+    // Update existing project data
+
+    if (typeof CASES !== 'undefined' &&
+        CASES.mojanara &&
+        CASES.mojanara.fashion) {
+
+        Object.assign(CASES.mojanara.fashion,{
+
+            cover:cover,
+            full:full,
+
+            heading:"Everyone's Ball Cap.",
+
+            description:
+                '모자 착용 모델 촬영과 제품 디테일을 중심으로 구성한 패션 룩북 및 상세페이지 작업물입니다.'
+
+        });
+    }
+
+    // Restore career image mapping
+
+    if (typeof ASSETS !== 'undefined') {
+
+        ASSETS['images/archive-02.jpg'] = cover;
+        ASSETS[cover] = cover;
+        ASSETS[full] = full;
+    }
+
+    document.querySelectorAll(
+        '.tl-item[data-label="MOJANARA"]'
+    ).forEach(row => {
+
+        row.dataset.img = cover;
+        row.dataset.pos = 'top';
+
+    });
+
+    // Direct archive thumbnail
+
+    document.querySelectorAll(
+        '.sleeve[data-case="mojanara"]'
+    ).forEach(card => {
+
+        const photo = card.querySelector('.ph');
+
+        if (photo) {
+
+            const image = new Image();
+
+            image.className = 'fit v3098-cover';
+
+            image.alt = "MOJANARA - Everyone's Ball Cap";
+
+            image.decoding = 'async';
+
+            image.onload = () => {
+
+                photo.querySelectorAll('img')
+                    .forEach(old => old.remove());
+
+                photo.removeAttribute('data-img');
+                photo.removeAttribute('data-crop');
+
+                photo.appendChild(image);
+
+                photo.classList.add('has-img');
+
+                console.info(
+                    'V30.9.8 MOJANARA COVER LOADED',
+                    image.naturalWidth,
+                    image.naturalHeight
+                );
+            };
+
+            image.onerror = () => {
+
+                console.error(
+                    'V30.9.8 MOJANARA COVER FAILED',
+                    image.src
+                );
+            };
+
+            image.src = cover;
+        }
+
+        // Remove previous tool sticker
+
+        card.querySelectorAll(
+            ':scope > .app.tool,' +
+            ':scope > .v3097-tools'
+        ).forEach(el => el.remove());
+
+        // Reuse NAUNAU icon styling
+
+        const tools = document.createElement('div');
+
+        tools.className = 'v3097-tools';
+
+        tools.innerHTML = `
+
+            <span class="v3097-tool ps"
+                  title="Adobe Photoshop"
+                  aria-label="Adobe Photoshop">
+                Ps
+            </span>
+
+            <span class="v3097-tool captureone"
+                  title="Capture One"
+                  aria-label="Capture One">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 40 40"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="3.2"
+                     aria-hidden="true">
+
+                    <path d="M35 11 A17 17 0 1 0 35 29"/>
+
+                    <circle cx="20"
+                            cy="20"
+                            r="10.5"/>
+
+                </svg>
+
+            </span>
+        `;
+
+        card.appendChild(tools);
+
+    });
+
+    console.info('V30.9.8 MOJANARA UPDATE READY');
+
+})();
+</script>
+<script id="v3099-collection-script">
+(() => {
+
+    'use strict';
+
+    const collection = {"details":[{"name":"MOJANARA","label":"LOOK 01","cover":"assets/other/mojanara/thumbnails/mojanara-ballcap-cover.webp","full":"assets/other/mojanara/mojanara-ballcap-full.webp","heading":"Everyone\u0027s Ball Cap.","description":"패션 촬영 및 상품 상세페이지 포트폴리오.","theme":"mojanara"},{"name":"MOJANARA","label":"LOOK 02","cover":"assets/other/mojanara/collection/thumbnails/look-02-cover.webp","full":"assets/other/mojanara/collection/detail/look-02.webp","heading":"Selected Look 02.","description":"패션 촬영 및 상품 상세페이지 포트폴리오.","theme":"mojanara"},{"name":"MOJANARA","label":"LOOK 03","cover":"assets/other/mojanara/collection/thumbnails/look-03-cover.webp","full":"assets/other/mojanara/collection/detail/look-03.webp","heading":"Selected Look 03.","description":"패션 촬영 및 상품 상세페이지 포트폴리오.","theme":"mojanara"},{"name":"MOJANARA","label":"LOOK 04","cover":"assets/other/mojanara/collection/thumbnails/look-04-cover.webp","full":"assets/other/mojanara/collection/detail/look-04.webp","heading":"Selected Look 04.","description":"패션 촬영 및 상품 상세페이지 포트폴리오.","theme":"mojanara"},{"name":"MOJANARA","label":"LOOK 05","cover":"assets/other/mojanara/collection/thumbnails/look-05-cover.webp","full":"assets/other/mojanara/collection/detail/look-05.webp","heading":"Selected Look 05.","description":"패션 촬영 및 상품 상세페이지 포트폴리오.","theme":"mojanara"}],"photos":[{"src":"assets/other/mojanara/collection/photos/photo-01.webp","title":"MOJANARA - Photo 01","width":850,"height":2765},{"src":"assets/other/mojanara/collection/photos/photo-02.webp","title":"MOJANARA - Photo 02","width":1000,"height":2699},{"src":"assets/other/mojanara/collection/photos/photo-03.webp","title":"MOJANARA - Photo 03","width":1000,"height":2483},{"src":"assets/other/mojanara/collection/photos/photo-04.webp","title":"MOJANARA - Photo 04","width":1000,"height":1811},{"src":"assets/other/mojanara/collection/photos/photo-05.webp","title":"MOJANARA - Photo 05","width":1000,"height":1725},{"src":"assets/other/mojanara/collection/photos/photo-06.webp","title":"MOJANARA - Photo 06","width":2000,"height":1000},{"src":"assets/other/mojanara/collection/photos/photo-07.webp","title":"MOJANARA - Photo 07","width":1000,"height":1000},{"src":"assets/other/mojanara/collection/photos/photo-08.webp","title":"MOJANARA - Photo 08","width":921,"height":906},{"src":"assets/other/mojanara/collection/photos/photo-09.webp","title":"MOJANARA - Photo 09","width":1000,"height":1000},{"src":"assets/other/mojanara/collection/photos/photo-10.webp","title":"MOJANARA - Photo 10","width":3024,"height":3024},{"src":"assets/other/mojanara/collection/photos/photo-11.webp","title":"MOJANARA - Photo 11","width":1000,"height":1000}]};
+
+    const details = collection.details;
+    const photos = collection.photos;
+
+    if (
+        typeof CASES === 'undefined' ||
+        typeof renderV3093Lookbook !== 'function' ||
+        typeof renderV3093BaseLookbook !== 'function'
+    ) {
+        console.error('V30.9.9: Required renderer missing');
+        return;
+    }
+
+    const originalRenderer = renderV3093Lookbook;
+
+    CASES.mojanara.collection = collection;
+
+    CASES.mojanara.results = [
+        [
+            String(details.length).padStart(2,'0'),
+            '패션 상세페이지'
+        ],
+        [
+            String(photos.length).padStart(2,'0'),
+            '촬영 및 비주얼 이미지'
+        ]
+    ];
+
+    function renderContent(mode,index) {
+
+        if (mode === 'photo') {
+
+            return `
+
+                <div class="v3099-photo-title">
+
+                    <span>SELECTED PHOTOGRAPHY</span>
+
+                    <span>${photos.length} IMAGES</span>
+
+                </div>
+
+                <div class="v3099-photo-grid">
+
+                    ${photos.map((item,i) => `
+
+                        <button type="button"
+                                class="v3099-photo-card"
+                                data-art="${item.src}"
+                                data-art-title="${item.title}">
+
+                            <span class="v3099-photo-frame">
+
+                                <img src="${item.src}"
+                                     alt="${item.title}"
+                                     width="${item.width}"
+                                     height="${item.height}"
+                                     loading="lazy"
+                                     decoding="async">
+
+                            </span>
+
+                            <small>
+                                PHOTO ${String(i+1).padStart(2,'0')} ↗
+                            </small>
+
+                        </button>
+
+                    `).join('')}
+
+                </div>
+
+            `;
+        }
+
+        const selected = details[index] || details[0];
+
+        return `
+
+            <div class="v3099-look-tabs"
+                 role="group"
+                 aria-label="룩북 선택">
+
+                ${details.map((item,i) => `
+
+                    <button type="button"
+                            class="v3099-look-tab ${i===index?'active':''}"
+                            data-v3099-look="${i}"
+                            aria-pressed="${i===index}">
+
+                        ${item.label}
+
+                    </button>
+
+                `).join('')}
+
+            </div>
+
+            ${renderV3093BaseLookbook({
+                ...CASES.mojanara,
+                fashion:selected
+            })}
+
+        `;
+    }
+
+    function renderCollection() {
+
+        return `
+
+            <section class="v3099-collection"
+                     data-mode="detail"
+                     data-index="0">
+
+                <div class="v3099-main-tabs"
+                     role="group"
+                     aria-label="모자나라 작업물 선택">
+
+                    <button type="button"
+                            class="v3099-main-tab active"
+                            data-v3099-mode="detail"
+                            aria-pressed="true">
+
+                        <strong>DETAIL PAGE</strong>
+
+                        <small>
+                            ${details.length} Editorial Works
+                        </small>
+
+                    </button>
+
+                    <button type="button"
+                            class="v3099-main-tab"
+                            data-v3099-mode="photo"
+                            aria-pressed="false">
+
+                        <strong>PHOTO GALLERY</strong>
+
+                        <small>
+                            ${photos.length} Selected Images
+                        </small>
+
+                    </button>
+
+                </div>
+
+                <div class="v3099-content">
+
+                    ${renderContent('detail',0)}
+
+                </div>
+
+            </section>
+
+        `;
+    }
+
+    renderV3093Lookbook = function(c) {
+
+        if (c === CASES.mojanara || c.collection === collection) {
+            return renderCollection();
+        }
+
+        return originalRenderer(c);
+    };
+
+    document.addEventListener('click',event => {
+
+        if (!(event.target instanceof Element)) return;
+
+        const button = event.target.closest(
+            '[data-v3099-mode],[data-v3099-look]'
+        );
+
+        if (!button) return;
+
+        const root = button.closest('.v3099-collection');
+
+        if (!root) return;
+
+        event.preventDefault();
+
+        let mode = root.dataset.mode;
+        let index = Number(root.dataset.index);
+
+        if (button.hasAttribute('data-v3099-mode')) {
+            mode = button.dataset.v3099Mode;
+        }
+        else {
+            index = Number(button.dataset.v3099Look);
+        }
+
+        if (
+            !['detail','photo'].includes(mode) ||
+            !Number.isInteger(index) ||
+            !details[index]
+        ) return;
+
+        if (
+            mode === root.dataset.mode &&
+            index === Number(root.dataset.index)
+        ) return;
+
+        root.dataset.mode = mode;
+        root.dataset.index = String(index);
+
+        root.querySelectorAll(
+            '[data-v3099-mode]'
+        ).forEach(tab => {
+
+            const active = tab.dataset.v3099Mode === mode;
+
+            tab.classList.toggle('active',active);
+            tab.setAttribute('aria-pressed',String(active));
+        });
+
+        const content = root.querySelector('.v3099-content');
+
+        content.innerHTML = renderContent(mode,index);
+
+        if (
+            !matchMedia('(prefers-reduced-motion:reduce)').matches &&
+            content.animate
+        ) {
+
+            content.animate(
+                [
+                    {opacity:0,transform:'translateY(5px)'},
+                    {opacity:1,transform:'translateY(0)'}
+                ],
+                {
+                    duration:280,
+                    easing:'ease-out'
+                }
+            );
+        }
+
+        const scroll = content.querySelector(
+            '.v3093-page-scroll'
+        );
+
+        if (scroll) scroll.scrollTop = 0;
+
+        if (
+            event.detail === 0 &&
+            button.hasAttribute('data-v3099-look')
+        ) {
+
+            const activeTab = content.querySelector(
+                '[data-v3099-look="' + index + '"]'
+            );
+
+            if (activeTab) {
+                activeTab.focus({preventScroll:true});
+            }
+        }
+
+    });
+
+    console.info('V30.9.9 MOJANARA COLLECTION READY',{
+        detailPages:details.length,
+        photos:photos.length
+    });
+
+})();
+</script>
+<script id="v3010-creative-script">
+(() => {
+
+    'use strict';
+
+    const collection = {"categories":[{"id":"ai-idol","label":"AI IDOL","count":1},{"id":"ceramic","label":"CERAMIC","count":3},{"id":"rescene","label":"RESCENE","count":14}],"images":[{"category":"ai-idol","label":"AI IDOL","src":"assets/other/instagram/b1-bank/preview/ai-idol/ai-idol-01.webp","title":"AI IDOL 1"},{"category":"ceramic","label":"CERAMIC","src":"assets/other/instagram/b1-bank/preview/ceramic/ceramic-01.webp","title":"CERAMIC 1"},{"category":"ceramic","label":"CERAMIC","src":"assets/other/instagram/b1-bank/preview/ceramic/ceramic-02.webp","title":"CERAMIC 2"},{"category":"ceramic","label":"CERAMIC","src":"assets/other/instagram/b1-bank/preview/ceramic/ceramic-03.webp","title":"CERAMIC 3"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-01.webp","title":"RESCENE 1"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-02.webp","title":"RESCENE 2"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-03.webp","title":"RESCENE 3"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-04.webp","title":"RESCENE 4"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-05.webp","title":"RESCENE 5"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-06.webp","title":"RESCENE 6"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-07.webp","title":"RESCENE 7"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-08.webp","title":"RESCENE 8"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-09.webp","title":"RESCENE 9"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-10.webp","title":"RESCENE 10"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-11.webp","title":"RESCENE 11"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-12.webp","title":"RESCENE 12"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-13.webp","title":"RESCENE 13"},{"category":"rescene","label":"RESCENE","src":"assets/other/instagram/b1-bank/preview/rescene/rescene-14.webp","title":"RESCENE 14"}]};
+
+    const bankURL =
+        'https://www.instagram.com/b1__bank/';
+
+    const personalURL =
+        'https://www.instagram.com/jiha_photo/';
+
+    const instagramSVG = `
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             aria-hidden="true">
+            <rect x="3" y="3"
+                  width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r=".8"
+                    fill="currentColor"/>
+        </svg>
+    `;
+
+    const captureOneSVG = `
+        <svg viewBox="0 0 40 40"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="3.2"
+             aria-hidden="true">
+            <path d="M35 11 A17 17 0 1 0 35 29"/>
+            <circle cx="20" cy="20" r="10.5"/>
+        </svg>
+    `;
+
+    // PHOTO ARCHIVE ICON UPDATE
+
+    const toolNames = {
+        Ps:'Adobe Photoshop',
+        Lr:'Adobe Lightroom',
+        Ai:'Adobe Illustrator',
+        C1:'Capture One'
+    };
+
+    const mappings = [
+        {
+            match:/CHAAKAN|착한구두/i,
+            tools:['Ps']
+        },
+        {
+            match:/MOJANARA|모자나라/i,
+            tools:['Ps']
+        },
+        {
+            match:/SANHO|산호맨션|산호맨숀/i,
+            tools:['Lr','Ps']
+        },
+        {
+            match:/NAUNAU/i,
+            tools:['Ps','C1']
+        },
+        {
+            match:/B1[\s-]*STUDIO|BLOOMING/i,
+            tools:['Ai','Ps']
+        }
+    ];
+
+    let updatedCards = 0;
+
+    document.querySelectorAll('.sleeve').forEach(card => {
+
+        const photo = card.querySelector('.ph');
+
+        const label = [
+            photo?.dataset.label || '',
+            card.dataset.case || '',
+            card.querySelector('h4')?.textContent || '',
+            card.textContent || ''
+        ].join(' ');
+
+        const mapping = mappings.find(
+            item => item.match.test(label)
+        );
+
+        if (!mapping) return;
+
+        card.querySelectorAll(
+            ':scope > .app.tool,' +
+            ':scope > .v3095-tools,' +
+            ':scope > .v3097-tools,' +
+            ':scope > .v3010-tools'
+        ).forEach(el => el.remove());
+
+        if (getComputedStyle(card).position === 'static') {
+            card.style.position = 'relative';
+        }
+
+        const tools = document.createElement('div');
+
+        tools.className = 'v3010-tools';
+
+        mapping.tools.forEach(name => {
+
+            const icon = document.createElement('span');
+
+            icon.className =
+                'v3010-tool ' + name.toLowerCase();
+
+            icon.setAttribute(
+                'aria-label',
+                toolNames[name]
+            );
+
+            if (name === 'C1') {
+                icon.innerHTML = captureOneSVG;
+            } else {
+                icon.textContent = name;
+            }
+
+            tools.appendChild(icon);
+
+        });
+
+        card.appendChild(tools);
+
+        updatedCards++;
+
+    });
+
+    // FIND PERSONAL INSTAGRAM LINK
+
+    const personal = Array.from(
+        document.querySelectorAll('a[href]')
+    ).find(link => {
+
+        return link.getAttribute('href')
+            .includes('instagram.com/jiha_photo');
+
+    });
+
+    if (!personal) {
+        console.warn('V30.10: Instagram link not found');
+        return;
+    }
+
+    personal.href = personalURL;
+    personal.target = '_blank';
+    personal.rel = 'noopener noreferrer';
+
+    // CREATE SECOND INSTAGRAM BUTTON
+
+    const trigger = document.createElement('a');
+
+    trigger.id = 'v3010-bank-trigger';
+    trigger.href = bankURL;
+    trigger.target = '_blank';
+    trigger.rel = 'noopener noreferrer';
+
+    trigger.setAttribute('aria-expanded','false');
+
+    trigger.setAttribute(
+        'aria-controls',
+        'v3010-bank-panel'
+    );
+
+    trigger.innerHTML =
+        instagramSVG + '<span>작업보호소 ↗</span>';
+
+    personal.insertAdjacentElement(
+        'afterend',trigger
+    );
+
+    const parent = personal.parentElement;
+
+    if (parent &&
+        ['flex','inline-flex'].includes(
+            getComputedStyle(parent).display
+        )) {
+
+        parent.style.flexWrap = 'wrap';
+    }
+
+    // CREATE FLOATING PREVIEW
+
+    const panel = document.createElement('section');
+
+    panel.id = 'v3010-bank-panel';
+    panel.hidden = true;
+
+    panel.setAttribute('aria-label','작업보호소 프리뷰');
+
+    panel.innerHTML = `
+
+        <div class="v3010-bank-profile">
+
+            <div class="v3010-avatar">B1.</div>
+
+            <div class="v3010-bank-account">
+
+                <strong>@b1__bank</strong>
+
+                <small>
+                    ${collection.images.length}
+                    SELECTED WORKS
+                </small>
+
+            </div>
+
+            <button type="button"
+                    class="v3010-bank-close"
+                    aria-label="프리뷰 닫기">
+                ×
+            </button>
+
+        </div>
+
+        <div class="v3010-bank-title">
+            작업보호소.
+        </div>
+
+        <div class="v3010-bank-slogan">
+            Not wasted, just archived.
+        </div>
+
+        <p class="v3010-bank-description">
+            선택받지 못한 아이디어와
+            AI 비주얼 실험의 기록.
+        </p>
+
+        <div class="v3010-bank-tabs"></div>
+
+        <div class="v3010-bank-feed"
+             tabindex="0"
+             aria-label="작업 이미지 피드"></div>
+
+        <div class="v3010-bank-count"></div>
+
+        <a class="v3010-bank-link"
+           href="${bankURL}"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            VIEW INSTAGRAM ↗
+
+        </a>
+
+    `;
+
+    document.body.appendChild(panel);
+
+    const tabs = panel.querySelector(
+        '.v3010-bank-tabs'
+    );
+
+    const feed = panel.querySelector(
+        '.v3010-bank-feed'
+    );
+
+    const count = panel.querySelector(
+        '.v3010-bank-count'
+    );
+
+    const filters = [
+        {id:'all',label:'ALL'},
+        ...collection.categories
+    ];
+
+    let currentCategory = 'all';
+    let rendered = false;
+
+    // FULL IMAGE VIEWER
+
+    const viewer = document.createElement('div');
+
+    viewer.id = 'v3010-bank-image-viewer';
+    viewer.hidden = true;
+
+    viewer.setAttribute('role','dialog');
+    viewer.setAttribute('aria-label','작업 이미지 확대');
+
+    viewer.innerHTML = `
+        <button type="button"
+                aria-label="이미지 닫기">×</button>
+        <img alt="">
+    `;
+
+    document.body.appendChild(viewer);
+
+    const largeImage = viewer.querySelector('img');
+
+    let previousImage = null;
+
+    function openImage(item,button) {
+
+        previousImage = button;
+
+        largeImage.src = item.src;
+        largeImage.alt = item.title;
+
+        viewer.hidden = false;
+
+        viewer.querySelector('button').focus({
+            preventScroll:true
+        });
+    }
+
+    function closeImage() {
+
+        viewer.hidden = true;
+        largeImage.removeAttribute('src');
+
+        if (previousImage?.isConnected) {
+            previousImage.focus({preventScroll:true});
+        }
+    }
+
+    viewer.addEventListener('click',event => {
+
+        if (event.target === viewer ||
+            event.target.closest('button')) {
+
+            closeImage();
+        }
+    });
+
+    // CATEGORY SWITCHING
+
+    function renderFeed(category) {
+
+        currentCategory = category;
+        rendered = true;
+
+        tabs.replaceChildren();
+        feed.replaceChildren();
+
+        filters.forEach(item => {
+
+            const button = document.createElement('button');
+
+            button.type = 'button';
+
+            button.className =
+                'v3010-bank-tab' +
+                (item.id === category ? ' active' : '');
+
+            button.textContent = item.label;
+
+            button.setAttribute(
+                'aria-pressed',
+                String(item.id === category)
+            );
+
+            button.addEventListener('click',() => {
+                renderFeed(item.id);
+            });
+
+            tabs.appendChild(button);
+
+        });
+
+        let images;
+
+        if (category === 'all') {
+
+            // Alternate categories for balanced initial view
+
+            const buckets = collection.categories.map(group =>
+                collection.images.filter(
+                    item => item.category === group.id
+                )
+            );
+
+            images = [];
+
+            const max = Math.max(
+                ...buckets.map(bucket => bucket.length)
+            );
+
+            for (let i=0; i<max; i++) {
+
+                buckets.forEach(bucket => {
+
+                    if (bucket[i]) {
+                        images.push(bucket[i]);
+                    }
+                });
+            }
+
+        } else {
+
+            images = collection.images.filter(
+                item => item.category === category
+            );
+        }
+
+        images.forEach((item,index) => {
+
+            const button = document.createElement('button');
+
+            button.type = 'button';
+            button.className = 'v3010-bank-image';
+            button.setAttribute('aria-label',item.title);
+
+            const image = document.createElement('img');
+
+            image.src = item.src;
+            image.alt = item.title;
+
+            image.loading = index < 6 ? 'eager' : 'lazy';
+            image.decoding = 'async';
+
+            button.appendChild(image);
+
+            button.addEventListener('click',() => {
+                openImage(item,button);
+            });
+
+            feed.appendChild(button);
+
+        });
+
+        feed.scrollTop = 0;
+
+        count.textContent =
+            images.length + ' Selected Works';
+
+        if (!panel.hidden) positionPanel();
+    }
+
+    // PREVIEW POSITION
+
+    function positionPanel() {
+
+        if (panel.hidden) return;
+
+        const anchor = trigger.getBoundingClientRect();
+
+        const width = panel.offsetWidth;
+        const height = panel.offsetHeight;
+
+        const vw = document.documentElement.clientWidth;
+        const vh = window.innerHeight;
+
+        let left =
+            anchor.left + (anchor.width - width)/2;
+
+        let top = anchor.top - height - 10;
+
+        left = Math.max(
+            12,
+            Math.min(left,vw - width - 12)
+        );
+
+        if (top < 12) {
+
+            top = Math.max(
+                12,
+                Math.min(anchor.bottom + 10,
+                    vh - height - 12)
+            );
+        }
+
+        panel.style.left = left + 'px';
+        panel.style.top = top + 'px';
+    }
+
+    // HOVER INTERACTION
+
+    let closeTimer = null;
+
+    function cancelClose() {
+
+        clearTimeout(closeTimer);
+    }
+
+    function showPanel() {
+
+        cancelClose();
+
+        panel.hidden = false;
+        panel.classList.add('open');
+
+        trigger.setAttribute('aria-expanded','true');
+
+        if (!rendered) {
+            renderFeed(currentCategory);
+        }
+
+        positionPanel();
+    }
+
+    function hidePanel(restoreFocus = false) {
+
+        cancelClose();
+
+        if (!viewer.hidden) return;
+
+        panel.hidden = true;
+        panel.classList.remove('open');
+
+        trigger.setAttribute('aria-expanded','false');
+
+        if (restoreFocus) {
+            trigger.focus({preventScroll:true});
+        }
+    }
+
+    function scheduleClose() {
+
+        cancelClose();
+
+        closeTimer = setTimeout(() => {
+
+            if (!viewer.hidden) return;
+
+            if (
+                panel.matches(':hover') ||
+                trigger.matches(':hover') ||
+                panel.contains(document.activeElement)
+            ) return;
+
+            hidePanel();
+
+        },300);
+    }
+
+    trigger.addEventListener('pointerenter',event => {
+
+        if (event.pointerType !== 'touch') {
+            showPanel();
+        }
+    });
+
+    trigger.addEventListener(
+        'pointerleave',scheduleClose
+    );
+
+    panel.addEventListener(
+        'pointerenter',cancelClose
+    );
+
+    panel.addEventListener(
+        'pointerleave',scheduleClose
+    );
+
+    trigger.addEventListener('focus',showPanel);
+
+    panel.addEventListener('focusin',cancelClose);
+
+    panel.addEventListener('focusout',scheduleClose);
+
+    // Desktop click opens Instagram.
+    // Mobile and keyboard click open preview.
+
+    trigger.addEventListener('click',event => {
+
+        const touch = matchMedia(
+            '(hover:none),(pointer:coarse)'
+        ).matches;
+
+        if (touch || event.detail === 0) {
+
+            event.preventDefault();
+
+            showPanel();
+
+            panel.querySelector(
+                '.v3010-bank-close'
+            ).focus({preventScroll:true});
+        }
+
+    });
+
+    panel.querySelector(
+        '.v3010-bank-close'
+    ).addEventListener('click',() => {
+
+        hidePanel();
+
+    });
+
+    document.addEventListener('pointerdown',event => {
+
+        if (
+            !panel.contains(event.target) &&
+            !trigger.contains(event.target) &&
+            !viewer.contains(event.target)
+        ) {
+
+            hidePanel();
+        }
+
+    },{passive:true});
+
+    window.addEventListener('resize',positionPanel);
+
+    window.addEventListener('scroll',() => {
+
+        if (viewer.hidden) hidePanel();
+
+    },{passive:true});
+
+    // Prevent Escape from closing unrelated project drawers
+
+    window.addEventListener('keydown',event => {
+
+        if (event.key !== 'Escape') return;
+
+        if (!viewer.hidden) {
+
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            closeImage();
+        }
+        else if (!panel.hidden) {
+
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            hidePanel();
+        }
+
+    },true);
+
+    console.info(
+        'V30.10 CREATIVE IDENTITY READY',
+        {
+            archiveCards:updatedCards,
+            categories:collection.categories.length,
+            images:collection.images.length
+        }
     );
 
 })();
