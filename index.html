@@ -5632,6 +5632,256 @@ dialog.sanho-modal .sanho-close {
 }
 
 </style>
+<style id="v30111-chaakan-style">
+
+.v30111-collection {
+    margin:30px 0 40px;
+}
+
+.v30111-tabs {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+}
+
+.v30111-tab {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:7px;
+    padding:18px;
+    min-height:80px;
+
+    background:#fff;
+    color:#222;
+
+    border:1px solid #ded9d4;
+    border-radius:13px;
+    font-family:inherit;
+    text-align:left;
+    transition:background .25s,transform .25s;
+}
+
+.v30111-tab strong {
+    font-size:15px;
+}
+
+.v30111-tab small {
+    font-size:10px;
+    opacity:.7;
+}
+
+.v30111-tab.active {
+    background:#222;
+    border-color:#222;
+    color:#fff;
+}
+
+.v30111-products {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:20px 0;
+}
+
+.v30111-product {
+    border:1px solid #ded9d4;
+    border-radius:25px;
+    padding:10px 14px;
+
+    background:#fff;
+    color:#222;
+    font-size:11px;
+    font-family:inherit;
+}
+
+.v30111-product.active {
+    background:#d74780;
+    border-color:#d74780;
+    color:#fff;
+}
+
+.v30111-collection .v3093-lookbook {
+    --fashion-accent:#d74780;
+    margin-top:18px;
+}
+
+.v30111-collection .v3093-page-scroll {
+    display:block;
+    font-size:0;
+    line-height:0;
+    touch-action:pan-y;
+}
+
+.v30111-collection .v3093-page-scroll img,
+.v30111-full-page img {
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+}
+
+.v30111-collection .v3093-cover img {
+    object-fit:contain;
+}
+
+.v30111-full-page {
+    max-width:850px;
+    margin:25px auto;
+    background:#fff;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.v30111-full-page[hidden] {
+    display:none !important;
+}
+
+.v30111-full-toolbar {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:16px;
+    font-size:11px;
+    line-height:1.5;
+}
+
+.v30111-collapse {
+    background:#222;
+    color:#fff;
+    border:0;
+    border-radius:20px;
+    padding:9px 14px;
+}
+
+.v30111-photo-grid {
+    columns:3;
+    column-gap:12px;
+    margin:25px 0;
+}
+
+.v30111-photo-card {
+    display:inline-block;
+    box-sizing:border-box;
+    width:100%;
+    margin:0 0 12px;
+    padding:7px;
+    border:0;
+    border-radius:8px;
+    background:#fff;
+    break-inside:avoid;
+    text-align:left;
+}
+
+.v30111-photo-frame {
+    display:block;
+    overflow:hidden;
+    border-radius:5px;
+}
+
+.v30111-photo-card img {
+    display:block;
+    width:100%;
+    height:auto;
+    transition:transform .4s ease;
+}
+
+.v30111-photo-card small {
+    display:block;
+    padding:10px 4px 4px;
+    font-size:10px;
+    color:#817773;
+}
+
+.v30111-archive-card .ph {
+    position:relative;
+    overflow:hidden;
+}
+
+.v30111-archive-cover {
+    position:absolute;
+    inset:0;
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center;
+    opacity:1 !important;
+    visibility:visible !important;
+    border-radius:inherit;
+}
+
+@media(hover:hover) and (pointer:fine) {
+
+    .v30111-tab:hover {
+        transform:translateY(-2px);
+    }
+
+    .v30111-photo-card:hover img {
+        transform:scale(1.025);
+    }
+}
+
+@media(max-width:650px) {
+
+    .v30111-tab {
+        padding:12px;
+        min-height:72px;
+    }
+
+    .v30111-tab strong {
+        font-size:12px;
+    }
+
+    .v30111-product {
+        padding:8px 11px;
+        font-size:10px;
+    }
+
+    .v30111-photo-grid {
+        columns:2;
+        column-gap:9px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .v30111-tab,
+    .v30111-photo-card img {
+        transition:none;
+    }
+
+    .v30111-tab:hover,
+    .v30111-photo-card:hover img {
+        transform:none;
+    }
+}
+
+</style>
+<style id="v30112-cover-style">
+
+.sleeve[data-case="chaakan"] .ph {
+    position:relative !important;
+    overflow:hidden !important;
+}
+
+.sleeve[data-case="chaakan"] .ph.v30112-ready {
+    background-image:var(--chaakan-cover) !important;
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+}
+
+.sleeve[data-case="chaakan"] .ph.v30112-ready img {
+    display:none !important;
+}
+
+</style>
 </head>
 <body>
 
@@ -13506,6 +13756,617 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
             images:collection.images.length
         }
     );
+
+})();
+</script>
+<script id="v30111-chaakan-script">
+(() => {
+
+    'use strict';
+
+    const collection = {"cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","products":[{"id":"bsltr4f882-bsltt4c239-bssdr4f883","label":"PRODUCT 01","cover":"assets/other/chaakan/thumbnails/chaakan-014-cover.webp","images":["assets/other/chaakan/web/detail/general/chaakan-014.webp","assets/other/chaakan/web/photos/bdffe1758/chaakan-001.webp","assets/other/chaakan/web/photos/general/chaakan-002.webp","assets/other/chaakan/web/photos/general/chaakan-003.webp","assets/other/chaakan/web/photos/general/chaakan-004.webp","assets/other/chaakan/web/photos/general/chaakan-005.webp","assets/other/chaakan/web/photos/general/chaakan-006.webp","assets/other/chaakan/web/detail/general/chaakan-007.webp","assets/other/chaakan/web/detail/general/chaakan-008.webp","assets/other/chaakan/web/detail/general/chaakan-009.webp","assets/other/chaakan/web/detail/general/chaakan-010.webp","assets/other/chaakan/web/detail/general/chaakan-011.webp","assets/other/chaakan/web/detail/general/chaakan-012.webp","assets/other/chaakan/web/detail/general/chaakan-013.webp","assets/other/chaakan/web/detail/general/chaakan-015.webp","assets/other/chaakan/web/detail/general/chaakan-016.webp","assets/other/chaakan/web/detail/general/chaakan-017.webp"],"fileCount":17}],"photos":[{"src":"assets/other/chaakan/web/photos/bdffe1758/chaakan-001.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/photos/general/chaakan-002.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/photos/general/chaakan-003.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/photos/general/chaakan-004.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/photos/general/chaakan-005.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/photos/general/chaakan-006.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-007.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-008.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-009.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-010.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-011.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-012.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-013.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-014.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-015.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-016.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]},{"src":"assets/other/chaakan/web/detail/general/chaakan-017.webp","cover":"assets/other/chaakan/thumbnails/chaakan-001-cover.webp thumbnails/chaakan-002-cover.webp thumbnails/chaakan-003-cover.webp thumbnails/chaakan-004-cover.webp thumbnails/chaakan-005-cover.webp thumbnails/chaakan-006-cover.webp thumbnails/chaakan-007-cover.webp thumbnails/chaakan-008-cover.webp thumbnails/chaakan-009-cover.webp thumbnails/chaakan-010-cover.webp thumbnails/chaakan-011-cover.webp thumbnails/chaakan-012-cover.webp thumbnails/chaakan-013-cover.webp thumbnails/chaakan-014-cover.webp thumbnails/chaakan-015-cover.webp thumbnails/chaakan-016-cover.webp thumbnails/chaakan-017-cover.webp","width":[1000,1000,1000,500,1000,1000,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080,1080],"height":[1000,1000,1000,500,1000,1000,2874,5466,4043,3784,4240,5060,5234,6832,5350,4100,3303]}],"detailCount":1};
+
+    if (
+        typeof CASES === 'undefined' ||
+        typeof openCase !== 'function' ||
+        typeof renderV3093Lookbook !== 'function'
+    ) {
+        console.error('CHAAKAN renderer unavailable');
+        return;
+    }
+
+    const previousRenderer = renderV3093Lookbook;
+
+    CASES.chaakan = {
+        ...(CASES.chaakan || {}),
+
+        no:'07',
+        tag:'CHAAKAN · MARKETING & PHOTOGRAPHY · 2020',
+        title:'착한구두 — CHAAKAN.',
+        sub:'상품 촬영 및 상세페이지 콘텐츠 아카이브.',
+        c:'#f5e7bb',
+
+        credit:[
+            '상품 촬영',
+            '사진 보정',
+            '상세페이지 디자인',
+            '콘텐츠 제작'
+        ],
+
+        fashion:{
+            theme:'chaakan'
+        },
+
+        work:[
+            '상품 및 착화 이미지 촬영',
+            '상품 상세페이지 콘텐츠 구성',
+            '사진 보정 및 비주얼 디자인'
+        ],
+
+        results:[
+            [
+                String(collection.products.length).padStart(2,'0'),
+                '상품 상세페이지 그룹'
+            ],
+            [
+                String(collection.photos.length).padStart(2,'0'),
+                '촬영 및 비주얼 이미지'
+            ]
+        ]
+    };
+
+    function pageImages(product) {
+
+        return product.images.map((src,i)=>`
+
+            <img src="${src}"
+                 alt="${product.label} detail ${i+1}"
+                 loading="${i===0?'eager':'lazy'}"
+                 decoding="async">
+
+        `).join('');
+    }
+
+    function renderContent(mode,index) {
+
+        if (mode==='photo') {
+
+            return `
+
+                <div class="v30111-photo-grid">
+
+                    ${collection.photos.map((photo,i)=>`
+
+                        <button type="button"
+                                class="v30111-photo-card art-open"
+                                data-art="${photo.src}"
+                                data-art-title="CHAAKAN PHOTO ${i+1}">
+
+                            <span class="v30111-photo-frame">
+
+                                <img src="${photo.src}"
+                                     alt="CHAAKAN Photo ${i+1}"
+                                     loading="lazy"
+                                     decoding="async">
+
+                            </span>
+
+                            <small>
+                                PHOTO ${String(i+1).padStart(2,'0')} ↗
+                            </small>
+
+                        </button>
+
+                    `).join('')}
+
+                </div>
+            `;
+        }
+
+        const product = collection.products[index] ||
+            collection.products[0];
+
+        return `
+
+            <div class="v30111-products"
+                 role="group"
+                 aria-label="상품 선택">
+
+                ${collection.products.map((p,i)=>`
+
+                    <button type="button"
+                            class="v30111-product ${i===index?'active':''}"
+                            data-v30111-product="${i}"
+                            aria-pressed="${i===index}">
+
+                        ${p.label}
+
+                    </button>
+
+                `).join('')}
+
+            </div>
+
+            <section class="v3093-lookbook">
+
+                <div class="v3093-editorial">
+
+                    <div class="v3093-kicker">
+                        SELECTED PRODUCT WORK
+                    </div>
+
+                    <button type="button"
+                            class="v3093-cover art-open"
+                            data-art="${product.cover}"
+                            data-art-title="${product.label}">
+
+                        <img src="${product.cover}"
+                             alt="${product.label}">
+
+                        <span>SELECTED VISUAL ↗</span>
+
+                    </button>
+
+                    <h4>Everyday, every step.</h4>
+
+                    <p>
+                        상품의 디테일과 착화 이미지를 담은
+                        상세페이지 콘텐츠입니다.
+                    </p>
+
+                    <div class="v3093-actions">
+
+                        <button type="button"
+                                class="v3093-full"
+                                data-v30111-full
+                                aria-expanded="false">
+
+                            FULL DETAIL PAGE ↗
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="v3093-device-column">
+
+                    <div class="v3093-phone">
+
+                        <div class="v3093-screen">
+
+                            <div class="v3093-status">
+
+                                <span>9:41</span>
+
+                                <div class="v3093-island"></div>
+
+                                <span>● ▰</span>
+
+                            </div>
+
+                            <div class="v3093-mobile-header">
+
+                                <span>‹</span>
+                                <strong>CHAAKAN</strong>
+                                <span>···</span>
+
+                            </div>
+
+                            <div class="v3093-page-scroll"
+                                 tabindex="0"
+                                 role="region"
+                                 aria-label="상품 상세페이지 스크롤">
+
+                                ${pageImages(product)}
+
+                            </div>
+
+                            <div class="v3093-home">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="v3093-scroll-note">
+                        SCROLL TO EXPLORE ↕
+                    </p>
+
+                    <p class="v3093-scroll-description">
+                        화면 안에서 상세페이지를 스크롤해 보세요.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="v30111-full-page" hidden>
+
+                <div class="v30111-full-toolbar">
+
+                    <strong>
+                        ${product.label} — FULL DETAIL PAGE
+                    </strong>
+
+                    <button type="button"
+                            class="v30111-collapse"
+                            data-v30111-collapse>
+
+                        CLOSE ×
+
+                    </button>
+
+                </div>
+
+                <div class="v30111-full-images"></div>
+
+            </section>
+
+        `;
+    }
+
+    function renderCollection() {
+
+        return `
+
+            <section class="v30111-collection"
+                     data-mode="detail"
+                     data-index="0">
+
+                <div class="v30111-tabs"
+                     role="group"
+                     aria-label="착한구두 작업물 선택">
+
+                    <button type="button"
+                            class="v30111-tab active"
+                            data-v30111-mode="detail"
+                            aria-pressed="true">
+
+                        <strong>DETAIL PAGE</strong>
+
+                        <small>
+                            ${collection.products.length} Product Collections
+                        </small>
+
+                    </button>
+
+                    <button type="button"
+                            class="v30111-tab"
+                            data-v30111-mode="photo"
+                            aria-pressed="false">
+
+                        <strong>PHOTO GALLERY</strong>
+
+                        <small>
+                            ${collection.photos.length} Selected Images
+                        </small>
+
+                    </button>
+
+                </div>
+
+                <div class="v30111-content">
+                    ${renderContent('detail',0)}
+                </div>
+
+            </section>
+        `;
+    }
+
+    // Extend existing renderer without changing other cases
+
+    renderV3093Lookbook = function(c) {
+
+        if (c===CASES.chaakan) {
+            return renderCollection();
+        }
+
+        return previousRenderer(c);
+    };
+
+    // Tab and product switching
+
+    document.addEventListener('click',event=>{
+
+        if (!(event.target instanceof Element)) return;
+
+        const button = event.target.closest(
+            '[data-v30111-mode],' +
+            '[data-v30111-product],' +
+            '[data-v30111-full],' +
+            '[data-v30111-collapse]'
+        );
+
+        if (!button) return;
+
+        const root = button.closest('.v30111-collection');
+
+        if (!root) return;
+
+        event.preventDefault();
+
+        const index = Number(root.dataset.index);
+        const product = collection.products[index];
+
+        if (button.hasAttribute('data-v30111-full')) {
+
+            const full = root.querySelector('.v30111-full-page');
+
+            if (!full) return;
+
+            full.hidden = !full.hidden;
+
+            button.setAttribute(
+                'aria-expanded',
+                String(!full.hidden)
+            );
+
+            if (!full.hidden) {
+
+                const images = full.querySelector(
+                    '.v30111-full-images'
+                );
+
+                if (!images.children.length) {
+                    images.innerHTML = pageImages(product);
+                }
+
+                button.textContent = 'HIDE FULL DETAIL ×';
+
+                full.scrollIntoView({
+                    behavior:matchMedia(
+                        '(prefers-reduced-motion:reduce)'
+                    ).matches?'auto':'smooth',
+                    block:'start'
+                });
+
+            } else {
+
+                button.textContent = 'FULL DETAIL PAGE ↗';
+            }
+
+            return;
+        }
+
+        if (button.hasAttribute('data-v30111-collapse')) {
+
+            root.querySelector('.v30111-full-page').hidden = true;
+
+            const fullButton = root.querySelector(
+                '[data-v30111-full]'
+            );
+
+            fullButton.textContent = 'FULL DETAIL PAGE ↗';
+            fullButton.setAttribute('aria-expanded','false');
+            fullButton.focus();
+
+            return;
+        }
+
+        let nextMode = root.dataset.mode;
+        let nextIndex = index;
+
+        if (button.hasAttribute('data-v30111-mode')) {
+            nextMode = button.dataset.v30111Mode;
+        } else {
+            nextIndex = Number(button.dataset.v30111Product);
+        }
+
+        if (!collection.products[nextIndex]) return;
+
+        root.dataset.mode = nextMode;
+        root.dataset.index = String(nextIndex);
+
+        root.querySelectorAll('[data-v30111-mode]')
+            .forEach(tab=>{
+
+                const active =
+                    tab.dataset.v30111Mode===nextMode;
+
+                tab.classList.toggle('active',active);
+                tab.setAttribute('aria-pressed',String(active));
+            });
+
+        const content = root.querySelector('.v30111-content');
+
+        content.innerHTML = renderContent(
+            nextMode,nextIndex
+        );
+
+        const scroll = content.querySelector(
+            '.v3093-page-scroll'
+        );
+
+        if (scroll) scroll.scrollTop = 0;
+
+        if (
+            content.animate &&
+            !matchMedia('(prefers-reduced-motion:reduce)').matches
+        ) {
+
+            content.animate(
+                [
+                    {opacity:0,transform:'translateY(5px)'},
+                    {opacity:1,transform:'translateY(0)'}
+                ],
+                {duration:260,easing:'ease-out'}
+            );
+        }
+
+    });
+
+    // Find and update CHAAKAN archive card
+
+    const card = Array.from(
+        document.querySelectorAll('.sleeve')
+    ).find(el=>{
+
+        const label = [
+            el.querySelector('.ph')?.dataset.label || '',
+            el.textContent || ''
+        ].join(' ');
+
+        return /CHAAKAN|착한구두/i.test(label);
+    });
+
+    if (card) {
+
+        card.classList.add('v30111-archive-card');
+
+        card.dataset.case = 'chaakan';
+
+        card.setAttribute('role','button');
+        card.setAttribute('tabindex','0');
+
+        const photo = card.querySelector('.ph');
+
+        if (photo) {
+
+            const oldPath = photo.dataset.img;
+
+            if (oldPath && typeof ASSETS!=='undefined') {
+                ASSETS[oldPath] = collection.cover;
+            }
+
+            const image = new Image();
+
+            image.className = 'fit v30111-archive-cover';
+            image.alt = 'CHAAKAN Selected Photography';
+
+            image.onload = ()=>{
+
+                photo.querySelectorAll('img')
+                    .forEach(img=>img.remove());
+
+                photo.removeAttribute('data-img');
+                photo.removeAttribute('data-crop');
+
+                photo.appendChild(image);
+                photo.classList.add('has-img');
+            };
+
+            image.src = collection.cover;
+        }
+
+        card.addEventListener('click',event=>{
+
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
+            openCase('chaakan');
+
+        },true);
+
+        card.addEventListener('keydown',event=>{
+
+            if (event.key==='Enter' || event.key===' ') {
+
+                event.preventDefault();
+                event.stopImmediatePropagation();
+
+                openCase('chaakan');
+            }
+
+        },true);
+
+    } else {
+
+        console.warn('CHAAKAN archive card not found');
+    }
+
+    // Career thumbnail
+
+    document.querySelectorAll('.tl-item').forEach(row=>{
+
+        const label = [
+            row.dataset.label || '',
+            row.textContent || ''
+        ].join(' ');
+
+        if (!/CHAAKAN|착한구두/i.test(label)) return;
+
+        if (row.dataset.img &&
+            typeof ASSETS!=='undefined') {
+
+            ASSETS[row.dataset.img] = collection.cover;
+        }
+
+        row.dataset.img = collection.cover;
+    });
+
+    if (typeof ASSETS!=='undefined') {
+        ASSETS[collection.cover] = collection.cover;
+    }
+
+    console.info('V30.11.1 CHAAKAN COLLECTION READY',{
+        products:collection.products.length,
+        photos:collection.photos.length,
+        archiveCard:!!card
+    });
+
+})();
+</script>
+<script id="v30112-cover-script">
+(() => {
+
+    const cover = 'assets/other/chaakan/thumbnails/chaakan-001-cover.webp';
+
+    const card = Array.from(
+        document.querySelectorAll('.sleeve')
+    ).find(el => {
+
+        const label = [
+            el.querySelector('.ph')?.dataset.label || '',
+            el.dataset.case || '',
+            el.textContent || ''
+        ].join(' ');
+
+        return /CHAAKAN|착한구두/i.test(label);
+    });
+
+    if (!card) {
+        console.error('CHAAKAN card not found');
+        return;
+    }
+
+    const photo = card.querySelector('.ph');
+
+    if (!photo) return;
+
+    const test = new Image();
+
+    test.onload = () => {
+
+        card.dataset.case = 'chaakan';
+
+        photo.removeAttribute('data-img');
+        photo.removeAttribute('data-crop');
+
+        photo.style.setProperty(
+            '--chaakan-cover',
+            `url("${cover}")`
+        );
+
+        photo.classList.add(
+            'v30112-ready',
+            'has-img'
+        );
+
+        console.info(
+            'CHAAKAN COVER READY',
+            cover,
+            test.naturalWidth,
+            test.naturalHeight
+        );
+    };
+
+    test.onerror = () => {
+        console.error('CHAAKAN COVER FAILED',cover);
+    };
+
+    test.src = cover;
 
 })();
 </script>

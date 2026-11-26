@@ -1,0 +1,223 @@
+[
+    {
+        "id":  "chaakan-001",
+        "original":  "343f8d01d359f7d34bdffe1758302799.jpg",
+        "group":  "bdffe1758",
+        "type":  "photos",
+        "width":  1000,
+        "height":  1000,
+        "ratio":  1,
+        "cover":  "thumbnails/chaakan-001-cover.webp",
+        "images":  [
+                       "web/photos/bdffe1758/chaakan-001.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-002",
+        "original":  "5237b30b0feeebdcb3b37d0f3cffa492.jpg",
+        "group":  "general",
+        "type":  "photos",
+        "width":  1000,
+        "height":  1000,
+        "ratio":  1,
+        "cover":  "thumbnails/chaakan-002-cover.webp",
+        "images":  [
+                       "web/photos/general/chaakan-002.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-003",
+        "original":  "70a1a35e09deb8fbf73f9c6b1570cf1e.jpg",
+        "group":  "general",
+        "type":  "photos",
+        "width":  1000,
+        "height":  1000,
+        "ratio":  1,
+        "cover":  "thumbnails/chaakan-003-cover.webp",
+        "images":  [
+                       "web/photos/general/chaakan-003.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-004",
+        "original":  "afbe638adeb0c37043b25cbb491c58f7.jpg",
+        "group":  "general",
+        "type":  "photos",
+        "width":  500,
+        "height":  500,
+        "ratio":  1,
+        "cover":  "thumbnails/chaakan-004-cover.webp",
+        "images":  [
+                       "web/photos/general/chaakan-004.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-005",
+        "original":  "b6f620e7420264270a424078bc5bdf4c.jpg",
+        "group":  "general",
+        "type":  "photos",
+        "width":  1000,
+        "height":  1000,
+        "ratio":  1,
+        "cover":  "thumbnails/chaakan-005-cover.webp",
+        "images":  [
+                       "web/photos/general/chaakan-005.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-006",
+        "original":  "bdded2e90c9c7acec30fbc455a835c81.jpg",
+        "group":  "general",
+        "type":  "photos",
+        "width":  1000,
+        "height":  1000,
+        "ratio":  1,
+        "cover":  "thumbnails/chaakan-006-cover.webp",
+        "images":  [
+                       "web/photos/general/chaakan-006.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-007",
+        "original":  "BSLTR4f882_BSSDR4f883_detail_d-1.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  2874,
+        "ratio":  2.66,
+        "cover":  "thumbnails/chaakan-007-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-007.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-008",
+        "original":  "BSLTR4f882_BSSDR4f883-thechaakan-1-1.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  5466,
+        "ratio":  5.06,
+        "cover":  "thumbnails/chaakan-008-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-008.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-009",
+        "original":  "BSLTR4f882_BSSDR4f883-thechaakan-2_01.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  4043,
+        "ratio":  3.74,
+        "cover":  "thumbnails/chaakan-009-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-009.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-010",
+        "original":  "BSLTR4f882_BSSDR4f883-thechaakan-2_03.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  3784,
+        "ratio":  3.5,
+        "cover":  "thumbnails/chaakan-010-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-010.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-011",
+        "original":  "BSLTR4f882_detail_01_01.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  4240,
+        "ratio":  3.93,
+        "cover":  "thumbnails/chaakan-011-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-011.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-012",
+        "original":  "BSLTR4f882_detail_01_02.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  5060,
+        "ratio":  4.69,
+        "cover":  "thumbnails/chaakan-012-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-012.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-013",
+        "original":  "BSLTR4f882_detail_01_03-1.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  5234,
+        "ratio":  4.85,
+        "cover":  "thumbnails/chaakan-013-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-013.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-014",
+        "original":  "BSLTT4c239_detail_top3.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  6832,
+        "ratio":  6.33,
+        "cover":  "thumbnails/chaakan-014-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-014.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-015",
+        "original":  "BSSDR4f883_detail_01_01.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  5350,
+        "ratio":  4.95,
+        "cover":  "thumbnails/chaakan-015-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-015.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-016",
+        "original":  "BSSDR4f883_detail_01_02.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  4100,
+        "ratio":  3.8,
+        "cover":  "thumbnails/chaakan-016-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-016.webp"
+                   ]
+    },
+    {
+        "id":  "chaakan-017",
+        "original":  "BSSDR4f883_detail_01_03-1.jpg",
+        "group":  "general",
+        "type":  "detail",
+        "width":  1080,
+        "height":  3303,
+        "ratio":  3.06,
+        "cover":  "thumbnails/chaakan-017-cover.webp",
+        "images":  [
+                       "web/detail/general/chaakan-017.webp"
+                   ]
+    }
+]
