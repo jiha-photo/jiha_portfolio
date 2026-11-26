@@ -2821,6 +2821,67 @@ button,input,textarea,select {
 }
 
 </style>
+
+
+<style id="v273-cherry-style">
+
+@media (hover:hover) and (pointer:fine) {
+
+    html .cursor,
+    html .cursor-ring {
+        opacity:0 !important;
+        visibility:hidden !important;
+        pointer-events:none !important;
+    }
+
+    html:not(.v273-ready),
+    html:not(.v273-ready) body,
+    html:not(.v273-ready) body * {
+        cursor:auto !important;
+    }
+
+    html.v273-ready,
+    html.v273-ready body,
+    html.v273-ready body * {
+        cursor:none !important;
+    }
+}
+
+#v273-cherry-pointer {
+
+    position:fixed !important;
+    top:0 !important;
+    left:0 !important;
+
+    width:40px !important;
+    height:40px !important;
+
+    object-fit:contain !important;
+
+    margin:0 !important;
+    padding:0 !important;
+    border:0 !important;
+
+    pointer-events:none !important;
+    user-select:none !important;
+
+    z-index:2147483647 !important;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:none !important;
+    animation:none !important;
+
+    will-change:transform;
+}
+
+#v273-cherry-pointer.v273-visible {
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+</style>
 </head>
 <body>
 
@@ -7264,6 +7325,104 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
 
         figma:FIGMA.length
     });
+
+})();
+</script>
+<script id="v273-cherry-script">
+(() => {
+
+    'use strict';
+
+    const finePointer = matchMedia(
+        '(hover:hover) and (pointer:fine)'
+    );
+
+    if (!finePointer.matches) return;
+
+    const pointer = document.createElement('img');
+
+    pointer.id = 'v273-cherry-pointer';
+    pointer.alt = '';
+    pointer.draggable = false;
+
+    pointer.setAttribute('aria-hidden','true');
+
+    const root = document.documentElement;
+
+    let loaded = false;
+
+    function hidePointer() {
+
+        pointer.classList.remove('v273-visible');
+        root.classList.remove('v273-ready');
+    }
+
+    function movePointer(event) {
+
+        if (!loaded || event.pointerType !== 'mouse') {
+            hidePointer();
+            return;
+        }
+
+        const x = event.clientX - 5;
+        const y = event.clientY - 3;
+
+        pointer.style.transform =
+            'translate3d(' + x + 'px,' + y + 'px,0)';
+
+        pointer.classList.add('v273-visible');
+        root.classList.add('v273-ready');
+    }
+
+    pointer.addEventListener('load',() => {
+
+        loaded = true;
+
+        console.info('V27.3 CHERRY IMAGE LOADED', {
+            width:pointer.naturalWidth,
+            height:pointer.naturalHeight
+        });
+    });
+
+    pointer.addEventListener('error',() => {
+
+        loaded = false;
+        hidePointer();
+
+        console.warn('V27.3 Cursor image failed to load');
+    });
+
+    document.body.appendChild(pointer);
+
+    pointer.src =
+        'assets/ui/cursor/cherry-cursor.png';
+
+    document.addEventListener(
+        'pointermove',
+        movePointer,
+        {passive:true}
+    );
+
+    document.documentElement.addEventListener(
+        'pointerleave',
+        hidePointer
+    );
+
+    window.addEventListener('blur',hidePointer);
+
+    document.addEventListener(
+        'visibilitychange',
+        () => {
+            if (document.hidden) hidePointer();
+        }
+    );
+
+    finePointer.addEventListener(
+        'change',
+        hidePointer
+    );
+
+    console.info('V27.3 CHERRY TRACKING READY');
 
 })();
 </script>
