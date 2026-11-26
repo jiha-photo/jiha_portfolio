@@ -2403,6 +2403,68 @@ button,input,textarea,select {
 }
 
 </style>
+<style id="v24-ip-reels-style">
+
+.ig-hl {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.ig-hl::-webkit-scrollbar {
+    display: none;
+}
+
+.ig-hl button[data-cat="ipcollab"] {
+    flex-shrink: 0;
+}
+
+.ig-hl button[data-cat="ipcollab"] em {
+    font-size: 7px;
+    white-space: nowrap;
+    letter-spacing: -.045em;
+}
+
+.ig-cat[data-cat="ipcollab"] {
+    transition:
+        background .2s ease,
+        border-color .2s ease;
+}
+
+</style>
+<style id="v24-1-reels-style">
+
+/* Hide IP COLLAB outside the Reels tab */
+
+.ig-wrap:not(:has([data-tab="reel"].on))
+.ig-cat[data-cat="ipcollab"],
+
+.ig-wrap:not(:has([data-tab="reel"].on))
+.ig-hl button[data-cat="ipcollab"] {
+    display: none !important;
+}
+
+/* Show IP COLLAB in Reels */
+
+.ig-wrap:has([data-tab="reel"].on)
+.ig-cat[data-cat="ipcollab"] {
+    display: block !important;
+}
+
+.ig-wrap:has([data-tab="reel"].on)
+.ig-hl button[data-cat="ipcollab"] {
+    display: flex !important;
+}
+
+/* Keep highlight label inside the circle */
+
+.ig-hl button[data-cat="ipcollab"] em {
+    font-size: 7px;
+    white-space: nowrap;
+    letter-spacing: -.04em;
+}
+
+</style>
+
 </head>
 <body>
 
@@ -3108,7 +3170,7 @@ function igTab(root, tab) {
     stopHover();
     const g = CASES.now.insta;
     const items = tab === 'reel' ? g.reels : g.posts;
-    const allowed = ['all', 'own', 'disney'];
+    const allowed = ['all', 'own', 'disney', 'ipcollab'];
 
     root.querySelectorAll('[data-tab]').forEach(b => {
         const on = b.dataset.tab === tab;
@@ -5896,6 +5958,249 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
     });
 
 /* V23.3-END */
+
+})();
+</script>
+<script id="v24-ip-reels-script">
+(() => {
+
+    'use strict';
+
+    if (
+        typeof CASES === 'undefined' ||
+        !CASES.now ||
+        !CASES.now.insta
+    ) {
+        console.warn('V24: Instagram data not found');
+        return;
+    }
+
+    const g = CASES.now.insta;
+
+    const incoming = [{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(1).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(1).mp4","t":0.5,"cap":"몬치치 (1)","views":"—"},{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(2).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(2).mp4","t":0.5,"cap":"몬치치 (2)","views":"—"},{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(3).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(3).mp4","t":0.5,"cap":"몬치치 (3)","views":"—"},{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(4).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(4).mp4","t":0.5,"cap":"몬치치 (4)","views":"—"},{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(5).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(5).mp4","t":0.5,"cap":"몬치치 (5)","views":"—"},{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(6).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(6).mp4","t":0.5,"cap":"몬치치 (6)","views":"—"},{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(7).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(7).mp4","t":0.5,"cap":"몬치치 (7)","views":"—"},{"cat":"ipcollab","img":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(8).jpg","video":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(8).mp4","t":0.5,"cap":"몬치치 (8)","views":"—"}];
+
+    const category = {
+        id: 'ipcollab',
+        name: 'IP COLLAB',
+        c: '#EADCFF',
+        desc: '기타 IP 협업 컬렉션 · 런칭 영상'
+    };
+
+    // Preserve existing category data
+
+    if (!g.cats.some(c => c.id === category.id)) {
+
+        const disneyIndex = g.cats.findIndex(
+            c => c.id === 'disney'
+        );
+
+        if (disneyIndex >= 0) {
+            g.cats.splice(
+                disneyIndex + 1,
+                0,
+                category
+            );
+        }
+        else {
+            g.cats.push(category);
+        }
+    }
+
+    // Remove only previously generated IP reels
+
+    g.reels = (g.reels || []).filter(
+        p => !p.v24Generated
+    );
+
+    const existingVideos = new Set(
+        g.reels.map(p => p.video)
+    );
+
+    const newReels = incoming
+        .filter(p => !existingVideos.has(p.video))
+        .map(p => {
+
+            const escapeHtml = value =>
+                String(value)
+                    .replace(/&/g,'&amp;')
+                    .replace(/"/g,'&quot;')
+                    .replace(/'/g,'&#39;')
+                    .replace(/</g,'&lt;')
+                    .replace(/>/g,'&gt;');
+
+            if (typeof ASSETS !== 'undefined') {
+
+                ASSETS[p.video] = p.video;
+
+                if (p.img) {
+                    ASSETS[p.img] = p.img;
+                }
+            }
+
+            return {
+                ...p,
+                cap: escapeHtml(p.cap),
+                v24Generated: true
+            };
+        });
+
+    g.reels.push(...newReels);
+
+    console.info('V24 IP COLLAB ready', {
+        total: g.reels.length,
+        own: g.reels.filter(
+            p => p.cat === 'own'
+        ).length,
+        disney: g.reels.filter(
+            p => p.cat === 'disney'
+        ).length,
+        ipcollab: g.reels.filter(
+            p => p.cat === 'ipcollab'
+        ).length
+    });
+
+})();
+</script>
+
+<script id="v24-4-asset-recovery">
+(() => {
+
+    'use strict';
+
+    if (
+        typeof CASES === 'undefined' ||
+        typeof ASSETS === 'undefined' ||
+        !CASES.now ||
+        !CASES.now.insta
+    ) {
+        console.warn('V24.4 Instagram data not found');
+        return;
+    }
+
+    const feeds = [{"cat":"own","img":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%200.jpg","images":["assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%200.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%201.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%202.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%203.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%204.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%205.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%206.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%207.jpg","assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%208.jpg"],"cap":"자사 그래픽 · 4회차","likes":"—","v244Generated":true},{"cat":"own","img":"assets/other/own-feed/251128/_0.jpg","images":["assets/other/own-feed/251128/_0.jpg","assets/other/own-feed/251128/_1.jpg","assets/other/own-feed/251128/_2.jpg","assets/other/own-feed/251128/_3.jpg","assets/other/own-feed/251128/_4.jpg"],"cap":"자사 제품 피드","likes":"—","v244Generated":true},{"cat":"own","img":"assets/other/own-feed/251201/_KOR%200.jpg","images":["assets/other/own-feed/251201/_KOR%200.jpg","assets/other/own-feed/251201/_KOR%201.jpg","assets/other/own-feed/251201/_KOR%202.jpg","assets/other/own-feed/251201/_KOR%203.jpg","assets/other/own-feed/251201/_KOR%204.jpg"],"cap":"자사 제품 피드","likes":"—","v244Generated":true},{"cat":"own","img":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%200.jpg","images":["assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%200.jpg","assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%201.jpg","assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%202.jpg","assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%203.jpg"],"cap":"이벤트 콘텐츠 · 17회차","likes":"—","v244Generated":true}];
+    const reels = [{"cat":"own","img":"assets/other/own-reels/251117/1%2C2%ED%9A%8C%EC%B0%A8_IMG_KOR.jpg","video":"assets/other/own-reels/251117/1%2C2%ED%9A%8C%EC%B0%A8_KOR_RE_3.mp4","cap":"자사 그래픽 · 1–2회차","views":"—","t":0.5,"v244Generated":true},{"cat":"own","img":"assets/other/own-reels/251125/6%ED%9A%8C%EC%B0%A8_KOR_%EC%88%98%EC%A0%95_3.jpg","video":"assets/other/own-reels/251125/6%ED%9A%8C%EC%B0%A8_KOR_%EC%88%98%EC%A0%95_3.mp4","cap":"자사 그래픽 · 6회차","views":"—","t":0.5,"v244Generated":true},{"cat":"own","img":"assets/other/own-reels/251205/13%ED%9A%8C%EC%B0%A8_KOR.jpg","video":"assets/other/own-reels/251205/13%ED%9A%8C%EC%B0%A8_KOR%202.mp4","cap":"자사 그래픽 · 13회차","views":"—","t":0.5,"v244Generated":true},{"cat":"own","img":"assets/other/own-reels/251210/18%ED%9A%8C%EC%B0%A8_KOR.jpg","video":"assets/other/own-reels/251210/18%ED%9A%8C%EC%B0%A8.mp4","cap":"자사 그래픽 · 18회차","views":"—","t":0.5,"v244Generated":true}];
+    const files = [{"raw":"assets/other/b1-blooming/original/blooming-full.jpg.jpg","url":"assets/other/b1-blooming/original/blooming-full.jpg.jpg"},{"raw":"assets/other/b1-blooming/sections/blooming-01.png","url":"assets/other/b1-blooming/sections/blooming-01.png"},{"raw":"assets/other/b1-blooming/sections/blooming-02.png","url":"assets/other/b1-blooming/sections/blooming-02.png"},{"raw":"assets/other/b1-blooming/sections/blooming-03.png","url":"assets/other/b1-blooming/sections/blooming-03.png"},{"raw":"assets/other/b1-blooming/sections/blooming-04.png","url":"assets/other/b1-blooming/sections/blooming-04.png"},{"raw":"assets/other/b1-blooming/sections/blooming-05.png","url":"assets/other/b1-blooming/sections/blooming-05.png"},{"raw":"assets/other/b1-blooming/sections/blooming-06.png","url":"assets/other/b1-blooming/sections/blooming-06.png"},{"raw":"assets/other/b1-blooming/sections/blooming-07.png","url":"assets/other/b1-blooming/sections/blooming-07.png"},{"raw":"assets/other/b1-blooming/sections/blooming-08.png","url":"assets/other/b1-blooming/sections/blooming-08.png"},{"raw":"assets/other/b1-blooming/sections/blooming-09.png","url":"assets/other/b1-blooming/sections/blooming-09.png"},{"raw":"assets/other/b1-blooming/sections/blooming-10.png","url":"assets/other/b1-blooming/sections/blooming-10.png"},{"raw":"assets/other/b1-blooming/sections/blooming-11.png","url":"assets/other/b1-blooming/sections/blooming-11.png"},{"raw":"assets/other/b1-blooming/sections/blooming-12.png","url":"assets/other/b1-blooming/sections/blooming-12.png"},{"raw":"assets/other/ip-reels/IP-몬치치- (1).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(1).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (1).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(1).mp4"},{"raw":"assets/other/ip-reels/IP-몬치치- (2).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(2).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (2).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(2).mp4"},{"raw":"assets/other/ip-reels/IP-몬치치- (3).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(3).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (3).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(3).mp4"},{"raw":"assets/other/ip-reels/IP-몬치치- (4).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(4).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (4).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(4).mp4"},{"raw":"assets/other/ip-reels/IP-몬치치- (5).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(5).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (5).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(5).mp4"},{"raw":"assets/other/ip-reels/IP-몬치치- (6).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(6).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (6).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(6).mp4"},{"raw":"assets/other/ip-reels/IP-몬치치- (7).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(7).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (7).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(7).mp4"},{"raw":"assets/other/ip-reels/IP-몬치치- (8).jpg","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(8).jpg"},{"raw":"assets/other/ip-reels/IP-몬치치- (8).mp4","url":"assets/other/ip-reels/IP-%EB%AA%AC%EC%B9%98%EC%B9%98-%20(8).mp4"},{"raw":"assets/other/own-feed/251121/4회차_KOR 0.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%200.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 1.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%201.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 2.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%202.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 3.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%203.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 4.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%204.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 5.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%205.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 6.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%206.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 7.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%207.jpg"},{"raw":"assets/other/own-feed/251121/4회차_KOR 8.jpg","url":"assets/other/own-feed/251121/4%ED%9A%8C%EC%B0%A8_KOR%208.jpg"},{"raw":"assets/other/own-feed/251128/_0.jpg","url":"assets/other/own-feed/251128/_0.jpg"},{"raw":"assets/other/own-feed/251128/_1.jpg","url":"assets/other/own-feed/251128/_1.jpg"},{"raw":"assets/other/own-feed/251128/_2.jpg","url":"assets/other/own-feed/251128/_2.jpg"},{"raw":"assets/other/own-feed/251128/_3.jpg","url":"assets/other/own-feed/251128/_3.jpg"},{"raw":"assets/other/own-feed/251128/_4.jpg","url":"assets/other/own-feed/251128/_4.jpg"},{"raw":"assets/other/own-feed/251201/_KOR 0.jpg","url":"assets/other/own-feed/251201/_KOR%200.jpg"},{"raw":"assets/other/own-feed/251201/_KOR 1.jpg","url":"assets/other/own-feed/251201/_KOR%201.jpg"},{"raw":"assets/other/own-feed/251201/_KOR 2.jpg","url":"assets/other/own-feed/251201/_KOR%202.jpg"},{"raw":"assets/other/own-feed/251201/_KOR 3.jpg","url":"assets/other/own-feed/251201/_KOR%203.jpg"},{"raw":"assets/other/own-feed/251201/_KOR 4.jpg","url":"assets/other/own-feed/251201/_KOR%204.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/17회차_KOR 0.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%200.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/17회차_KOR 1.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%201.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/17회차_KOR 2.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%202.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/17회차_KOR 3.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/17%ED%9A%8C%EC%B0%A8_KOR%203.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/원본/00.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/%EC%9B%90%EB%B3%B8/00.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/원본/01.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/%EC%9B%90%EB%B3%B8/01.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/원본/02.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/%EC%9B%90%EB%B3%B8/02.jpg"},{"raw":"assets/other/own-feed/251208(이벤트,원본)/원본/03_1.jpg","url":"assets/other/own-feed/251208(%EC%9D%B4%EB%B2%A4%ED%8A%B8%2C%EC%9B%90%EB%B3%B8)/%EC%9B%90%EB%B3%B8/03_1.jpg"},{"raw":"assets/other/own-reels/251117/1,2회차_IMG_KOR.jpg","url":"assets/other/own-reels/251117/1%2C2%ED%9A%8C%EC%B0%A8_IMG_KOR.jpg"},{"raw":"assets/other/own-reels/251117/1,2회차_KOR_RE_3.jpg","url":"assets/other/own-reels/251117/1%2C2%ED%9A%8C%EC%B0%A8_KOR_RE_3.jpg"},{"raw":"assets/other/own-reels/251117/1,2회차_KOR_RE_3.mp4","url":"assets/other/own-reels/251117/1%2C2%ED%9A%8C%EC%B0%A8_KOR_RE_3.mp4"},{"raw":"assets/other/own-reels/251125/6회차_KOR_수정_3.jpg","url":"assets/other/own-reels/251125/6%ED%9A%8C%EC%B0%A8_KOR_%EC%88%98%EC%A0%95_3.jpg"},{"raw":"assets/other/own-reels/251125/6회차_KOR_수정_3.mp4","url":"assets/other/own-reels/251125/6%ED%9A%8C%EC%B0%A8_KOR_%EC%88%98%EC%A0%95_3.mp4"},{"raw":"assets/other/own-reels/251205/13회차_KOR 2.jpg","url":"assets/other/own-reels/251205/13%ED%9A%8C%EC%B0%A8_KOR%202.jpg"},{"raw":"assets/other/own-reels/251205/13회차_KOR 2.mp4","url":"assets/other/own-reels/251205/13%ED%9A%8C%EC%B0%A8_KOR%202.mp4"},{"raw":"assets/other/own-reels/251205/13회차_KOR.jpg","url":"assets/other/own-reels/251205/13%ED%9A%8C%EC%B0%A8_KOR.jpg"},{"raw":"assets/other/own-reels/251210/18회차.jpg","url":"assets/other/own-reels/251210/18%ED%9A%8C%EC%B0%A8.jpg"},{"raw":"assets/other/own-reels/251210/18회차.mp4","url":"assets/other/own-reels/251210/18%ED%9A%8C%EC%B0%A8.mp4"},{"raw":"assets/other/own-reels/251210/18회차_KOR.jpg","url":"assets/other/own-reels/251210/18%ED%9A%8C%EC%B0%A8_KOR.jpg"},{"raw":"assets/other/sanho-mansion/sanho-01.jpg.jpg","url":"assets/other/sanho-mansion/sanho-01.jpg.jpg"},{"raw":"assets/other/sanho-mansion/sanho-02.jpg.jpg","url":"assets/other/sanho-mansion/sanho-02.jpg.jpg"},{"raw":"assets/other/sanho-mansion/sanho-03.jpg.jpg","url":"assets/other/sanho-mansion/sanho-03.jpg.jpg"},{"raw":"assets/other/sanho-mansion/sanho-04.jpg.jpg","url":"assets/other/sanho-mansion/sanho-04.jpg.jpg"},{"raw":"assets/other/sanho-mansion/sanho-05.jpg.jpg","url":"assets/other/sanho-mansion/sanho-05.jpg.jpg"},{"raw":"assets/other/sanho-mansion/sanho-06.jpg.jpg","url":"assets/other/sanho-mansion/sanho-06.jpg.jpg"},{"raw":"assets/other/sanho-mansion/sanho-07.jpg.jpg","url":"assets/other/sanho-mansion/sanho-07.jpg.jpg"},{"raw":"assets/other/sanho-mansion/sanho-08.jpg.jpg","url":"assets/other/sanho-mansion/sanho-08.jpg.jpg"},{"raw":"assets/other/web-publishing/desktop-d.png","url":"assets/other/web-publishing/desktop-d.png"},{"raw":"assets/other/web-publishing/port_mobile1.png","url":"assets/other/web-publishing/port_mobile1.png"},{"raw":"assets/other/web-publishing/port_mobile2.png","url":"assets/other/web-publishing/port_mobile2.png"},{"raw":"assets/other/web-publishing/web-hyosung-guide.jpg.jpg","url":"assets/other/web-publishing/web-hyosung-guide.jpg.jpg"},{"raw":"assets/other/web-publishing/web-hyosung-project.jpg.jpg","url":"assets/other/web-publishing/web-hyosung-project.jpg.jpg"},{"raw":"assets/other/web-publishing/web-kellogg-m-01.jpg.png","url":"assets/other/web-publishing/web-kellogg-m-01.jpg.png"},{"raw":"assets/other/web-publishing/web-kellogg-m-02.jpg.png","url":"assets/other/web-publishing/web-kellogg-m-02.jpg.png"},{"raw":"assets/other/web-publishing/web-kellogg-m-03.jpg.png","url":"assets/other/web-publishing/web-kellogg-m-03.jpg.png"},{"raw":"assets/other/web-publishing/web-kellogg-pc.jpg.png","url":"assets/other/web-publishing/web-kellogg-pc.jpg.png"},{"raw":"assets/other/web-publishing/web-subway-guide.png.jpg","url":"assets/other/web-publishing/web-subway-guide.png.jpg"},{"raw":"assets/other/web-publishing/web-subway-m-full.png.png","url":"assets/other/web-publishing/web-subway-m-full.png.png"},{"raw":"assets/other/web-publishing/web-subway-project.png.png","url":"assets/other/web-publishing/web-subway-project.png.png"}];
+
+    const g = CASES.now.insta;
+
+    function normalize(value) {
+
+        let path = String(value || '');
+
+        try {
+            path = decodeURIComponent(path);
+        }
+        catch {}
+
+        return path
+            .replace(/\\/g,'/')
+            .replace(/^\.\//,'')
+            .toLowerCase();
+    }
+
+    function isOtherPath(value,folder) {
+
+        return normalize(value).startsWith(
+            'assets/other/' + folder + '/'
+        );
+    }
+
+    // Register real paths, including Korean names
+
+    files.forEach(file => {
+
+        ASSETS[file.raw] = file.url;
+        ASSETS[file.url] = file.url;
+
+        const lowerExt = file.raw.replace(
+            /\.[^.]+$/,
+            s => s.toLowerCase()
+        );
+
+        ASSETS[lowerExt] = file.url;
+    });
+
+    // Remove only older OTHER feed entries
+
+    g.posts = (g.posts || []).filter(post => {
+
+        if (post.v244Generated) return false;
+
+        return !(
+            isOtherPath(post.img,'own-feed') ||
+            (post.images || []).some(path =>
+                isOtherPath(path,'own-feed')
+            )
+        );
+    });
+
+    // Insert the restored carousel posts
+
+    g.posts.unshift(...feeds);
+
+    // Remove only older OTHER OWN reel entries
+
+    g.reels = (g.reels || []).filter(post => {
+
+        if (post.v244Generated) return false;
+
+        return !isOtherPath(
+            post.video,
+            'own-reels'
+        );
+    });
+
+    // Preserve existing Disney and IP COLLAB
+
+    g.reels.unshift(...reels);
+
+    // Register all carousel and reel image paths
+
+    feeds.forEach(post => {
+
+        ASSETS[post.img] = post.img;
+
+        post.images.forEach(path => {
+            ASSETS[path] = path;
+        });
+    });
+
+    reels.forEach(post => {
+
+        ASSETS[post.img] = post.img;
+        ASSETS[post.video] = post.video;
+    });
+
+    console.info('V24.4 Asset Recovery',{
+
+        restoredFeedPosts: feeds.length,
+
+        restoredFeedImages: feeds.reduce(
+            (sum,p) => sum+p.images.length,
+            0
+        ),
+
+        restoredReels: reels.length,
+
+        registeredOtherAssets: files.length,
+
+        totalPosts: g.posts.length,
+
+        totalReels: g.reels.length,
+
+        ownReels: g.reels.filter(
+            p => p.cat === 'own'
+        ).length,
+
+        disneyReels: g.reels.filter(
+            p => p.cat === 'disney'
+        ).length,
+
+        ipCollabReels: g.reels.filter(
+            p => p.cat === 'ipcollab'
+        ).length
+
+    });
 
 })();
 </script>
