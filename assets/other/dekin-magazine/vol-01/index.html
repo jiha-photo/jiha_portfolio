@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+
+<title>DEKIN MAGAZINE - VOL.01</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    background: #f5f3ef;
+    color: #252525;
+    font-family: Arial, "Malgun Gothic", sans-serif;
+}
+
+button, a {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.progress-track {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    z-index: 100;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background: #252525;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 4vw;
+    background: rgba(245,243,239,.96);
+    border-bottom: 1px solid #d5d2cb;
+}
+
+.brand {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 24px 50px;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: .18em;
+    color: #888;
+}
+
+.hero h1 {
+    font-size: clamp(36px,6vw,80px);
+    letter-spacing: -.065em;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.hero p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.issue-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.issue-info span + span {
+    border-left: 1px solid #bbb;
+    padding-left: 12px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 185px minmax(0,860px);
+    justify-content: center;
+    gap: 35px;
+    max-width: 1180px;
+    padding: 0 24px 70px;
+    margin: auto;
+}
+
+.contents {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    max-height: 76vh;
+    overflow-y: auto;
+}
+
+.contents-title {
+    font-size: 10px;
+    color: #888;
+    letter-spacing: .1em;
+    padding: 0 0 20px;
+    border-bottom: 1px solid #aaa;
+}
+
+.contents a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 15px 3px;
+    border-bottom: 1px solid #d8d5cf;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.contents a:hover,
+.contents a.active {
+    color: #222;
+    font-weight: 700;
+}
+
+.contents .official {
+    display: block;
+    text-align: center;
+    border: 1px solid #777;
+    border-radius: 40px;
+    margin-top: 25px;
+    padding: 13px 5px;
+    font-size: 10px;
+}
+
+.magazine {
+    width: 100%;
+    min-width: 0;
+    background: #fff;
+}
+
+.mag-section {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    scroll-margin-top: 15px;
+}
+
+.mag-section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.issue-navigation {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 24px;
+    border-top: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.issue-navigation a {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.issue-navigation a:hover {
+    text-decoration: underline;
+}
+
+.issue-navigation .disabled {
+    opacity: .3;
+    font-size: 12px;
+}
+
+.official-bottom {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 55px;
+    border-radius: 40px;
+    background: #252525;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 12px;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 25px 15px;
+    color: #999;
+    font-size: 10px;
+    letter-spacing: .05em;
+}
+
+.back-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background: #f5f3ef;
+    color: #222;
+    cursor: pointer;
+    z-index: 20;
+}
+
+@media(max-width:760px) {
+
+    .topbar {
+        padding: 16px;
+    }
+
+    .top-links {
+        gap: 12px;
+        font-size: 9px;
+    }
+
+    .hero {
+        padding: 45px 15px 25px;
+    }
+
+    .layout {
+        display: block;
+        padding: 0 0 30px;
+    }
+
+    .contents {
+        position: sticky;
+        top: 47px;
+        z-index: 30;
+        display: flex;
+        overflow-x: auto;
+        gap: 18px;
+        background: #f5f3ef;
+        padding: 12px 15px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    .contents-title,
+    .contents .official {
+        display: none;
+    }
+
+    .contents a {
+        flex-shrink: 0;
+        white-space: nowrap;
+        border: 0;
+        font-size: 10px;
+        padding: 5px 0;
+    }
+
+    .contents a span {
+        display: none;
+    }
+
+    .issue-navigation {
+        padding: 20px 15px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="progress-track">
+    <div id="progress"></div>
+</div>
+
+<header class="topbar">
+
+    <a class="brand" href="#top">
+        DEKIN MAGAZINE.
+    </a>
+
+    <div class="top-links">
+
+        <a href="../../../../index.html">
+            PORTFOLIO
+        </a>
+
+        <a href="https://designskin.com/product/project.html?cate_no=2818"
+           target="_blank"
+           rel="noopener noreferrer">
+            OFFICIAL STORE &#8599;
+        </a>
+
+    </div>
+
+</header>
+
+<section class="hero" id="top">
+
+    <div class="eyebrow">
+        DESIGNSKIN / EDITORIAL CONTENT
+    </div>
+
+    <h1>DEKIN MAGAZINE.</h1>
+
+    <p>
+        DIGITAL EDITORIAL ARCHIVE
+        <br>
+        CONTENT PLANNING / VISUAL DESIGN
+    </p>
+
+    <div class="issue-info">
+        <span>VOL.01</span>
+        <span>6 SECTIONS</span>
+    </div>
+
+</section>
+
+<div class="layout">
+
+    <nav class="contents">
+
+        <div class="contents-title">
+            TABLE OF CONTENTS
+        </div>
+
+        <a href="#section-1">COVER<span>&#8599;</span></a>
+<a href="#section-2">NEW SKIN<span>&#8599;</span></a>
+<a href="#section-4">SKIN TREND<span>&#8599;</span></a>
+<a href="#section-5">SKIN LIFE<span>&#8599;</span></a>
+<a href="#section-7">SECRET COUPON<span>&#8599;</span></a>
+<a href="#section-8">WHATS NEXT<span>&#8599;</span></a>
+
+        <a class="official"
+           href="https://designskin.com/product/project.html?cate_no=2818"
+           target="_blank"
+           rel="noopener noreferrer">
+            OFFICIAL MAGAZINE &#8599;
+        </a>
+
+    </nav>
+
+    <main class="magazine">
+
+        <section class="mag-section" id="section-1"><img src="detail/00%20COVER.png" alt="COVER" loading="eager" decoding="async" draggable="false"></section>
+<section class="mag-section" id="section-2"><img src="detail/01-1%20NEW%20SKIN.png" alt="NEW SKIN" loading="lazy" decoding="async" draggable="false"></section>
+<section class="mag-section" id="section-3"><img src="detail/01-2%20NEW%20SKIN.png" alt="NEW SKIN" loading="lazy" decoding="async" draggable="false"></section>
+<section class="mag-section" id="section-4"><img src="detail/02%20SKIN%20TREND.png" alt="SKIN TREND" loading="lazy" decoding="async" draggable="false"></section>
+<section class="mag-section" id="section-5"><img src="detail/03-1%20SKIN%20LIFE.png" alt="SKIN LIFE" loading="lazy" decoding="async" draggable="false"></section>
+<section class="mag-section" id="section-6"><img src="detail/03-2%20SKIN%20LIFE.png" alt="SKIN LIFE" loading="lazy" decoding="async" draggable="false"></section>
+<section class="mag-section" id="section-7"><img src="detail/04%20SECRET%20COUPON.png" alt="SECRET COUPON" loading="lazy" decoding="async" draggable="false"></section>
+<section class="mag-section" id="section-8"><img src="detail/05%20WHATS%20NEXT.png" alt="WHATS NEXT" loading="lazy" decoding="async" draggable="false"></section>
+
+    </main>
+
+</div>
+
+<nav class="issue-navigation">
+
+    <span class="disabled">PREVIOUS ISSUE</span>
+
+    <a href="../vol-02/index.html">NEXT ISSUE &#8594;<br>VOL.02</a>
+
+</nav>
+
+<a class="official-bottom"
+   href="https://designskin.com/product/project.html?cate_no=2818"
+   target="_blank"
+   rel="noopener noreferrer">
+
+   VIEW OFFICIAL MAGAZINE &#8599;
+
+</a>
+
+<footer>
+    DESIGNSKIN / DEKIN MAGAZINE
+    <br><br>
+    PORTFOLIO ARCHIVE
+</footer>
+
+<button class="back-top"
+        type="button"
+        aria-label="Back to top"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+    &#8593;
+
+</button>
+
+<script>
+
+const progress = document.getElementById('progress');
+
+function updateProgress() {
+
+    const max = document.documentElement.scrollHeight
+        - window.innerHeight;
+
+    const value = max > 0
+        ? window.scrollY / max * 100
+        : 0;
+
+    progress.style.width =
+        Math.max(0,Math.min(100,value)) + '%';
+}
+
+window.addEventListener(
+    'scroll',updateProgress,{passive:true}
+);
+
+window.addEventListener('resize',updateProgress);
+window.addEventListener('load',updateProgress);
+
+updateProgress();
+
+const links = [...document.querySelectorAll(
+    '.contents a[href^="#"]'
+)];
+
+const sections = [...document.querySelectorAll(
+    '.mag-section'
+)];
+
+function updateSection() {
+
+    let current = sections[0]?.id;
+
+    sections.forEach(section => {
+        if (section.getBoundingClientRect().top < 160) {
+            current = section.id;
+        }
+    });
+
+    links.forEach(link => {
+
+        link.classList.toggle(
+            'active',
+            link.getAttribute('href') === '#' + current
+        );
+    });
+}
+
+window.addEventListener(
+    'scroll',updateSection,{passive:true}
+);
+
+updateSection();
+
+document.addEventListener('contextmenu',e => {
+
+    if (e.target.closest('.magazine img')) {
+        e.preventDefault();
+    }
+});
+
+document.addEventListener('dragstart',e => {
+
+    if (e.target.closest('.magazine img')) {
+        e.preventDefault();
+    }
+});
+
+</script>
+
+</body>
+</html>

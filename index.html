@@ -2465,6 +2465,42 @@ button,input,textarea,select {
 
 </style>
 
+<style id="v25-magazine-style">
+
+.ig-magi .cv .ph img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    background: #f5f3ef;
+}
+
+.ig-magi .cv {
+    transition: opacity .25s ease;
+}
+
+.ig-magi:hover .cv {
+    opacity: .85;
+}
+
+.v25-official-link {
+    display: none;
+    width: fit-content;
+    margin-top: 15px;
+    padding: 13px 18px;
+    border: 1px solid #252525;
+    border-radius: 30px;
+    color: #252525;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ig-wrap:has([data-tab="mag"].on)
+.v25-official-link {
+    display: inline-flex;
+}
+
+</style>
 </head>
 <body>
 
@@ -6201,6 +6237,119 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
         ).length
 
     });
+
+})();
+</script>
+<script id="v25-magazine-script">
+(() => {
+
+    'use strict';
+
+    if (
+        typeof CASES === 'undefined' ||
+        typeof ASSETS === 'undefined' ||
+        !CASES.now?.insta?.magazine
+    ) {
+        console.warn('V25: Magazine data not found');
+        return;
+    }
+
+    const issues = [{"img":"assets/other/dekin-magazine/vol-02/thumbnail.png","vol":"VOL.02","title":"디킨매거진 VOL.02","sub":"VIEW FULL MAGAZINE","c":"#F3EFE8","href":"assets/other/dekin-magazine/vol-02/index.html","number":2},{"img":"assets/other/dekin-magazine/vol-01/thumbnail.png","vol":"VOL.01","title":"디킨매거진 VOL.01","sub":"VIEW FULL MAGAZINE","c":"#F3EFE8","href":"assets/other/dekin-magazine/vol-01/index.html","number":1}];
+
+    const official =
+        'https://designskin.com/product/project.html?cate_no=2818';
+
+    const magazine = CASES.now.insta.magazine;
+
+    // Replace old empty placeholder issues
+
+    magazine.items = issues;
+
+    magazine.desc =
+        '이룸디자인스킨 디지털 매거진 / 콘텐츠 기획 및 제작';
+
+    // Register actual thumbnail files
+
+    issues.forEach(issue => {
+        ASSETS[issue.img] = issue.img;
+    });
+
+    // Open full magazine in a new browser tab
+
+    mBody.addEventListener('click',event => {
+
+        const card = event.target.closest(
+            '.ig-wrap .ig-magi[data-i]'
+        );
+
+        if (!card) return;
+
+        const issue = issues[
+            Number(card.dataset.i)
+        ];
+
+        if (!issue) return;
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        window.open(
+            issue.href,
+            '_blank',
+            'noopener,noreferrer'
+        );
+
+    },true);
+
+    // Add official magazine link beside existing link
+
+    function attachOfficialLink() {
+
+        const wrap = mBody.querySelector('.ig-wrap');
+
+        if (!wrap) return;
+
+        if (wrap.querySelector('.v25-official-link')) {
+            return;
+        }
+
+        const originalLink = wrap.querySelector(
+            'a.wp-link'
+        );
+
+        if (!originalLink) return;
+
+        const link = document.createElement('a');
+
+        link.className = 'v25-official-link';
+
+        link.href = official;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+
+        link.textContent =
+            '공식 디킨매거진 바로가기 ↗';
+
+        originalLink.insertAdjacentElement(
+            'afterend',link
+        );
+    }
+
+    const observer = new MutationObserver(
+        attachOfficialLink
+    );
+
+    observer.observe(mBody,{
+        childList:true,
+        subtree:true
+    });
+
+    attachOfficialLink();
+
+    console.info(
+        'V25 DEKIN Magazine Ready',
+        issues.length + ' issues'
+    );
 
 })();
 </script>
