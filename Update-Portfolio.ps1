@@ -257,13 +257,63 @@ function Convert-Media($file,$section,$role) {
 
         $success = $false
 
-        foreach ($crf in @(21,24,27,30)) {
+        # V3115A AUDIO COMPATIBILITY
+
+                            $probe = Get-Command ffprobe `
+                                -ErrorAction Stop
+
+                            $audioJson = & $probe.Source `
+                                -v error `
+                                -select_streams a `
+                                -show_entries 'stream=index,codec_name,channels' `
+                                -of json `
+                                $file.FullName
+
+                            if ($LASTEXITCODE -ne 0) {
+                                throw "Audio inspection failed: $($file.Name)"
+                            }
+
+                            $audioInfo = ConvertFrom-Json `
+                                -InputObject ($audioJson -join "`n")
+
+                            $audioStreams = @(
+                                $audioInfo.streams |
+                                Where-Object { $_ }
+                            )
+
+                            $supported = @(
+                                $audioStreams |
+                                Where-Object {
+                                    $_.codec_name -match '^(aac|mp3|alac|ac3|eac3|opus|vorbis|flac|pcm_.+)$'
+                                }
+                            )
+
+                            $audioArgs = @('-an')
+
+                            if ($supported.Count -gt 0) {
+
+                                $selectedAudio = $supported[0]
+
+                                $audioArgs = @(
+                                    '-map',
+                                    "0:$($selectedAudio.index)"
+                                )
+
+                            } elseif ($audioStreams.Count -gt 0) {
+
+                                Write-Warning (
+                                    "Unsupported audio. Silent MP4: " +
+                                    $file.Name
+                                )
+                            }
+
+foreach ($crf in @(21,24,27,30)) {
 
             & $ffmpeg.Source `
                 -hide_banner -loglevel error -y `
                 -i $file.FullName `
                 -map '0:v:0' `
-                -map '0:a?' `
+                @audioArgs `
                 -vf "scale=w='min(iw,1080)':h='min(ih,1920)':force_original_aspect_ratio=decrease:force_divisible_by=2,setsar=1" `
                 -c:v libx264 `
                 -preset medium `
