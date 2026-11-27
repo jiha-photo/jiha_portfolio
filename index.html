@@ -13578,7 +13578,7 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
         if (
             !original ||
             !meta ||
-            meta.textContent.trim() !== '03'
+            !original.classList.contains('selected-modal-gallery')
         ) {
             return;
         }
