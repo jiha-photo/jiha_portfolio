@@ -1,0 +1,678 @@
+[
+    {
+        "id":  "jy-0",
+        "brand":  "jy",
+        "title":  "BLACK FRIDAY",
+        "cover":  "assets/images/images_0058.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/images/images_0058.jpg",
+                          "href":  "assets/images/images_0081.jpg",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/images/images_0035.jpg",
+                          "href":  "assets/images/images_0035.jpg",
+                          "label":  "712 × 712 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0059.jpg",
+                          "href":  "assets/images/images_0059.jpg",
+                          "label":  "800 × 800 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0028.jpg",
+                          "href":  "assets/images/images_0028.jpg",
+                          "label":  "860 × 600 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0033.jpg",
+                          "href":  "assets/images/images_0033.jpg",
+                          "label":  "1280 × 600 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0046.jpg",
+                          "href":  "assets/images/images_0046.jpg",
+                          "label":  "1920 × 500 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0032.jpg",
+                          "href":  "assets/images/images_0032.jpg",
+                          "label":  "628 × 380 · 배너 / 광고 소재"
+                      }
+                  ]
+    },
+    {
+        "id":  "jy-1",
+        "brand":  "jy",
+        "title":  "봄이왔자영",
+        "cover":  "assets/images/images_0008.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/images/images_0008.jpg",
+                          "href":  "assets/images/images_0082.jpg",
+                          "label":  "EVENT PAGE"
+                      }
+                  ]
+    },
+    {
+        "id":  "jy-2",
+        "brand":  "jy",
+        "title":  "12월 윈터 쿠폰팩",
+        "cover":  "assets/images/images_0054.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/images/images_0054.jpg",
+                          "href":  "assets/images/images_0039.webp",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/images/images_0036.jpg",
+                          "href":  "assets/images/images_0036.jpg",
+                          "label":  "172 × 172 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0085.jpg",
+                          "href":  "assets/images/images_0085.jpg",
+                          "label":  "628 × 380 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0057.jpg",
+                          "href":  "assets/images/images_0057.jpg",
+                          "label":  "628 × 380 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0022.jpg",
+                          "href":  "assets/images/images_0022.jpg",
+                          "label":  "860 × 200 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0019.jpg",
+                          "href":  "assets/images/images_0019.jpg",
+                          "label":  "1920 × 400 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0055.jpg",
+                          "href":  "assets/images/images_0055.jpg",
+                          "label":  "750 × 600 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0023.jpg",
+                          "href":  "assets/images/images_0023.jpg",
+                          "label":  "750 × 600 · 배너 / 광고 소재"
+                      },
+                      {
+                          "image":  "assets/images/images_0072.jpg",
+                          "href":  "assets/images/images_0072.jpg",
+                          "label":  "800 × 800 · 배너 / 광고 소재"
+                      }
+                  ]
+    },
+    {
+        "id":  "jy-3",
+        "brand":  "jy",
+        "title":  "패밀리데이",
+        "cover":  "assets/images/images_0074.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/images/images_0074.jpg",
+                          "href":  "assets/images/images_0015.jpg",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/images/images_0074.jpg",
+                          "href":  "assets/images/images_0074.jpg",
+                          "label":  "대표 배너 · 1000 × 1000"
+                      },
+                      {
+                          "image":  "assets/images/images_0049.jpg",
+                          "href":  "assets/images/images_0049.jpg",
+                          "label":  "사은품 이벤트 · 860 × 694"
+                      },
+                      {
+                          "image":  "assets/images/images_0030.jpg",
+                          "href":  "assets/images/images_0030.jpg",
+                          "label":  "아울렛 이벤트 · 1000 × 651"
+                      }
+                  ]
+    },
+    {
+        "id":  "jy-4",
+        "brand":  "jy",
+        "title":  "EARLY SUMMER · 얼리썸머",
+        "cover":  "assets/images/images_0080.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/images/images_0080.jpg",
+                          "href":  "assets/images/images_0018.jpg",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/images/images_0070.jpg",
+                          "href":  "assets/images/images_0070.jpg",
+                          "label":  "스마트스토어 기획전 · 487 × 2048"
+                      },
+                      {
+                          "image":  "assets/images/images_0060.jpg",
+                          "href":  "assets/images/images_0060.jpg",
+                          "label":  "배너 / 광고 소재 · 1920 × 400"
+                      },
+                      {
+                          "image":  "assets/images/images_0047.jpg",
+                          "href":  "assets/images/images_0047.jpg",
+                          "label":  "배너 / 광고 소재 · 1920 × 500"
+                      },
+                      {
+                          "image":  "assets/images/images_0068.jpg",
+                          "href":  "assets/images/images_0068.jpg",
+                          "label":  "배너 / 광고 소재 · 628 × 380"
+                      },
+                      {
+                          "image":  "assets/images/images_0052.jpg",
+                          "href":  "assets/images/images_0052.jpg",
+                          "label":  "배너 / 광고 소재 · 750 × 600"
+                      },
+                      {
+                          "image":  "assets/images/images_0051.jpg",
+                          "href":  "assets/images/images_0051.jpg",
+                          "label":  "배너 / 광고 소재 · 750 × 600"
+                      },
+                      {
+                          "image":  "assets/images/images_0080.jpg",
+                          "href":  "assets/images/images_0080.jpg",
+                          "label":  "배너 / 광고 소재 · 800 × 800"
+                      },
+                      {
+                          "image":  "assets/images/images_0009.jpg",
+                          "href":  "assets/images/images_0009.jpg",
+                          "label":  "배너 / 광고 소재 · 860 × 200"
+                      }
+                  ]
+    },
+    {
+        "id":  "2026-members-week",
+        "brand":  "ds",
+        "title":  "2026 멤버스위크",
+        "cover":  "assets/promotion/designskin/2026-members-week/banner/banner-600x900-001.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/review/vertical-600x900-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-members-week/review/vertical-600x900-001.jpg",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/review/wide-1920x800-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-members-week/review/wide-1920x800-001.jpg",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/landing/sections/landing-mobile-600x7708-001/landing-001.webp",
+                          "href":  "assets/promotion/designskin/_gallery/2026-members-week-asset-003.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/banner/banner-pc-1920x4691-001.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/banner/banner-pc-1920x4691-001.png",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-001.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-001.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-002.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-002.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-003.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-003.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-004.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-004.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-005.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-005.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-006.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-006.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-007.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-007.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-008.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-008.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-009.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-009.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-010.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-010.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-011.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-011.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-012.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-012.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-013.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-013.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-014.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-014.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-015.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-015.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-016.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/ads/ads-1080x1080-016.png",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/coupon/coupon-1080x1080-001.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/coupon/coupon-1080x1080-001.png",
+                          "label":  "COUPON"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/coupon/coupon-1080x1080-002.png",
+                          "href":  "assets/promotion/designskin/2026-members-week/coupon/coupon-1080x1080-002.png",
+                          "label":  "COUPON"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/banner/banner-600x900-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-members-week/banner/banner-600x900-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-members-week/review/wide-1920x800-002.jpg",
+                          "href":  "assets/promotion/designskin/2026-members-week/review/wide-1920x800-002.jpg",
+                          "label":  "ADDITIONAL ASSETS"
+                      }
+                  ]
+    },
+    {
+        "id":  "2026-new-year",
+        "brand":  "ds",
+        "title":  "2026 신년 프로모션",
+        "cover":  "assets/promotion/designskin/2026-new-year/banner/banner-600x900-001.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-001.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-002.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-002.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-003.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-003.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-004.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-004.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-005.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-005.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-006.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-006.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-007.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-007.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/review/square-1440x1440-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/review/square-1440x1440-001.jpg",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/review/square-1440x1440-002.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/review/square-1440x1440-002.jpg",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-008.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-008.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-009.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-009.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-010.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/ads/ads-1440x1440-010.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x3112-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x3112-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x3804-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x3804-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x1043-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x1043-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x1381-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x1381-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x1380-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-600x1380-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x1039-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x1039-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x1039-002.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x1039-002.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x1034-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-event-1920x1034-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-600x900-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-600x900-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/2026-new-year/banner/banner-pc-1920x800-001.jpg",
+                          "href":  "assets/promotion/designskin/2026-new-year/banner/banner-pc-1920x800-001.jpg",
+                          "label":  "WEB BANNER"
+                      }
+                  ]
+    },
+    {
+        "id":  "iphone-18",
+        "brand":  "ds",
+        "title":  "아이폰18",
+        "cover":  "assets/promotion/designskin/iphone-18/banner/banner-main-700x1000-001.png",
+        "items":  [
+                      {
+                          "image":  "assets/promotion/designskin/iphone-18/banner/banner-naver-mobile-750x1308-001.jpg",
+                          "href":  "assets/promotion/designskin/iphone-18/banner/banner-naver-mobile-750x1308-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/iphone-18/banner/banner-naver-pc-1920x860-001.png",
+                          "href":  "assets/promotion/designskin/iphone-18/banner/banner-naver-pc-1920x860-001.png",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/iphone-18/review/square-1080x1080-001.png",
+                          "href":  "assets/promotion/designskin/iphone-18/review/square-1080x1080-001.png",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/iphone-18/banner/banner-main-700x1000-001.png",
+                          "href":  "assets/promotion/designskin/iphone-18/banner/banner-main-700x1000-001.png",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/iphone-18/popup/popup-480x480-001.jpg",
+                          "href":  "assets/promotion/designskin/iphone-18/popup/popup-480x480-001.jpg",
+                          "label":  "POPUP"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/iphone-18/landing/sections/landing-750x8494-001/landing-001.webp",
+                          "href":  "assets/promotion/designskin/_gallery/iphone-18-asset-006.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/iphone-18/banner/banner-1080x367-001.png",
+                          "href":  "assets/promotion/designskin/iphone-18/banner/banner-1080x367-001.png",
+                          "label":  "WEB BANNER"
+                      }
+                  ]
+    },
+    {
+        "id":  "ip-ttagaebi-ru-jeju",
+        "brand":  "ds",
+        "title":  "따개비루 제주",
+        "cover":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/banner/banner-main-700x1000-001.png",
+        "items":  [
+                      {
+                          "image":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/landing/sections/landing-750x6771-001/landing-001.webp",
+                          "href":  "assets/promotion/designskin/_gallery/ip-ttagaebi-ru-jeju-asset-001.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/banner/banner-naver-mobile-750x1308-001.png",
+                          "href":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/banner/banner-naver-mobile-750x1308-001.png",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/banner/banner-naver-pc-1920x860-001.png",
+                          "href":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/banner/banner-naver-pc-1920x860-001.png",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/landing/landing-naver-750x1491-001.png",
+                          "href":  "assets/promotion/designskin/_gallery/ip-ttagaebi-ru-jeju-asset-004.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/banner/banner-main-700x1000-001.png",
+                          "href":  "assets/promotion/designskin/ip-ttagaebi-ru-jeju/banner/banner-main-700x1000-001.png",
+                          "label":  "WEB BANNER"
+                      }
+                  ]
+    },
+    {
+        "id":  "random-box-v02",
+        "brand":  "ds",
+        "title":  "랜덤박스 VER.2",
+        "cover":  "assets/promotion/designskin/random-box-v02/review/square-1200x1200-001.png",
+        "items":  [
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v02/review/square-1000x1000-001.png",
+                          "href":  "assets/promotion/designskin/random-box-v02/review/square-1000x1000-001.png",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v02/review/vertical-960x1280-001.png",
+                          "href":  "assets/promotion/designskin/random-box-v02/review/vertical-960x1280-001.png",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v02/review/vertical-750x1982-001.png",
+                          "href":  "assets/promotion/designskin/random-box-v02/review/vertical-750x1982-001.png",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v02/review/square-1200x1200-001.png",
+                          "href":  "assets/promotion/designskin/random-box-v02/review/square-1200x1200-001.png",
+                          "label":  "ADDITIONAL ASSETS"
+                      }
+                  ]
+    },
+    {
+        "id":  "random-box-v03",
+        "brand":  "ds",
+        "title":  "랜덤박스 VER.3",
+        "cover":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-004.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-001.jpg",
+                          "href":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-002.jpg",
+                          "href":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-002.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-003.jpg",
+                          "href":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-003.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-004.jpg",
+                          "href":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-004.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-005.jpg",
+                          "href":  "assets/promotion/designskin/random-box-v03/banner/banner-naver-1000x1000-005.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/review/vertical-750x1982-001.jpg",
+                          "href":  "assets/promotion/designskin/random-box-v03/review/vertical-750x1982-001.jpg",
+                          "label":  "ADDITIONAL ASSETS"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/landing/landing-750x1982-001.jpg",
+                          "href":  "assets/promotion/designskin/_gallery/random-box-v03-asset-007.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/landing/landing-750x1982-002.jpg",
+                          "href":  "assets/promotion/designskin/_gallery/random-box-v03-asset-008.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/random-box-v03/landing/landing-750x1982-003.jpg",
+                          "href":  "assets/promotion/designskin/_gallery/random-box-v03-asset-009.html",
+                          "label":  "EVENT PAGE"
+                      }
+                  ]
+    },
+    {
+        "id":  "z8",
+        "brand":  "ds",
+        "title":  "Z8",
+        "cover":  "assets/promotion/designskin/z8/banner/banner-main-700x1000-001.jpg",
+        "items":  [
+                      {
+                          "image":  "assets/promotion/designskin/z8/banner/banner-naver-mobile-750x1308-001.jpg",
+                          "href":  "assets/promotion/designskin/z8/banner/banner-naver-mobile-750x1308-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/banner/banner-naver-pc-1920x860-001.jpg",
+                          "href":  "assets/promotion/designskin/z8/banner/banner-naver-pc-1920x860-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/landing/landing-naver-750x1422-001.jpg",
+                          "href":  "assets/promotion/designskin/_gallery/z8-asset-003.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/message/message-talktalk-628x270-001.jpg",
+                          "href":  "assets/promotion/designskin/z8/message/message-talktalk-628x270-001.jpg",
+                          "label":  "CRM \u0026 MESSAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/banner/banner-naver-mobile-750x1308-002.jpg",
+                          "href":  "assets/promotion/designskin/z8/banner/banner-naver-mobile-750x1308-002.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/banner/banner-naver-pc-1920x860-002.jpg",
+                          "href":  "assets/promotion/designskin/z8/banner/banner-naver-pc-1920x860-002.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/landing/landing-naver-750x1422-002.jpg",
+                          "href":  "assets/promotion/designskin/_gallery/z8-asset-007.html",
+                          "label":  "EVENT PAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/message/message-talktalk-628x270-002.jpg",
+                          "href":  "assets/promotion/designskin/z8/message/message-talktalk-628x270-002.jpg",
+                          "label":  "CRM \u0026 MESSAGE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/ads/ads-1080x1080-001.jpg",
+                          "href":  "assets/promotion/designskin/z8/ads/ads-1080x1080-001.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/ads/ads-1080x1080-002.jpg",
+                          "href":  "assets/promotion/designskin/z8/ads/ads-1080x1080-002.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/ads/ads-1080x1080-003.jpg",
+                          "href":  "assets/promotion/designskin/z8/ads/ads-1080x1080-003.jpg",
+                          "label":  "AD CREATIVE"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/social/instagram-1080x1350-001.jpg",
+                          "href":  "assets/promotion/designskin/z8/social/instagram-1080x1350-001.jpg",
+                          "label":  "SOCIAL MEDIA"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/banner/banner-main-700x1000-001.jpg",
+                          "href":  "assets/promotion/designskin/z8/banner/banner-main-700x1000-001.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/banner/banner-main-700x1000-002.jpg",
+                          "href":  "assets/promotion/designskin/z8/banner/banner-main-700x1000-002.jpg",
+                          "label":  "WEB BANNER"
+                      },
+                      {
+                          "image":  "assets/promotion/designskin/z8/banner/banner-main-700x1000-003.png",
+                          "href":  "assets/promotion/designskin/z8/banner/banner-main-700x1000-003.png",
+                          "label":  "WEB BANNER"
+                      }
+                  ]
+    }
+]

@@ -1,0 +1,509 @@
+{
+    "version":  "V31.0-assets",
+    "items":  [
+                  {
+                      "id":  "promo/이룸디자인스킨/z폴드8 와이드 네이버배너",
+                      "section":  "promo",
+                      "category":  "이룸디자인스킨",
+                      "title":  "z폴드8 와이드 네이버배너",
+                      "count":  5,
+                      "media":  [
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/d375f6f7cf2508b5dea9098ad777b676.webp",
+                                        "hash":  "d375f6f7cf2508b5dea9098ad777b6769c73ccaebb9c19f7ec6dace5884b6a3a",
+                                        "role":  "기타소재",
+                                        "name":  "K리그 산리오캐릭터즈 네이버 브랜드스토어_M_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/5336d120af2c6634f30e373921775b26.webp",
+                                        "hash":  "5336d120af2c6634f30e373921775b26740a4b19d6cbcad336e3328f6404b34b",
+                                        "role":  "기타소재",
+                                        "name":  "K리그 산리오캐릭터즈 네이버 브랜드스토어_PC_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/5e77db8e3c289d4b8e4475e091d4b12d.webp",
+                                        "hash":  "5e77db8e3c289d4b8e4475e091d4b12de741444390da46a46bc643c5f9775ccc",
+                                        "role":  "기타소재",
+                                        "name":  "네이버 브랜드스토어_M_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/1de36e1eda9eac6f2c28bfc5bd32f801.webp",
+                                        "hash":  "1de36e1eda9eac6f2c28bfc5bd32f801ed50b90f90e4fc7b26f2121566a34feb",
+                                        "role":  "기타소재",
+                                        "name":  "네이버 브랜드스토어_PC_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/ce23794c9461e8e3dd802b00758bfd2d.webp",
+                                        "hash":  "ce23794c9461e8e3dd802b00758bfd2d19b19ed72e2183c2fe55fe5c818e430b",
+                                        "role":  "기타소재",
+                                        "name":  "메인배너_700_1000"
+                                    }
+                                ]
+                  },
+                  {
+                      "id":  "promo/이룸디자인스킨/가정의달",
+                      "section":  "promo",
+                      "category":  "이룸디자인스킨",
+                      "title":  "가정의달",
+                      "count":  9,
+                      "media":  [
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/00b3fe5e0e732b51faeba6529206359c.webp",
+                                        "hash":  "00b3fe5e0e732b51faeba6529206359c3c9b72ae90c64a9042440cecdbeef0f3",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달__띠배너_Mobile"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/52f8fd7a3d9820ca19dc6e840b7330d2.webp",
+                                        "hash":  "52f8fd7a3d9820ca19dc6e840b7330d21791c091cdc3bc11cfeea2e38b2215d8",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달__띠배너_Mobile_할인강조"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/cd4ec43f0db8348a8f6c5ca0cd330f75.webp",
+                                        "hash":  "cd4ec43f0db8348a8f6c5ca0cd330f751775957cc1cfe04fcace58768020a1e3",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달_Mobile"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/d08a0bddc506e351e9b7826ef34bf61c.webp",
+                                        "hash":  "d08a0bddc506e351e9b7826ef34bf61c1664acd0e2caf45fe2a9169b5ff3aedf",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달_PC"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/aa4b0c589674802e1f6611c3c39692a8.webp",
+                                        "hash":  "aa4b0c589674802e1f6611c3c39692a801730dc3b6b08226a4dbe92f850bc9cd",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달_PC_1920_800"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/f238a299806794e02f6ae5c682f8a45d.webp",
+                                        "hash":  "f238a299806794e02f6ae5c682f8a45d80e82b68e4168606abdb22c2a9152294",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달_띠배너_PC"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/f98d3bdd62eb1734d65895d70f2cd58b.webp",
+                                        "hash":  "f98d3bdd62eb1734d65895d70f2cd58b4cb92c64dba453fc4dadaace3338e7a4",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달_띠배너_PC_할인강조"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/7a7849db4b6dcf11dbb095ab2c10e0ee.webp",
+                                        "hash":  "7a7849db4b6dcf11dbb095ab2c10e0eeb6977f0c683cb98b4eb8068b404ceb3d",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달2_Mobile 600_900"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/b599d3b9dea7d8797adb0712c7ad6d6d.webp",
+                                        "hash":  "b599d3b9dea7d8797adb0712c7ad6d6dc1193a0806b81f5bd390ee6602fe62b1",
+                                        "role":  "기타소재",
+                                        "name":  "2026 가정의 달2_PC_1920_800"
+                                    }
+                                ]
+                  },
+                  {
+                      "id":  "promo/이룸디자인스킨/디즈니 토이스토리",
+                      "section":  "promo",
+                      "category":  "이룸디자인스킨",
+                      "title":  "디즈니 토이스토리",
+                      "count":  6,
+                      "media":  [
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/c5c27dfbc81f6f4f39285a8f3a8e954b.webp",
+                                        "hash":  "c5c27dfbc81f6f4f39285a8f3a8e954bc3e9187c2f5558894ee240602831d26b",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼 배너_m 복사"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/ee47eb31ad4fc0e96fa2753765ea5439.webp",
+                                        "hash":  "ee47eb31ad4fc0e96fa2753765ea5439cad73291b1d5d887c5e1cf3b4392a811",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼 배너_pc 복사"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/75c4914da310798a042cbd2b104ccdb7.webp",
+                                        "hash":  "75c4914da310798a042cbd2b104ccdb7417c7f56f078f58fbe164e68b31d3993",
+                                        "role":  "기타소재",
+                                        "name":  "브랜드스토어_ver.2_M_750x1308_버튼 추가 복사"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/729a94d2dfe7f643d6750571cdb88476.webp",
+                                        "hash":  "729a94d2dfe7f643d6750571cdb884763e5083af7730b1c14bd8e42b9c94a70f",
+                                        "role":  "기타소재",
+                                        "name":  "브랜드스토어_ver.2_PC_1920x860_버튼 추가 복사"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/fcef4b4dcd1a0dfeebb2bc70f8169c62.webp",
+                                        "hash":  "fcef4b4dcd1a0dfeebb2bc70f8169c621fcbef023e67cb87d3c3ca55616f4c43",
+                                        "role":  "기타소재",
+                                        "name":  "브랜드스토어_기획전 모바일 복사"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/a186c0bf88ba49c689c2e12d51b5df6c.webp",
+                                        "hash":  "a186c0bf88ba49c689c2e12d51b5df6c72af840f83d5d23152122bc7f7145143",
+                                        "role":  "기타소재",
+                                        "name":  "카테고리 하위 복사"
+                                    }
+                                ]
+                  },
+                  {
+                      "id":  "promo/이룸디자인스킨/리틀주니,주베리1차",
+                      "section":  "promo",
+                      "category":  "이룸디자인스킨",
+                      "title":  "리틀주니,주베리1차",
+                      "count":  22,
+                      "media":  [
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/6ef10356de6253bf5c0c6904ffb7ca02.webp",
+                                        "hash":  "6ef10356de6253bf5c0c6904ffb7ca023734504ae6fedb5e7414ad0d42c04f31",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_M"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/6553eb2f3431b7b621613b3b09668f4e.webp",
+                                        "hash":  "6553eb2f3431b7b621613b3b09668f4ed5ee742b595bc7752fb9cf406bc79753",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_PC"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/9552c1cb875321d265bcd4292ce1d117.webp",
+                                        "hash":  "9552c1cb875321d265bcd4292ce1d117881881c195c7cc0f4c9b59d9529a1c94",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_M_분할_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/0acb6eddb517c749f1f18881b4d4a050.webp",
+                                        "hash":  "0acb6eddb517c749f1f18881b4d4a05053da128773d4d58602ea81fa8fcd0a91",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_M_분할_2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/1310f40e0263f34fb884bb146438ae31.webp",
+                                        "hash":  "1310f40e0263f34fb884bb146438ae318c2c16570a8dfd36fc1d877301eb921e",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_M_분할_3"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/ddcea7792b2e69769aeb51931d808caf.webp",
+                                        "hash":  "ddcea7792b2e69769aeb51931d808caf02d3cfeb692b9c664df0cbc876c3a082",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_PC_분할_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/c81edad3b1a3befb98c948891793f73b.webp",
+                                        "hash":  "c81edad3b1a3befb98c948891793f73b35e4cbbbc3e11105647dc091e1c79c3b",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_PC_분할_2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/2cd14d857140d757af1f95c8ae78a001.webp",
+                                        "hash":  "2cd14d857140d757af1f95c8ae78a0017826aad40f0804570f4bcf1afc46a3e7",
+                                        "role":  "리틀주니",
+                                        "name":  "리틀주니 공구_PC_분할_3"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/b6ff0f624b0b8952968ca6416710691e.webp",
+                                        "hash":  "b6ff0f624b0b8952968ca6416710691e255269e377fdf6eb1ae16922a3d0a308",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_M_분할_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/fe47b7068ad05e6b5b32a98b71ef548b.webp",
+                                        "hash":  "fe47b7068ad05e6b5b32a98b71ef548bcbee6139fe2f5eed0e8767b29e2ce303",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_M_분할_2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/0aa71cd3b00317311750aba32da1b3ee.webp",
+                                        "hash":  "0aa71cd3b00317311750aba32da1b3ee68d20432e6d4d17d7cf1e9a8ca6e9caa",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_M_분할_3"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/0b74e23c7b85f392aef60043e1f19d78.webp",
+                                        "hash":  "0b74e23c7b85f392aef60043e1f19d787b03b4d2869cfafa25c04e6e0ab1d346",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_PC_분할_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/80545b2db907ad614a195f3ad648e137.webp",
+                                        "hash":  "80545b2db907ad614a195f3ad648e137dd1ae16e659dc42582675a8fc79aa3aa",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_PC_분할_2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/e807c2daf4a454ca54836a4c7cd0174d.webp",
+                                        "hash":  "e807c2daf4a454ca54836a4c7cd0174d50c298201bcfb7fd735dec0d7f935f94",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_PC_분할_3"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/609556b0be08d94c643d9c59a038d738.webp",
+                                        "hash":  "609556b0be08d94c643d9c59a038d738803c231d3364e891ba6b5ce916072bc8",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_M_분할_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/174251ed5f6964bde9c979341d610cdb.webp",
+                                        "hash":  "174251ed5f6964bde9c979341d610cdb742cd8f77bbed00b7920af65a1d7173f",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_M_분할_2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/d97e071c807cf9bca5ca6ccd5985e2a8.webp",
+                                        "hash":  "d97e071c807cf9bca5ca6ccd5985e2a86319fb1d3f074a9c54536610ca99582c",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_M_분할_3"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/b7680af8ff93000dec35ccd43dc0a0d3.webp",
+                                        "hash":  "b7680af8ff93000dec35ccd43dc0a0d3115658539fc3039c19a349ddeb3ea627",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_PC_분할_1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/0abe1bb4dde57eed193c47f57ef601e3.webp",
+                                        "hash":  "0abe1bb4dde57eed193c47f57ef601e330a2be0b861adadad337687f8d03843a",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_PC_분할_2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/f16d7c9162ae60564e1e4792e5c0e217.webp",
+                                        "hash":  "f16d7c9162ae60564e1e4792e5c0e217a144909302e7cf13063d1fab43ea0adc",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_PC_분할_3"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/671f4aff8d63134428f78171a24ab54a.webp",
+                                        "hash":  "671f4aff8d63134428f78171a24ab54a2db9285682090a924275e5e7cccea0da",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_M"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/49bc967480f61a68e9358a355dd57328.webp",
+                                        "hash":  "49bc967480f61a68e9358a355dd57328973725cc20eca4e2c3044dd97a0a5eb8",
+                                        "role":  "주베리",
+                                        "name":  "주베리 공구_PC"
+                                    }
+                                ]
+                  },
+                  {
+                      "id":  "promo/이룸디자인스킨/에르고 1차",
+                      "section":  "promo",
+                      "category":  "이룸디자인스킨",
+                      "title":  "에르고 1차",
+                      "count":  9,
+                      "media":  [
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/c3e079cd67a73d2bc37b2f57e832d177.webp",
+                                        "hash":  "c3e079cd67a73d2bc37b2f57e832d177670cdfa6f44c75c7214f849dcb1e0b21",
+                                        "role":  "기타소재",
+                                        "name":  "[신제품]맥세이프 스탠드 카드 포켓 ver.2_블랙"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/28501d1fe9c994073e7f17ba9773c35c.webp",
+                                        "hash":  "28501d1fe9c994073e7f17ba9773c35c8651c8837a23e898df9c2921d2f6c64f",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_Mobile 분할 1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/aa8e64b07b8d4d6c3cdea33d9953af7b.webp",
+                                        "hash":  "aa8e64b07b8d4d6c3cdea33d9953af7b7a0e7de479281aa0d994d202e24245eb",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_Mobile 분할 2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/55acd980a4e9c3789ec7b838cbb7a3c2.webp",
+                                        "hash":  "55acd980a4e9c3789ec7b838cbb7a3c284f3579db84b66ddae762d9ab46eaa8a",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_Mobile 분할 3"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/af5f5fb0f4ecc3e3b421a4382185e80b.webp",
+                                        "hash":  "af5f5fb0f4ecc3e3b421a4382185e80b45ae562325fe6cdcb3b17984ff1affd0",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_Mobile"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/aeca614d179c94cab0ace51aa6bf974d.webp",
+                                        "hash":  "aeca614d179c94cab0ace51aa6bf974d795f0a680a4b30357c7c5618c2bdf2b4",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_PC"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/a14ed95b2de906f875e5f96ac430e309.webp",
+                                        "hash":  "a14ed95b2de906f875e5f96ac430e309a15a6d0f86d88e2d69c3886c86f617f8",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_PC_분할 1"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/7e7e2bde3db3b939759239befea8e2e8.webp",
+                                        "hash":  "7e7e2bde3db3b939759239befea8e2e8ba8b0a8483dec67a870a0742b41628cd",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_PC_분할 2"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/a2050cc8cf3d4d5e93468497a7b3ccc9.webp",
+                                        "hash":  "a2050cc8cf3d4d5e93468497a7b3ccc9dadf3824f3feb4aed9a363fed39c14e5",
+                                        "role":  "기타소재",
+                                        "name":  "더에르고 공구_PC_분할 3"
+                                    }
+                                ]
+                  },
+                  {
+                      "id":  "promo/이룸디자인스킨/주베리1차",
+                      "section":  "promo",
+                      "category":  "이룸디자인스킨",
+                      "title":  "주베리1차",
+                      "count":  8,
+                      "media":  [
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/1a9ded2e2b9cebab71be3c2143257250.webp",
+                                        "hash":  "1a9ded2e2b9cebab71be3c2143257250d24c17fd2034550004b01490681ec223",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼 기획전_띠배너_M"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/9302f0dfdafbd9bdfde06d7027243ebf.webp",
+                                        "hash":  "9302f0dfdafbd9bdfde06d7027243ebf30afed21a2ba9584d625c1036fd5df58",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼 기획전_띠배너_PC 복사"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/1cf763fe8b1666cb35e5b5e4a315663c.webp",
+                                        "hash":  "1cf763fe8b1666cb35e5b5e4a315663c037aa863fc20f26707053544889b0ca8",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼-기획전_띠배너_M_01"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/23deb29c3027c56457c83173b9438ec9.webp",
+                                        "hash":  "23deb29c3027c56457c83173b9438ec9af454b943fd004b72680d228078a96a9",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼-기획전_띠배너_M_02"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/3dd82d41dc489b522c2c1d4271132e6b.webp",
+                                        "hash":  "3dd82d41dc489b522c2c1d4271132e6b09f7047ee8d23749069cc892ffbf8c34",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼-기획전_띠배너_M_03"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/74425c3e393a3e7ae8aa3015adff5d1d.webp",
+                                        "hash":  "74425c3e393a3e7ae8aa3015adff5d1d933b46caa8cdb1c3b61793922250683b",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼-기획전_띠배너_PC-복사_01"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/e64937afcc822a451ff16266f440a996.webp",
+                                        "hash":  "e64937afcc822a451ff16266f440a996913172dd985793a865e8c8e73ef82062",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼-기획전_띠배너_PC-복사_02"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/8e94070e2fed360d8ce441668517584d.webp",
+                                        "hash":  "8e94070e2fed360d8ce441668517584d04366cf216237ad2230d5136d1e55af0",
+                                        "role":  "기타소재",
+                                        "name":  "리뉴얼-기획전_띠배너_PC-복사_03"
+                                    }
+                                ]
+                  },
+                  {
+                      "id":  "promo/이룸디자인스킨/캣츠앤독스2",
+                      "section":  "promo",
+                      "category":  "이룸디자인스킨",
+                      "title":  "캣츠앤독스2",
+                      "count":  4,
+                      "media":  [
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/a464fc1e4d113430880969daff91ccfb.webp",
+                                        "hash":  "a464fc1e4d113430880969daff91ccfbac0acb09aa739d6c6aa39145e94e30c0",
+                                        "role":  "기타소재",
+                                        "name":  "네이버 브랜드스토어_M"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/a46067022f5242a42644da7fa49d3bd2.webp",
+                                        "hash":  "a46067022f5242a42644da7fa49d3bd24e14b3ce0516ac3551f190a12b55392e",
+                                        "role":  "기타소재",
+                                        "name":  "네이버 브랜드스토어_PC"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/798e28666794113bd53a133e6340fffa.webp",
+                                        "hash":  "798e28666794113bd53a133e6340fffaf2acae89dbff978f18a2e5e7172fb76c",
+                                        "role":  "기타소재",
+                                        "name":  "네이버 브랜드스토어_기획전 모바일"
+                                    },
+                                    {
+                                        "type":  "image",
+                                        "image":  "assets/other/portfolio-auto/images/234cf75aebf5feaab7ef0ab36b7291dd.webp",
+                                        "hash":  "234cf75aebf5feaab7ef0ab36b7291dd258b7418eb3d4bf5ea4ed6b98a08aa06",
+                                        "role":  "기타소재",
+                                        "name":  "메인배너_700_1000"
+                                    }
+                                ]
+                  }
+              ]
+}
