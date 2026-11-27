@@ -8641,6 +8641,31 @@ dialog.sanho-modal .sanho-close {
     max-width:none!important;
 }
 </style>
+<style id="v3114a-ip-image-fix">
+
+.ip-card .ip-real-image {
+    display:block;
+    position:relative;
+    width:100%;
+    aspect-ratio:1/1;
+    overflow:hidden;
+}
+
+.ip-card .ip-real-image img {
+    display:block!important;
+    position:static!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    max-height:none!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    margin:0!important;
+    opacity:1!important;
+    visibility:visible!important;
+}
+
+</style>
 </head>
 <body>
 
@@ -10000,7 +10025,13 @@ function renderInsta(c){
     </div>
   </div>`;
 }
-const ipCards=(arr)=>arr&&arr.length?`<div class="ip-grid">${arr.map(x=>`<div class="ip-card"><span class="ph" data-img="${x[0]}" data-label="${x[1]}" style="--c:${x[3]}"></span><div><b>${x[1]}</b><p>${x[2]}</p></div></div>`).join('')}</div>`:'';
+const ipCards=(arr)=>arr&&arr.length?`<div class="ip-grid">${arr.map(x=>`<div class="ip-card"><span class="ip-real-image" style="background:${x[3]}">
+    <img src="${asset(x[0])}"
+         alt="${x[1]}"
+         loading="lazy"
+         decoding="async"
+         draggable="false">
+</span><div><b>${x[1]}</b><p>${x[2]}</p></div></div>`).join('')}</div>`:'';
 function igFilter(root,cat){stopHover();
   root.querySelectorAll('.ig-hl button,.ig-cat').forEach(b=>b.classList.toggle('on',b.dataset.cat===cat));
   root.querySelectorAll('.ig-post:not(.ig-magi)').forEach(p=>{const show=cat==='all'||p.dataset.cat===cat;p.hidden=!show;if(show){p.style.animation='none';p.offsetWidth;p.style.animation=''}});
@@ -10553,7 +10584,7 @@ stopHover();
     ${renderInsta(c)}
     ${c.b1?`<div class="b1-gallery">${[['forest','Crossroads Forest'],['train','Red subway train']].map(([f,t])=>`<figure><div class="scroll" tabindex="0" aria-label="${t} 상세페이지 스크롤"><img src="${asset(`images/b1-${f}.jpg`)}" alt="${t} 전체 상세페이지" data-art="${asset(`images/b1-${f}.jpg`)}" data-art-title="${t}" style="cursor:zoom-in"></div><figcaption>${t}</figcaption><button type="button" class="art-open" data-art="${asset(`images/b1-${f}.jpg`)}" data-art-title="${t}">상세페이지 크게 보기 ↗</button></figure>`).join('')}</div>`:''}
     ${c.fashion?renderV3093Lookbook(c):c.campaigns?renderBrandCampaigns(c):c.b1?'':c.gallery?`<div class="m-gallery${c.covers?' selected-modal-gallery':''}">${c.gallery.map((g,i)=>`<figure><div class="scroll"><img src="${asset(c.covers?.[i]||g[0])}" alt="${c.title} — ${g[1]}" data-art="${asset(g[0])}" data-art-title="${g[1]}" style="cursor:zoom-in" loading="eager"></div><figcaption>${g[1]}</figcaption><button type="button" class="art-open" data-art="${asset(g[0])}" data-art-title="${g[1]}">크게 보기 ↗</button></figure>`).join('')}</div><p class="mono" style="color:var(--mute);margin:10px 0 36px">${c.covers?'대표 작업물 5종 · 이미지를 클릭하면 전체 상세페이지를 볼 수 있습니다.':'↕ 각 상세페이지 안에서 스크롤해 보세요'}</p>`:(c.projects||c.insta)?'<div style="height:28px"></div>':`<div class="m-hero ph" data-img="${c.img||''}" data-label="CASE IMAGE — ${c.title}" style="--c:${c.c}"></div>`}
-    ${c.campaigns?'<div class="promo-jy-summary">':''}${sec('Problem',c.problem?`<p>${c.problem}</p>`:'')}${sec('My work',ul(c.work))}${sec('IP Collab',ipCards(c.ip))}${sec('공구 · Influencer',ipCards(c.collab))}${renderProjects(c)}${sec('Cases',ul(c.cases))}
+    ${c.campaigns?'<div class="promo-jy-summary">':''}${sec('Problem',c.problem?`<p>${c.problem}</p>`:'')}${sec('My work',ul(c.work))}${sec('IP Collab',ipCards(c.ip))}${sec('Influencer',ipCards(c.collab))}${renderProjects(c)}${sec('Cases',ul(c.cases))}
     ${sec('Result',`<div class="m-res">${c.results.map(r=>`<div><b>${r[0]}</b><span>${r[1]}</span></div>`).join('')}</div>`)}
     ${sec('Learned',c.learned?`<p class="m-learn">${c.learned}</p>`:'')}
     ${sec('Links',c.links?`<div class="m-links">${c.links.map(l=>`<a href="${l[1]}" target="_blank" rel="noopener">${l[0]} ↗</a>`).join('')}</div>`:'')}${c.campaigns?'</div>':''}`;
@@ -20259,6 +20290,312 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-art]'))note.hid
             categories:cats.length-1,
             magazinePreserved:!!g.magazine,
             exactDuplicates:duplicates.size
+        }
+    );
+
+})();
+</script>
+<script id="v3114-designskin-cleanup">
+(() => {
+
+    'use strict';
+
+    if (
+        typeof CASES === 'undefined' ||
+        !CASES.now ||
+        !CASES.now.insta
+    ) {
+        console.warn('V31.1.4 Designskin data not found');
+        return;
+    }
+
+    const c = CASES.now;
+    const g = c.insta;
+
+    const ipGroups = [
+
+        {
+            id:'disney',
+            name:'DISNEY',
+            color:'#DCE9FF',
+            desc:'디즈니 캐릭터 IP 협업 · SNS 콘텐츠 제작'
+        },
+
+        {
+            id:'webtoon',
+            name:'NAVER WEBTOON',
+            color:'#D9F5E5',
+            desc:'웹툰 IP 협업 · 캐릭터 콘텐츠 기획 및 디자인'
+        },
+
+        {
+            id:'eland',
+            name:'E·LAND',
+            color:'#FFF1B8',
+            desc:'브랜드 컬래버레이션 · SNS 소재 제작'
+        },
+
+        {
+            id:'kleague',
+            name:'K LEAGUE',
+            color:'#DBE3F1',
+            desc:'K리그 IP 협업 · 프로모션 및 SNS 콘텐츠'
+        },
+
+        {
+            id:'ipcollab',
+            name:'OTHER IP',
+            color:'#EADCFF',
+            desc:'다양한 캐릭터 IP 협업 콘텐츠 제작'
+        }
+
+    ];
+
+    function itemsOf(id) {
+
+        return [
+            ...(g.posts || []),
+            ...(g.reels || [])
+        ].filter(p =>
+            p.cat === id &&
+            p.img
+        );
+    }
+
+    function coverOf(p) {
+
+        const path =
+            p.img ||
+            p.slides?.[0]?.image ||
+            '';
+
+        if (!path) return '';
+
+        return typeof asset === 'function'
+            ? asset(path)
+            : path;
+    }
+
+    // =================================
+    // IP COLLAB - REAL SNS CONTENT
+    // =================================
+
+    c.ip = ipGroups.map(group => {
+
+        const items = itemsOf(group.id);
+
+        if (!items.length) {
+            return null;
+        }
+
+        const first = items.find(p=>coverOf(p));
+
+        if (!first) return null;
+
+        return [
+            coverOf(first),
+            group.name,
+            group.desc + ' · ' + items.length + ' works',
+            group.color
+        ];
+
+    }).filter(Boolean);
+
+    // =================================
+    // INFLUENCER CONTENT
+    // =================================
+
+    const influencers = itemsOf('inf');
+
+    c.collab = influencers
+        .slice(0,6)
+        .map((p,i)=>[
+            coverOf(p),
+            p.title || p.cap ||
+                '인플루언서 협업 ' + (i+1),
+            '인플루언서 협업 · SNS 콘텐츠 제작',
+            '#F1DCE8'
+        ]);
+
+    // =================================
+    // REMOVE GROUP BUY REFERENCES
+    // =================================
+
+    const cleanText = value => {
+
+        if (typeof value !== 'string') {
+            return value;
+        }
+
+        return value
+            .replace(/공동구매\s*·\s*/g,'')
+            .replace(/공구\s*·\s*/g,'')
+            .replace(/\s*·\s*공동구매/g,'')
+            .replace(/\s*·\s*공구/g,'')
+            .replace(/공동구매/g,'')
+            .replace(/공구/g,'')
+            .trim();
+    };
+
+    ['title','sub','problem','tag','learned']
+        .forEach(key=>{
+
+            if (typeof c[key] === 'string') {
+                c[key] = cleanText(c[key]);
+            }
+        });
+
+    if (Array.isArray(c.credit)) {
+
+        c.credit = [...new Set(
+            c.credit.map(cleanText).filter(Boolean)
+        )];
+    }
+
+    // =================================
+    // REFRESH PROJECT SCOPE
+    // =================================
+
+    c.work = [
+
+        'IP 협업 상품의 런칭 콘텐츠 및 상세페이지 제작',
+
+        '디즈니 · 네이버웹툰 · 이랜드 · K리그 등 IP별 브랜드 가이드 기반 콘텐츠 디자인',
+
+        '인스타그램 피드 및 릴스 콘텐츠 기획 · 제작 · 운영',
+
+        '브랜드 영상 기획 · 촬영 · 편집',
+
+        '자체 매거진 콘텐츠 「디킨매거진」 기획 및 제작',
+
+        '인플루언서 협업 콘텐츠 기획 및 SNS 소재 제작',
+
+        '자사몰 메인 배너 · 시즌 프로모션 · 상품 상세페이지 디자인',
+
+        '상품 촬영 및 이미지 보정'
+
+    ];
+
+    // =================================
+    // LIVE RESULT COUNTS
+    // =================================
+
+    const ipCount = c.ip.length;
+
+    const postCount = (g.posts || []).length;
+    const reelCount = (g.reels || []).length;
+
+    c.results = [
+
+        [
+            'IP × ' + ipCount,
+            'IP 협업 콘텐츠 분류'
+        ],
+
+        [
+            '3ch',
+            '자사몰 · 상세 · SNS 통합 운영'
+        ],
+
+        [
+            postCount + reelCount + ' works',
+            '피드 ' + postCount + '개 · 릴스 ' +
+                reelCount + '개'
+        ]
+
+    ];
+
+    // =================================
+    // MAIN CARD CLEANUP
+    // =================================
+
+    function updateMainCard() {
+
+        const card = document.querySelector(
+            '.card[data-case="now"]'
+        );
+
+        if (!card) return;
+
+        const summary = card.querySelector(
+            '.card-foot .sum'
+        );
+
+        if (summary) {
+
+            summary.textContent =
+                'Instagram · 릴스 · 디킨매거진 · IP 협업';
+        }
+
+        const kpi = card.querySelector(
+            '.card-foot .kpi'
+        );
+
+        if (kpi) {
+
+            kpi.textContent = 'IP×' + ipCount;
+        }
+
+        card.querySelectorAll('.ig-stk').forEach(node=>{
+
+            node.textContent = cleanText(
+                node.textContent
+            );
+        });
+
+        const who = card.querySelector('.who small');
+
+        if (who) {
+
+            who.textContent =
+                'IP collab · SNS contents';
+        }
+
+        // Update only the Designskin career timeline.
+
+        document.querySelectorAll('.tl-item')
+            .forEach(item=>{
+
+                const title = item.querySelector(
+                    '.tl-title'
+                );
+
+                if (
+                    !title ||
+                    !title.textContent.includes('이룸디자인스킨')
+                ) {
+                    return;
+                }
+
+                const desc = item.querySelector(
+                    '.tl-desc'
+                );
+
+                if (desc) {
+
+                    desc.textContent =
+                        '자사몰 · 상세페이지 · SNS · IP 협업 · 인플루언서 콘텐츠';
+                }
+
+            });
+    }
+
+    updateMainCard();
+
+    window.addEventListener(
+        'load',
+        updateMainCard,
+        {once:true}
+    );
+
+    console.info(
+        'V31.1.4 DESIGNSKIN CLEANUP READY',
+        {
+            ipCategories:ipCount,
+            influencerCards:c.collab.length,
+            feedGroups:postCount,
+            reelGroups:reelCount,
+            groupBuyRemoved:true
         }
     );
 
