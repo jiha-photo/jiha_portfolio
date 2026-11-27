@@ -26,6 +26,28 @@ $manifest = ConvertFrom-Json -InputObject (
     )
 )
 
+# V31.1.3 LONG PAGE HOOK
+
+& (Join-Path $PSScriptRoot 'Update-LongPages.ps1')
+
+$longIndex = @{}
+
+$longDataPath = "$base/longpage-index.json"
+
+if (Test-Path -LiteralPath $longDataPath) {
+
+    $longData = ConvertFrom-Json -InputObject (
+        [IO.File]::ReadAllText(
+            (Join-Path $root $longDataPath)
+        )
+    )
+
+    foreach ($property in $longData.PSObject.Properties) {
+
+        $longIndex[$property.Name] = $property.Value
+    }
+}
+
 $campaigns = New-Object System.Collections.ArrayList
 
 foreach ($item in $original) {
@@ -126,8 +148,32 @@ foreach ($project in @($manifest.items)) {
 
         $ratio = Get-ImageRatio $src
 
+        $longRecord = $null
+        $viewImage = $src
+        $viewHref = $src
+        $viewSections = @()
+
+        $mediaHash = [string]$media.hash
+
+        if (
+            $mediaHash -and
+            $longIndex.ContainsKey($mediaHash)
+        ) {
+
+            $longRecord = $longIndex[$mediaHash]
+
+            $ratio = (
+                [double]$longRecord.width /
+                [double]$longRecord.height
+            )
+
+            $viewImage = $longRecord.image
+            $viewHref = $longRecord.href
+            $viewSections = @($longRecord.sections)
+        }
+
         $isLong = (
-            $media.role -eq '기획전' -or
+            $null -ne $longRecord -or $media.role -eq '기획전' -or
             ($ratio -gt 0 -and $ratio -lt 0.38)
         )
 
@@ -146,13 +192,30 @@ foreach ($project in @($manifest.items)) {
 
         [void]$items.Add(
             [PSCustomObject]@{
-                image = $src
-                href  = $src
+
+                image = $viewImage
+                href  = $viewHref
                 label = $label
+                sections = @($viewSections)
             }
         )
 
         $score = 0
+
+        if ($isLong) {
+            $score -= 500
+        }
+
+        # Explicit thumbnail selection.
+        if (
+            !$isLong -and
+            (
+                $media.role -eq '썸네일' -or
+                $media.name -match '^(cover|thumbnail|썸네일)'
+            )
+        ) {
+            $score += 1000
+        }
 
         if (!$isLong) {
             $score += 100
@@ -170,7 +233,8 @@ foreach ($project in @($manifest.items)) {
         }
 
         $coverCandidates += [PSCustomObject]@{
-            image = $src
+
+            image = $viewImage
             score = $score
         }
 
